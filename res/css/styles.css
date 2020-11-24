@@ -1,0 +1,779 @@
+body, html {
+	/* font-family: Tahoma, Geneva, sans-serif;
+	 */
+	 /* font-family: cursive,'Lato', sans-serif; */
+	 /* font-family:cursive,'Lato',sans-serif; */
+	 font-family: Cambria, Georgia, serif;
+	-ms-overflow-style: none;
+	/* scroll-snap-type: y proximity; */
+	background: white;
+	/* background-image:url('https://media1.giphy.com/media/l3q2sLRa7XYfVRq8w/giphy.gif'); */
+	/* background-image: url('https://i.ibb.co/nBHp7M1/Ultimate-Meek-Armedcrab-small.gif'); */
+	background-repeat:repeat;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+p {
+	font-size: 19px;
+	color: black;
+}
+.h-adjust {
+	height: calc(100vh - 54px);
+}
+.h-adjust-last {
+	height: calc(200vh - 54px);
+}
+
+.h-adjust-first {
+	height: calc(100vh - 100px);
+}
+
+.navbar-toggler:focus {
+	outline: none;
+}
+.vertical-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.title_padding {
+	padding-bottom: 3vh;
+}
+
+.snap-pad {
+	/* scroll-snap-align: start; */
+	height: 54px;
+	background-color: #00000000;
+}
+
+.section {
+	height: 100vh;
+	width: 100%;
+	font-size: 22px;
+	color: white;
+}
+.section2 {
+	height: 170vh;
+	width: 100%;
+	font-size: 22px;
+	color: white;
+}
+.tsys {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.expn {
+	height: 20vh;
+	width: 100%;
+	font-size: 22px;
+	color: white;
+}
+.gpair {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.gpair2 {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.black {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.black2 {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+
+.greek {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+
+.greek2 {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+
+.greek3 {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.btest {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.btr {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.tsys2 {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.ops {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.pair {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.pairs2 {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.stath {
+	height: 20vh;
+	width: 70%;
+	font-size: 22px;
+	color: white;
+}
+.main {
+	padding-top: 0;
+	 /*scroll-snap-align: start; */
+	padding-left: 5vw;
+	padding-right: 5vw;
+	background-color: black;
+}
+.main3 {
+	padding-top: 0;
+	 /*scroll-snap-align: start; */
+	padding-left: 5vw;
+	padding-right: 5vw;
+	background-color: white;
+	/* background-image: url('https://i.ibb.co/nBHp7M1/Ultimate-Meek-Armedcrab-small.gif'); */
+	background-repeat: repeat;
+	[img][/img]
+}
+.main2 {
+	padding-top: 0;
+	 /*scroll-snap-align: start; */
+	padding-left: 5vw;
+	padding-right: 5vw;
+	background-color: #013B41;
+}
+
+.ourproject {
+	/* scroll-snap-align: center; */
+	padding-left: 5vw;
+	padding-right: 5vw;
+	/* background-image: url('https://img.pngio.com/phone-wallpapers-page-22-wallpapers-for-phones-free-download-black-honeycomb-png-3840_2160.png'); */
+	background-size: cover;
+	/* background-color: #003D78; */
+	background-color: #AED6F1 ;
+	font-family: "Lucida Console", Courier, monospace;
+	/*background-color: #FF1700;*/
+}
+.prereq {
+	/* scroll-snap-align: center; */
+	color: #1c1c1c;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	/* font-family: Arial, Helvetica, sans-serif; */
+	/* font-family: "Times New Roman", Times, serif; */
+	 font-family: "Courier New", Courier, monospace;
+
+	/*background-image: url('https://motionarray.imgix.net/preview-167570-xLiElPqQTp-high_0014.jpg');*/
+	background-size: cover;
+	/* background-image: linear-gradient(black, #080E24, black); */
+	background-color: black;
+	/*background-color: #5A5B5C;*/
+}
+
+.ourwork {
+	/* scroll-snap-align: end; */
+	color: #1c1c1c;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	/* background-image: url('https://inteng-storage.s3.amazonaws.com/img/iea/yrwQLAdm6N/sizes/41296772825-ab170e39f3-k_resize_md.jpg'); */
+	background-size: 100% 100%;
+	background-color:  #AED6F1  ;
+ 	/* background-color:  #003D78; */
+}
+
+.team {
+	/* scroll-snap-align: end; */
+	padding-left: 5vw;
+	padding-right: 5vw;
+	/*background-image: url('https://i.ibb.co/vQHkJDm/upfin.png');*/
+	background-size: 100% 100%;
+	/* background-image: linear-gradient(black, black, black, #8C0902, black, black); */
+	/*background-color: #2e7d32;*/
+	background-color: black;
+}
+.main_greeting {
+	color: #AAAAAA;
+	font-size: calc(18px + 8vw);
+	font-weight: bold;
+	padding-bottom: 5vh;
+}
+
+.main_intro {
+	font-size: calc(16px + 5vw);
+	font-weight: bold;
+}
+
+.main_desc {
+	padding-top: 1vh;
+	font-size: calc(10px + 3vw);
+}
+
+#main_type {
+	font-size: calc(10px + 3vw);
+	color: #A569BD ;
+	font-weight: 700;
+}
+.responsive {
+  width: 80%;
+  height: auto;
+}
+.responsive2 {
+  width: 100%;
+  height: auto;
+}
+.responsive3 {
+  width: 50%;
+  height: auto;
+}
+
+#main_cursor {
+	display: inline-block;
+	width: 5px;
+	height: calc(10px + 2vw);
+	background-color: #fff;
+	animation: blink 0.8s step-end infinite;
+}
+
+h2 {
+	font-size: calc(10px + 3vw);
+	font-weight: bold;
+}
+
+@keyframes blink {
+	from, to {
+		background-color: #000;
+	}
+	50% {
+		background-color: #fff;
+	}
+}
+
+.carousel-control-prev, .carousel-control-next {
+	padding-bottom: 25%;
+}
+
+.car-card {
+	border-radius: 10px;
+	box-shadow: 0px 0px 50px  #555;
+}
+
+.carousel-inner img {
+	max-height: 300px;
+	margin: auto;
+}
+
+.car-card-ext {
+	padding-left: 1vw;
+	background-color: #eee;
+}
+
+.car-card-title {
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	padding-left: 8px;
+	font-weight: 700;
+	font-size: calc(12px + 1.2vw);
+}
+
+.car-card-desc {
+	display: flex;
+	box-sizing: border-box;
+	max-height: 500px;
+	font-size: calc(11px + 0.6vw);
+	padding-left: 8px;
+	padding-right: 12px;
+	padding-bottom: 2.8vh;
+}
+
+.carousel {
+	width: 100% !important;
+	max-width: 500px !important;
+}
+
+.carousel-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#carousel-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 700px;
+	min-width: 350px;
+}
+#carousel_new{
+	display:none;
+}
+
+.navbar-logo {
+	font-weight: 800;
+}
+
+#navbar-collapsed {
+	display: none;
+}
+
+.snt_card {
+	display: flex;
+	width: 100vw;
+	background-color: #eee;
+	border-radius: 10px;
+	box-shadow: 0px 0px 50px  #777;
+	padding: 10px;
+	margin-right: 3vw;
+	margin-left: 3vw;
+	font-size: calc(12px + 0.6vw);
+	max-height: 200px;
+	min-width: 300px;
+}
+
+.snt_card_title {
+	font-weight: 700;
+	font-size: calc(12px + 1.2vw);
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+.snt_card_desc {
+	font-size: calc(10px + 0.6vw);
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+.snt_div_text {
+	width: 70%;
+}
+
+.snt_div_button {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 30%;
+}
+/*div {
+  padding-top: 0px;
+  padding-right: 80px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+*/
+.snt_card_button {
+	border: none;
+	border-radius: 8px;
+	background-color: #222;
+	box-shadow: 0px 1px 8px  #777;
+	color: #fff;
+	font-weight: 700;
+	height: 100%;
+	width: 100%;
+}
+
+.snt_card_button:hover {
+	box-shadow: 0px 0.5px 5px  #777;
+	background-color: #000;
+}
+
+.snt_card_button:active {
+	box-shadow: 0px 0px 0px  #777;
+	background-color: #000;
+	outline: none;
+}
+
+.work_container {
+	margin-left: auto;
+	margin-right: auto;
+	background-color:  black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+#gallery_pics {
+	cursor: pointer;
+	display: flex;
+	height: 75vh;
+	width: 100vh;
+}
+
+#gallery_hint {
+	padding-top: 20px;
+	color: #777;
+}
+
+.top_caret {
+	filter: invert(1);
+}
+
+#top_button {
+	position: fixed;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	bottom: 10px;
+	right: 10px;
+	height: 3.5vw;
+	width: 3.5vw;
+	min-height: 50px;
+	min-width: 50px;
+	text-align: center;
+	background-color: #00000055;
+	border: none;
+	border-radius: 5px;
+	z-index: 99;
+}
+/*p {
+  max-width: 75ch;
+}
+*/
+#top_button:hover {
+	filter: invert(1);
+	outline: none;
+}
+
+.team_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	width: 85%;
+	min-width: 350px;
+	background-color: #eee;
+	color: #111;
+	border-radius: 10px;
+	box-shadow: 0px 0px 50px  #555;
+}
+
+.team_detail {
+	font-size: calc(10px + 0.8vw);
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 90%;
+	max-height: 100px;
+}
+
+#mail_icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10%;
+}
+
+#mail_desc {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	padding-left: 5%;
+	width: 85%;
+}
+
+#mobile_icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10%;
+}
+
+#mobile_desc {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	padding-left: 5%;
+	width: 85%;
+}
+
+
+.inline-bold {
+	font-weight: 700;
+}
+
+.number {
+	font-size: calc(12px + 0.7vw);
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.clickable:hover {
+	color: #2196F3;
+}
+
+.clickable:active {
+	color: #1565C0;
+}
+
+.line2 {
+	margin-left: calc(20px + 2vw);
+}
+
+#carousel_bs {
+	display: block;
+}
+
+#carousel_web {
+	display: none;
+}
+
+#carousel_px {
+	display: none;
+}
+#carousel_new {
+	display: none;
+}
+
+.carousel-button-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.carousel-manual-button {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 5px;
+	border: none;
+	background-color: #00000044;
+	min-width: 40px;
+	border-radius: 5px;
+	margin-bottom: 1vh;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	height: 1vw;
+	width: 1vw;
+	min-height: 15px;
+	min-width: 15px;
+}
+
+.carousel-manual-button:focus {
+	outline: none;
+}
+
+
+th {
+	font-size: calc(6px + 0.8vw);
+}
+
+td {
+	font-size: calc(6px + 0.8vw);
+}
+
+#skill_table {
+	margin: 5px;
+	width: calc(100% - 10px);
+	height: 40%;
+}
+
+#empty_marker {
+	display: block;
+	padding: 20px;
+	text-align: center;
+	color: #777;
+}
+
+#nice {
+	display: none;
+	padding: 20px;
+}
+
+@media only screen and (orientation: portrait) {
+	#navbar-collapse {
+		display: none;
+	}
+	#navbarFull {
+		display: none;
+	}
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+	}
+	#navbar-collapsed {
+		display: flex;
+		text-align: right;
+		align-self: right;
+		justify-content: right;
+		padding-right: 2vw;
+		flex-direction: row;
+	}
+	.nav-item {
+		height: 5vh;
+		margin-top: 1px;
+		margin-right: 12px;
+		display: flex;
+	}
+	#top_button {
+		top: 66px;
+	}
+	#gallery_container {
+		height: 100vh;
+		width: 100vw;
+	}
+	#gallery_pics {
+		height: 67.5vw;
+		width: 90vw;
+	}
+	.carousel-manual-button{
+		min-width: 50px;
+	}
+	td {
+		font-size: calc(8px + 0.8vw);
+	}
+}
+/*------------------------------------*/
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+@page {
+  size: 4in 6in landscape;
+}
+.button, .button:visited, .button-dark {
+  display: inline-block;
+  max-width: 300px;
+  margin: 50px 10px 30px 10px;
+  padding: 10px;
+  font-family: "Signika", sans-serif;
+  color: #ffffff;
+  background-color: black;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  text-transform: capitalize;
+  text-align: center;
+  transition: all 0.1s ease;
+}
+.button-dark, .button-dark:visited {
+  margin: 20px 10px 30px 0;
+  color: #464646;
+  border-color: #464646;
+
+}
+.button:hover, .button-dark:hover {
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.button-dark:hover {
+  color: #ffffff;
+  background-color: rgba(70, 70, 70, 0.9);
+}
+/*ol {list-style: none; counter-reset: li}
+li {counter-increment: li}
+ol li::before {content: counter(li); color: red;
+    display: inline-block; width: 1em; margin-left: -1.5em;
+    margin-right: 0.5em; text-align: right; direction: rtl}
+*/
+.collapsible {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #0BADE6;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: black;
+}
