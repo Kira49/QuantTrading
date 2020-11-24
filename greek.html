@@ -44,27 +44,27 @@
 				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
 			</button>
 			<br><br>
-			<h2 align="center" class="ourproject_title title_padding" style="color:#FF1700"> GREEKS </h2>
+			<h2 class="ourproject_title title_padding" style="color:black"> GREEKS </h2>
 
-			<p align="center" style="color:rgb(53, 49, 49)">Derivations and Applications of Greeks in Option Derivatives</p><br> <br>
-			<h4 class="ourproject_title title_padding" style="color:#7439fd">
+			<p style="color:rgb(53, 49, 49)">Derivations and Applications of Greeks in Option Derivatives</p><br>
+			<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Abstract</b>
 			</h4>
 			<p style="color: black; font-size: 19px">In this article, we introduce the definitions of Greek letters. We also provide the derivations of Greek letters for call and put options on both dividends-paying stock and non-dividends stock. Then we discuss some applications of Greek letters. Finally, we show the relationship between Greek letters, one of the examples can be seen from the Black-Scholes partial differential equation as already derived before.<br><br>
-			<h4 class="ourproject_title title_padding" style="color:#ec496c">
+			<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Keywords</b>
 			</h4>
 			<p style="color: black; font-size: 19px">
 			Greek letters, Delta, Theta, Gamma, Vega, Rho, Black-Scholes option pricing model, Black-Scholes partial differential equation.<br><br>
-			<h4 class="ourproject_title title_padding" style="color:#52f022">
+			<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Introduction</b>
 			</h4><p style="color: black; font-size: 19px">“Greek letters” are defined as the sensitivities of the option price to a single-unit change in the value of either a state variable or a parameter. Such sensitivities can represent the different dimensions to the risk in an option. Financial institutions who sell option to their clients can manage their risk by Greek letters analysis.<br><br>
 			In this chapter, we will discuss the definitions and derivations of Greek letters. We also specifically derive Greek letters for call (put) options on non-dividend stock and dividends-paying stock. Some examples are provided to explain the application of Greek letters. Finally, we will describe the relationship between Greek letters and the implication in delta neutral portfolio.<br><br>
-			<h4 class="ourproject_title title_padding" style="color:#c06007">
+			<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Delta(&#916;)</b></h4><p style="color: black; font-size: 19px">
 			The delta of an option,&#916; , is defined as the rate of change of the option price respected to the rate of change of underlying asset price:	<br><br>
 			<img  src="res/img/gk1.png" alt="ok" height="70px" width="500px"  ><br>
-			<h4 class="ourproject_title title_padding" style="color:#08aa9d">
+			<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Derivation of Delta for Different Kinds of Stock Options</b></h4>
 				<p style="color: black; font-size: 19px">
 				From Black-Scholes option pricing model, we know the price of call option on a non-dividend stock can be written as:
@@ -100,45 +100,28 @@
 				<br><br><img  src="res/img/gk16.png" alt="ok" height="70px" width="600px" ><br><br>
 				The derivation of (12) is
 				<br><br><img  src="res/img/gk17.png" alt="ok" height="300px" width="500px" ><br><br>
-			<h4 class="ourproject_title title_padding" style="color:#d41062">
+			<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Application of Delta</b></h4><p style="color: black; font-size: 19px">
 				Figure 1 shows the relationship between the price of a call option and the price of its underlying asset. The delta of this call option is the slope of the line at the point of A corresponding to current price of the underlying asset.<br><br>
-				<img  src="res/img/gk19.png" alt="ok" height="500px" width="500px"><br>Figure 1<br><br>
+				<img  src="res/img/gk19.png" alt="ok" height="500px" width="500px"><br><b>Figure 1</b><br><br>
 				By calculating delta ratio, a financial institution that sells option to a client can make a delta neutral position to hedge the risk of changes of the underlying asset price. Suppose that the current stock price is $100, the call option price on stock is $10, and the current delta of the call option is 0.4. A financial institution sold 10 call option to its client, so that the client has right to buy 1,000 shares at time to maturity. To construct a delta hedge position, the financial institution should buy 0.4 x 1,000 = 400 shares of stock. If the stock price goes up to $1, the option price will go up by $0.4. In this situation, the financial institution has a $400 ($1 x 400 shares) gain in its stock position, and a $400 ($0.4 x 1,000 shares) loss in its option position. The total payoff of the financial institution is zero. On the other hand, if the stock price goes down by $1, the option price will go down by $0.4. The total payoff of the financial institution is also zero.<br><br>
 				However, the relationship between option price and stock price is not linear, so delta changes over different stock price. If an investor wants to remain his portfolio in delta neutral, he should adjust his hedged ratio periodically. The more frequently adjustment he does, the better delta-hedging he gets.<br><br>
 				Figure 2 exhibits the change in delta affects the delta-hedges. If the underlying stock has a price equal to $20, then the investor who uses only delta as risk measure will consider that his portfolio has no risk. However, as the underlying stock prices changes, either up or down, the delta changes as well and thus he will have to use different delta hedging. Delta measure can be combined with other risk measures to yield better risk measurement. We will discuss it further in the following sections.<br><br>
-				<img  src="res/img/gk20.png" alt="ok" height="500px" width="500px"><br>Figure 2<br><br>
+				<img  src="res/img/gk20.png" alt="ok" height="500px" width="500px"><br><b>Figure 2<b><br><br>
 	
 	
 	
 												
 					</p>
 
-
-</div>
-<p align="center">
+	<p align="center">
 	<a class="button" href="index.html"> << Back Home</a>
 	<a class="button" href="greek2.html"> Next >> </a>
 	 <!-- <a class="button" href="tsys2.html">Ne</a> -->
 </p>
-<script src="res/js/prism.js"></script>
-	<script type="text/javascript">
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
+</div>
 
-	for (i = 0; i < coll.length; i++) 
-	{
-  		coll[i].addEventListener("click", function() {
-    	this.classList.toggle("active");
-    	var content = this.nextElementSibling;
-    	if (content.style.display === "block") {
-      	content.style.display = "none";
-    	} else {
-      	content.style.display = "block";
-    }
-  });
-}
-</script>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
