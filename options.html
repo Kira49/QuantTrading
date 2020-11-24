@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> AJ </title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="res/css/styles.css">
+</head>
+
+<!-- --------------------nav end------------------------------------ -->
+<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
+	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
+	<div class="navbar-nav" id="navbar-collapsed">
+		<a href="#home" class="nav-item nav-link navbar-brand">
+			<img src="res/img/home-24px.svg" alt="H">
+		</a>
+		<a href="#stuff" class="nav-item nav-link navbar-brand">
+			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
+		</a>
+
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse">
+		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
+			<a href="index.html#home" class="nav-item nav-link">HOME</a>
+
+			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
+		</div>
+	</div>
+</nav>
+<!-- ------------------------------------------ -->
+<body  align="center" bgcolor="black">
+		<br>
+		<p align="center">
+				<a class="button" href="index.html"> << Back Home</a>
+				<a class="button" href="tsys2.html"> Next >> </a>
+	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
+     	</p>
+		<div id="home" class="ops main3 container-fluid">
+			<div class="snap-pad"></div>
+			<button type="button" id="top_button" onclick="goToTop()">
+				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
+			</button>
+			<h2 align="center" class="ourproject_title title_padding" style="color:#FF1700"> Option Strategies </h2>
+			<p>
+				The various strategies discussed are as follows:<br><br>
+				<b style="color:#0BADE6">Bullish Strategies</b><br>
+				<ol style="color:black; font-size: 19px">
+					<li>Bull Call Spread</li>
+					<li>Bull Put Spread</li>
+					<li>Call Ratio Back Spread</li>
+					<li>Bear Call Ladder</li>
+					<li>Call Butterfly</li>
+					<li>Synthetic Call</li>
+				</ol>
+				<b style="color:#0BADE6">Bearish Strategies</b><br>
+				<ol style="color:black; font-size: 19px">
+					<li>Bear Call Spread</li>
+					<li>Bear Put Spread</li>
+					<li>Bull Put Ladder</li>
+					<li>Put Ratio Back spread</li>
+				</ol>
+				<b style="color:#0BADE6">Neutral Strategies</b><br>
+				<ol style="color:black; font-size: 19px">
+					<li>Long & Short Straddles</li>
+					<li>Long & Short Strangles</li>
+					<li>Long & Short Iron Condor</li>
+					<li>Max Pain</li>
+				</ol>
+			</p><br>
+			<p>
+				<b style="color:#0BADE6">Bull Call Spread</b><br><br>
+				The bull call spread is a strategy applied when the view on the market is moderately bullish. It is a two-leg spread strategy traditionally executed using ITM and OTM options<br><br>
+				Strategy:<br>
+				<ul style="color:black; font-size: 19px">
+					<li>Buy 1 ATM option (Leg 1)</li>
+					<li>Sell 1 OTM option (Leg 2)</li>
+				</ul>
+				<img src="res/img/ops1.png" alt="Nature" class="responsive"> <br> 
+
+			</p>
+			<p>
+				Note that both the options belong to the same underlying, have same expiration date and are in the same ratio (1:1).<br>
+				This is a net debit strategy as initially we need to put money into the strategy (ATM option is costlier than OTM option).<br>
+				Both the maximum loss and gain are capped as can be seen from the below calculations.<br><br>
+			</p>
+			<p>
+				<b>The calculations are as follows:</b><br><br>
+				𝑆𝑝𝑟𝑒𝑎𝑑 = 𝑆𝑡𝑟𝑖𝑘𝑒𝑃𝑟𝑖𝑐𝑒𝑜𝑓𝑆ℎ𝑜𝑟𝑡𝐶𝑎𝑙𝑙 – 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝐿𝑜𝑛𝑔 𝐶𝑎𝑙𝑙 <br><br>
+				𝑁𝑒𝑡 𝐷𝑒𝑏𝑖𝑡 = 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝐿𝑜𝑛𝑔 𝐶𝑎𝑙𝑙−𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 <br><br>
+				𝑆ℎ𝑜𝑟𝑡 𝐶𝑎𝑙𝑙 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝑃𝑟𝑜𝑓𝑖𝑡 = 𝑆𝑝𝑟𝑒𝑎𝑑 – 𝑁𝑒𝑡 𝐷𝑒𝑏𝑖𝑡<br><br>
+				 𝐵𝑟𝑒𝑎𝑘 − 𝑒𝑣𝑒𝑛 𝑝𝑜𝑖𝑛𝑡 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝐿𝑜𝑛𝑔 𝐶𝑎𝑙𝑙 + 𝑁𝑒𝑡 𝐷𝑒𝑏𝑖𝑡 <br><br>
+				 (𝑃𝑜𝑖𝑛𝑡 𝑜𝑓 𝑧𝑒𝑟𝑜 𝑝𝑎𝑦𝑜𝑓𝑓)<br><br>
+
+				 <b>For our Example,</b><br><br>
+				 𝑆𝑝𝑟𝑒𝑎𝑑 = 105 –100 = 5<br><br>
+
+				𝑁𝑒𝑡 𝐷𝑒𝑏𝑖𝑡 = 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 <br><br>
+						= 3.30−1.50 = 1.80 <br><br>
+						𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝑃𝑟𝑜𝑓𝑖𝑡 = 5 – 1.80 = 3.20 <br><br>
+						𝐵𝑟𝑒𝑎𝑘 − 𝑒𝑣𝑒𝑛 𝑝𝑜𝑖𝑛𝑡 = 100+1.80 = 101.80 <br><br>
+						(𝑃𝑜𝑖𝑛𝑡 𝑜𝑓 𝑧𝑒𝑟𝑜 𝑝𝑎𝑦𝑜𝑓𝑓)<br><br>
+
+				<img src="res/img/ops2.png" alt="Nature" class="responsive"> <br> 
+				<img src="res/img/ops13.png" alt="Nature" class="responsive">
+				
+			</p>
+			<p>
+				<b style="color:#0BADE6">Greeks: </b><br><br>
+				<b>Delata and Gamma:</b><br><br>
+				The Bull Call Spread is a bullish strategy which makes money when the price of the underlying increases. Thus, it has a positive delta. As it consists of one long and one short call, the change in delta when the underlying changes is less. Thus, it has a near-zero gamma.<br><br>
+
+				<b>Vega:</b><br><br>
+				As the bull call spread has a long call and a short call, the rise in premiums due to increased volatility is balanced out, and thus it has a near zero Vega.<br><br>
+
+				<b>Theta:</b><br><br>
+				The option premium values decrease as time passes because of theta. However, the decrease in premiums is not the same for all strikes and depends on the price of the underlying. If the underlying is close to the long call option, then the price of the bull call spread value decreases (loses money). This is because the long call is closest to the money, and thus the decrease in price of the long option is more than that of the short option. However, if the underlying is closer to the short option, the bull call spread value increases (makes money). This is because the decrease in premium of the short option is more than that of the long option.<br><br>
+
+				<b>Strike Selection:</b><br><br>
+				The best strike to be selected (one which gives maximum profit) depends on the time in which the target is expected to be reached as well as in which half of the month the trade is being executed on.<br><br>
+				<b style="font-size: 17px"> First Half:</b><br>
+				<img src="res/img/ops7.png" alt="Nature" class="responsive"> <br> 
+				<img src="res/img/ops5.png" alt="Nature" class="responsive"> <br> 
+				<b style="font-size: 17px"> Second Half:</b><br>
+				<img src="res/img/ops8.png" alt="Nature" class="responsive"><br><img src="res/img/ops9.png" alt="Nature" class="responsive"><br>
+				<img src="res/img/ops6.png" alt="Nature" class="responsive"><br>
+				Benefits compared to naked call option:<br>
+				<ul style="color:black; font-size: 19px;">
+					<li>Cost of strategy is less compared to the naked call option. Low cost also implies lower risk.</li>
+					<li>The strategy has a lower breakeven point, which means that to become profitable, the underlying price will not have to rise as much as it would have to in case of a naked long call.</li>
+				</ul>
+				<a style="color: black;font-size: 19px">Drawbacks:</a>
+				<ul style="color:black; font-size: 19px;">
+					<li>Limited profit potential as maximum profit is fixed.</li>
+				</ul>
+
+			</p>
+			<p>
+				<b style="color:#0BADE6">Bull Put Spread</b><br><br>
+				The bull put spread strategy is a bullish strategy, very similar to the bull call spread except that it is executed using put options rather than call options.<br><br>
+
+				Strategy:<br>
+				<ul>
+					<li>Buy 1 OTM Put option (Leg 1)</li>
+					<li>Sell 1 ITM Put option (Leg 2)</li>
+
+				</ul>
+				<img src="res/img/ops10.png" alt="Nature" class="responsive"><br>
+			</p>
+			<p>
+				Note that both the options belong to the same underlying, have same expiration date and are in the same ratio (1:1).<br><br>
+
+				This is a net credit strategy as initially, the cost of buying OTM Put option is less than the premium received by selling an ITM option. Similar to bear call spread, both the profit and loss are capped.<br><br>
+				<b>The calculations are as follows:</b><br><br>
+				𝑆𝑝𝑟𝑒𝑎𝑑 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝑆ℎ𝑜𝑟𝑡 𝐶𝑎𝑙𝑙 – 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝐿𝑜𝑛𝑔 𝐶𝑎𝑙𝑙<br><br>
+				 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡. = 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝑃𝑟𝑜𝑓𝑖𝑡. <br><br>
+				 = 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝑆ℎ𝑜𝑟𝑡 𝐶𝑎𝑙𝑙 − 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝐿𝑜𝑛𝑔 𝐶𝑎𝑙𝑙<br><br>
+				  𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = 𝑆𝑝𝑟𝑒𝑎𝑑 – 𝐼𝑛𝑖𝑡𝑖𝑎𝑙 𝑃𝑟𝑜𝑓𝑖𝑡 <br><br>
+				  𝐵𝑟𝑒𝑎𝑘 − 𝑒𝑣𝑒𝑛 𝑝𝑜𝑖𝑛𝑡 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝐿𝑜𝑛𝑔 𝐶𝑎𝑙𝑙 + 𝐼𝑛𝑖𝑡𝑖𝑎𝑙 𝑃𝑟𝑜𝑓𝑖𝑡 <br><br>
+				  (𝑃𝑜𝑖𝑛𝑡 𝑜𝑓 𝑧𝑒𝑟𝑜 𝑝𝑎𝑦𝑜𝑓𝑓)<br><br>
+				  <img src="res/img/ops11.png" alt="Nature" class="responsive"><br>
+				  <img src="res/img/ops12.png" alt="Nature" class="responsive"><br>
+
+				  The Option Greeks and Strike selection for this strategy is similar to Bull Put Effect.<br><br>
+				  
+			</p>
+			<p>
+				<b style="color:#0BADE6">Call Ratio Back Spread</b><br><br>
+				The Call Ratio Back Spread is a 3-leg strategy, applied when the view on the market is outrightly bullish. It involves buying 2 OTM call option and selling 1 OTM call option.<br>
+				Unlike the previous strategies, the profit is not capped. Also, even if the market moves against the trend, if the market moves, the strategy will still make money.<br><br>
+				<img src="res/img/ss1.png" alt="Nature" class="responsive"><br><br>
+				The strategy loses money if the market remains stagnant.<br><br>
+				Strategy:<br>
+				<ul style="color: black; font-size: 19px">
+					<li>Sell one lot of ITM options.</li>
+					<li>Buy two lots of OTM options.</li>
+				</ul><br>
+			</p>
+			<p>
+				Note that both the options belong to the same underlying, have same expiration date and are in the ratio 2:1 (OTM: ITM).<br><br>
+
+				This is a net credit strategy as the cost of the ITM options finances the buying of the OTM options.<br><br>
+
+				<b>The calculations for the strategy are as follows:</b><br><br>
+				𝑆𝑝𝑟𝑒𝑎𝑑 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑜𝑓 𝑡ℎ𝑒 𝑂𝑇𝑀 𝑜𝑝𝑡𝑖𝑜𝑛 – 𝑆𝑡𝑟𝑖𝑘𝑒 𝑜𝑓 𝑡ℎ𝑒 𝐼𝑇𝑀 𝑜𝑝𝑡𝑖𝑜𝑛<br><br>
+				 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡 = 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝑠ℎ𝑜𝑟𝑡 𝑜𝑝𝑡𝑖𝑜𝑛 – 2∗ 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝑙𝑜𝑛𝑔 𝑜𝑝𝑡𝑖𝑜𝑛<br><br>
+				  𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝑃𝑟𝑜𝑓𝑖𝑡 = 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑 <br><br>
+				  𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = 𝑆𝑝𝑟𝑒𝑎𝑑 – 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡<br><br>
+				   𝐿𝑜𝑤𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝐿𝑜𝑤𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 + 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡<br><br>
+				   𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑈𝑝𝑝𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 + 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠<br><br>
+				<img src="res/img/ss2.png" alt="Nature" class="responsive"><br>
+				<img src="res/img/ss3.png" alt="Nature" class="responsive"><br><br>
+			</p>
+			<p>
+				<b style="color:#0BADE6">Greeks:</b><br><br>
+				<b>Delta:</b><br><br>
+				The initial delta of bull call spread is positive. Delta increases as the stock price increases; thus, the strategy position has a positive gamma. As expiration approaches, the position delta approaches −1.00 if the short call is in the money and the long calls are out of the money. In this case, the delta of the short call approaches −1.00, and the deltas of the long calls approach zero.<br><br>
+
+				When the stock price is above the strike price of the long calls as expiration approaches, the position delta approaches +1.00. In this case, the delta of the short call approaches −1.00 and the deltas of the two long calls approach +1.00 each. The position delta approaches zero as the stock price falls below the strike price of the short call, because the deltas of all calls approach zero.<br><br>
+
+				<b>Vega:</b><br><br>
+				Volatility is a measure of the fluctuation of the stock price. As volatility rises, option premiums tend to swell if all other factors remain constant. Long options, therefore, rise in price and make money when volatility rises, and short options rise in price and lose money when volatility rises. The opposite is observed when volatility falls. Long options lose money and short options make money.<br><br>
+
+				The call back ratio spread has a net positive Vega, as it has two long calls and one short call. However, the impact of changing volatility (Vega) varies depending on the time to expiration and the relationship of the stock price to the strike prices.<br><br>
+				<img src="res/img/ss4.png" alt="Nature" class="responsive"><br><br>
+				The increase in volatility when there is ample time for the expiry increases the payoff of Call Ratio back spread, as can be seen in the blue and green lines. However, when there is less time to expiry, increase in volatility has a negative impact on the strategy. This is because as the volatility increases with few days left to expiry, the chances of the option to expire OTM increases, and hence premium decreases. <br><br>
+			</p>
+			<p>
+				<b>Theta:</b><br><br>
+				The value of an option decreases as the expiration approaches, all other factors remaining constant. This is called time erosion. Theta measures how much time erosion affects the net price of the position. Long options have a negative theta, and short options have a positive theta.<br><br> 
+
+				The Call Ratio Back Spread has a negative theta, because of the two long calls and one short call. However, the impact of time erosion varies depending on the relationship of the stock price. When first established, assuming the stock price is at or above the strike price of the short call and there are 14 days or more to expiration, the net theta is negative, because the total negative theta of the two long calls is greater than the positive theta of the one short call.<br><br> 
+
+				As a result, the position loses money from time decay. As expiration approaches, if the stock price is close to or above the strike price of the long calls (higher strike), then the net theta is negative. If the stock price is close to the strike price of the short call (lower strike), then the net theta tends to be positive. The net theta approaches zero if the stock price falls below the lower strike.<br><br>
+
+				The main advantage of this strategy is that it makes a limited profit even if the market goes against you (moves down) and an unlimited profit if the market moves up. However, the strategy loses money if the price does not move in any direction.<br><br>
+				Thus, if the move of the underlying is expected in either direction, most probably in the upward direction, this strategy would be a perfect fit. However, the volatility must also be factored in. If the volatility is expected to decrease, this strategy might lose money and hence, might not be a good fit.<br><br>
+
+			</p>
+			<p>
+				<b style="color:#0BADE6">Bear Call Ladder:</b><br><br>
+				Contrary to the name, the bear call ladder is actually a bullish strategy. This is an improvisation of the aforementioned Call Ratio Back Spread and can be implemented when the view on the market is out rightly bullish.<br><br>
+
+				<img src="res/img/ss5.png" alt="Nature" class="responsive"><br><br>
+				Strategy: 
+				<ul style="color: black; font-size: 19px">
+					<li>Sell 1 ITM call option</li>
+					<li>Buy 1 ATM call option</li>
+					<li>Buy 1 OTM call option</li>
+				</ul>
+			</p>
+			<p>
+				Note that both the options belong to the same underlying, have same expiration date and are in the ratio 1:1:1 (ITM (Sell): ATM (Buy): OTM(Buy)).<br><br>
+
+				This is a net credit strategy as writing an ITM option should finance the buying of ATM and OTM options.<br><br>
+				<img src="res/img/ss6.png" alt="Nature" class="responsive"><br><br>
+				<img src="res/img/ss7.png" alt="Nature" class="responsive"><br><br>
+
+				<b>The calculations of the strategy are as follows:</b><br><br>
+				𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡 = 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝐼𝑇𝑀 𝑠ℎ𝑜𝑟𝑡 − (𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝐴𝑇𝑀 𝑙𝑜𝑛𝑔 + 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝑂𝑇𝑀 𝑙𝑜𝑛𝑔)<br><br>
+				𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = (𝐷𝑖𝑓𝑓𝑒𝑟𝑒𝑛𝑐𝑒 𝑏𝑒𝑡𝑤𝑒𝑒𝑛 𝐼𝑇𝑀 𝑎𝑛𝑑 𝑂𝑇𝑀) − 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡<br><br>
+				𝐿𝑜𝑤𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝐿𝑜𝑤𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 + 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡<br><br>
+				𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑜𝑓 𝐴𝑇𝑀 + 𝑆𝑡𝑟𝑖𝑘𝑒 𝑜𝑓 𝑂𝑇𝑀 – 𝑆𝑡𝑟𝑖𝑘𝑒 𝑜𝑓 𝐼𝑇𝑀 – 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡<br><br>
+				This strategy makes money (limited) when the price of the underlying decreases and makes unlimited profit when the price of the underlying increases. However, it loses money (risk is limited) when the underlying does not move in either direction.<br><br>
+			</p>
+			<p>
+				<b style="color:#0BADE6">Greeks:</b><br><br>
+				<b>Delta:</b><br><br>
+				Because this is a bullish strategy at initiation, Delta is initially positive and thereby benefits the position when the underlying price rises, and vice versa. However, Delta turns negative as the underlying price continues rising and inches towards the strikes of the short Calls. As a result, rising underlying price eventually starts hurting the option position, and vice versa.<br><br>
+
+				<b>Gamma:</b><br><br>
+				Gamma peaks out at the lower strike, lifting the Delta as the underlying price rises, and vice versa. It eventually turns negative as the underlying moves towards the middle strike, by which time rising prices start dragging the Delta into negative zone. Gamma bottoms out at the higher strike, dragging the Delta further into negative if the underlying price continues rises.<br><br>
+
+				<b>Vega:</b><br><br>
+				The effect of Vega on this strategy is dependent on the time left till expiration of the option.<br><br>
+
+				If the option has ample time to expiry (> 5-6 days) then the increase in Vega benefits the option strategy with the maximum increase seen when there is the most amount of time to expiry. However, when the time period is less (fewer days to expire) increase in Vega negatively affects the strategy as increased Vega increases the chances of the option to expiry OTM.<br><br>
+
+				<img src="res/img/ss8.png" alt="Nature" class="responsive"><br><br>
+
+				<b>Theta:</b><br><br>
+				When the underlying price is below the lower breakeven point or above the upper breakeven point, Theta is positive, because of which time decay benefits the position. On the other hand, when the underlying price is in between the two breakeven points, Theta is negative, because of which time decay hurts the position.<br><br>
+
+				Advantage:<br>
+				<ul style="color: black; font-size: 19px">
+					<li>Highly lucrative risk reward ratio as the risk is limited while the profit is unlimited</li>
+					<li>The strategy makes money even when the market moves in the opposite direction</li>
+				</ul>
+				<a style="color: black; font-size: 19px">Disadvantage:</a><br>
+				<ul style="color: black; font-size: 19px">
+					<li> Loss when the market remains constant</li>
+				</ul>
+			</p>
+			<p align="center">
+				<a class="button" href="index.html"> << Back Home </a>
+				<a class="button" href="tsys2.html"> Next >> </a>
+	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
+     		</p>
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+		</div>
+		
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="res/js/typing_text.js" type="text/javascript"></script>
+	<script src="res/js/work_carousel.js" type="text/javascript"></script>
+	<script src="res/js/scroll_top.js" type="text/javascript"></script>
+	<script src="res/js/sticky_navbar.js" type="text/javascript"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

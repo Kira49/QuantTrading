@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> AJ </title>
+	<link href="res/css/prism.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="res/css/styles.css">
+</head>
+
+<!-- --------------------nav end------------------------------------ -->
+<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
+	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
+	<div class="navbar-nav" id="navbar-collapsed">
+		<a href="#home" class="nav-item nav-link navbar-brand">
+			<img src="res/img/home-24px.svg" alt="H">
+		</a>
+		<a href="#stuff" class="nav-item nav-link navbar-brand">
+			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
+		</a>
+
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse">
+		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
+			<a href="index.html#home" class="nav-item nav-link">HOME</a>
+
+			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
+		</div>
+	</div>
+</nav>
+
+<!-- ------------------------------------------ -->
+<body>
+
+		<br>
+
+		<div id="home" class="btest main3 container-fluid">
+			<div class="snap-pad"></div>
+			<button type="button" id="top_button" onclick="goToTop()">
+				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
+			</button>
+
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+			<!-- <div class="snap-pad"></div> -->
+			<h3 class="ourproject_title title_padding" style="color:black">
+				<b>Backtesting</b>
+			</h3>
+			<p>
+				<b style="color:#A569BD;">What is backtesting and what’s our goal?</b><br>
+				<a style="color:#0BADE6"href="https://algotrading101.com/wiki/what-is-backtesting/">Backtesting</a> involves testing your strategy against historical data to see how it would have performed.<br><br>
+
+				A backtest can reveal a lot about a strategy. It can provide insight into how profitable a strategy might be and point out areas where the strategy can be improved.<br><br>
+
+				While it is natural to focus on profits, a backtest will show how a strategy performs during bad times and how it handles drawdowns.<br><br>
+
+				It’s normal for a strategy to go through periods where it doesn’t make money. If it doesn’t, it might even be a warning that something is not right.<br><br>
+
+				A common pitfall in backtesting is making modifications to improve the PnL only to find the strategy underperforming once deployed live.<br><br>
+
+				To avoid this, the historical data can be split into two parts. This is known as in-sample data and out of sample data.<br><br>
+
+			</p>
+			<p>
+				<b style="color:#A569BD;"> Backtesting platforms</b><br>
+				There are several platforms out there and each has its own strengths and weaknesses.<br><br>
+
+				Like many aspects of this process, picking the right backtesting framework comes down to preference to a degree.<br><br>
+
+				This is because the developers that have created backtesting frameworks all have different approaches to the market.<br><br>
+
+				Here is a list of the more popular backtesters:<br>
+				<ul style="color: black; font-size: 19px">
+					<li><a style="color:#0BADE6" href="https://www.backtrader.com/" target="_blank">Backtrader</a></li>
+					<li><a style="color:#0BADE6" href="https://www.zipline.io/" target="_blank">Zipline</a></li>
+					<li> <a style="color:#0BADE6" href="https://www.tradingview.com/pine-script-docs/en/v4/Introduction.html" target="_blank">Pine Script (TradingView)</a></li>
+					<li> <a style="color:#0BADE6" href="https://www.metatrader4.com/en"> MetaTrader 4</a></li>
+					<li> <a style="color:#0BADE6" href="https://www.metatrader5.com/en" target="_blank"> MetaTrader 5</a></li>
+					<li> <a style="color:#0BADE6" href="https://www.quantopian.com/home" target="_blank"> Quantopian</a></li>
+					<li> <a style="color:#0BADE6" href="https://www.quantconnect.com/" target="_blank">Quantconnect </a></li>
+				</ul>
+
+			</p>
+			<p>
+				Of these, the one I have looked into closely is Backtrader. Its API is vast, and I think it's better to leave the links to the articles that help understand back-testing with Backtrader rather than trying to make an excerpt of it.<br><br>
+				List of articles I found to helpful and to the point:<br>
+				<ol style="color: black; font-size: 19px">
+					<li> <a style="color:#0BADE6" href="https://medium.com/coinmonks/is-pairs-trading-profitable-in-crypto-part8-fba698abcd6f" target="_blank"> Intro to Statistical Arbitrage in Crypto — Pairs Trading [Part8]</a><br>
+						This article explains statistical ideas along with code that shows backtesting of some crypto pair trading strategies
+					</li>
+					<li> <a style="color:#0BADE6" href="https://towardsdatascience.com/trading-strategy-back-testing-with-backtrader-6c173f29e37f" target="_blank"> Trading Strategy: Back testing with Backtrader </a><br>
+					 A very brief introductory article on backtesting with Backtrader </li>
+					<li> <a style="color:#0BADE6" href="https://www.backtrader.com/blog/posts/2015-09-03-multidata-strategy/multidata-strategy/" target="_blank"> MultiData Strategy</a> <br>
+					An article on the official website of Backtrader that talks about dealing with data from two different stocks. Essentially, it discusses the backtesting of a pair trading strategy with code snippets.
+					</li>
+
+				</ol>
+			</p>
+			<p>
+				<b style="color:#A569BD;"> What is Backtrader?</b><br>
+				Backtrader is a Python library that aids in strategy development and testing for traders of the financial markets.<br><br>
+
+				It is an open-source framework that allows for strategy testing on historical data. Further, it can be used to optimize strategies, create visual plots, and can even be used for live trading.<br><br>
+			</p>
+			<p>
+				<b style="color:#A569BD;"> Why Backtrader?</b><br>
+				Backtrader library is effective for writing code to test out market strategies.<br><br>
+
+				With a large community, and an active forum, you can easily find assistance with any issues holding up your development. Further, the extensive documentation on Backtrader’s website might even lead to the discovery of a crucial component for a strategy.<br><br>
+
+				Here are some of the things Backtrader excels at:<br><br>
+				<b style="font-size: 19px">Backtesting</b> – This might seem like an obvious one but Backtrader removes the tedious process of cleaning up your data and iterating through it to test strategies. It has built-in templates to use for various data sources to make importing data easier.<br><br>
+
+				<b style="font-size: 19px">Optimizing</b> – Adjusting a few parameters can sometimes be the difference between a profitable strategy and an unprofitable one. After running a backtest, optimizing is easily done by changing a few lines of code.<br><br>
+
+				<b style="font-size: 19px">Plotting</b> – If you’ve worked with a few Python plotting libraries, you’ll know these are not always easy to configure, especially the first time around. A complex chart can be created with a single line of code.<br><br>
+
+				<b style="font-size: 19px">Indicators</b> – Most of the popular indicators are already programmed in the Backtrader platform. This is especially useful if you want to test out an indicator but you’re not sure how effective it will be. Rather than trying to figure out the math behind the indicator, and how to code it, you can test it out first in Backtrader, probably with one line of code.<br><br>
+
+				<b style="font-size: 19px">Support for Complex Strategies</b> – Want to take a signal from one dataset and execute a trade on another? Does your strategy involve multiple timeframes? Or do you need to resample data? Backtrader has accounted for the various ways traders approach the markets and has extensive support.<br><br>
+
+				<b style="font-size: 19px">Open Source</b> –
+				There is a lot of benefit to using open-source software, here are a few of them: <br>
+				<ul style="color: black; font-size: 19px">
+					<li>You have full access to all the individual components and can build on them if desired.</li><br>
+					<li>There’s no need to upload your strategy to a third-party server which eases concerns over confidentiality.</li><br>
+					<li>You’re not obligated to upgrade and deal with unwanted changes as you might with software from a corporation. A good example of this is when Quantopian discontinued live trading a few years ago. It forced many users to migrate to a different platform which can be cumbersome.</li><br>
+				</ul>
+
+			</p >
+
+			<p>
+				<b style="font-size: 19px">Active Development</b> – This might be one area where Backtrader especially stands out. The framework was originally developed in 2015 and constant improvements have been made since then. Just a few weeks ago, a pandas-based technical analysis library was released to address issues in the popular and commonly used TA-Lib framework. Further, with a wide user base, there is also active third-party development.<br><br>
+
+				<b style="font-size: 19px">Live Trading</b> – If you’re happy with your backtesting results, it is easy to migrate to a live environment within Backtrader. This is especially useful if you plan to use the built-in indicators offered by the platform.<br><br>
+			</p>
+			<p align="center" style="font-size: 19px">
+				<a class="button" href="goodpairs2.html"> << Back </a>
+	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
+     		</p>
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+		</div>
+
+	<script src="res/js/prism.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="res/js/typing_text.js" type="text/javascript"></script>
+	<script src="res/js/work_carousel.js" type="text/javascript"></script>
+	<script src="res/js/scroll_top.js" type="text/javascript"></script>
+	<script src="res/js/sticky_navbar.js" type="text/javascript"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> AJ </title>
+	<link href="res/css/prism.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="res/css/styles.css">
+</head>
+
+<!-- --------------------nav end------------------------------------ -->
+<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
+	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
+	<div class="navbar-nav" id="navbar-collapsed">
+		<a href="#home" class="nav-item nav-link navbar-brand">
+			<img src="res/img/home-24px.svg" alt="H">
+		</a>
+		<a href="#stuff" class="nav-item nav-link navbar-brand">
+			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
+		</a>
+
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse">
+		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
+			<a href="index.html#home" class="nav-item nav-link">HOME</a>
+
+			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
+		</div>
+	</div>
+</nav>
+
+<!-- ------------------------------------------ -->
+<body>
+
+		<br>
+		<p align="center">
+				<a class="button" href="goodpairs.html"> << Back </a>
+				 <a class="button" href="backtesting.html"> Go To Backtesting </a>
+	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
+     	</p>
+
+		<div id="home" class="gpair2 main3 container-fluid">
+			<div class="snap-pad"></div>
+			<button type="button" id="top_button" onclick="goToTop()">
+				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
+			</button>
+		
+		<p>
+				<h2 style="color: black">Correlation</h2><br>
+				<b style="color:#A569BD; font-size: 22px">What is correlation</b><br>
+				<a style="color:black; font-size: 19px">
+				A correlation is a relationship between two sets of data.<br><br>
+
+				For example, in the equity markets, you may notice that stocks like Microsoft (MSFT) and Apple (AAPL) both tend to rise and fall at the same time. The price behavior between the two stocks is not an exact match, but there is enough similarity to say there is a relationship. In this scenario, we can say MSFT and AAPL have a positive correlation.<br><br>
+
+				Further, there are often relationships across markets, such as equities and bonds or precious metals. We often also see a correlation between financial instruments and economic data or even sentiment indicators.<br><br><a>
+			</p>
+			<p>
+				<b style="color:#A569BD; font-size: 22px">Why do corellations matter?</b><a style="color:black; font-size: 19px"><br>
+				There are several reasons why correlations are important, here a few benefits of tracking them in the markets –</a><br><br>
+				<ol style="color:black; font-size: 19px">
+					<li> <b style="color:black">Insights</b> – keeping track of different relationships can provide insight into where the markets are headed. A good example is when the markets turned sharply lower in late February due to the Coronavirus escalation. The price of gold, which is known as an asset investors turn to when their mood for risky investment sours, rose sharply the trading day before the big initial drop in stocks. It acted as a warning signal for those equity traders mindful of the inverse correlation between the two.</li><br>
+					<li><b>Strength in correlated moves</b> – It’s much easier to assess trends when there is a correlated move. In other words, if a bulk of the tech stocks on your watchlist are rising, it’s probably safe to say the sector is bullish or that there is strong demand.</li><br>
+					<li><b>Diversification</b> – To make sure you have some diversification in your portfolio, it’s a good idea to make sure the assets within it aren’t all strongly correlated to each other.</li><br>
+					<li><b>Signal confirmation</b> – Let’s say you want to buy a stock because your analysis shows that it is bullish. You could analyze another stock with a positive correlation to make sure it provides a similar signal.</li>
+				</ol>
+			</p>
+			<p>
+				<b style="color:#A569BD; font-size: 22px">Correlation doesn’t imply causation</b><a style="color:black; font-size: 19px"><br>
+				<a style="color:black; font-size: 19px">
+					A popular saying among the statistics crowd is “correlation does not imply causation.” It comes up often, and it’s important to understand its meaning.<br><br>
+
+					Essentially, correlations can provide valuable insights, but you’re bound to come across situations that might imply a correlation where a relationship does not exist.<br><br>
+
+					As an example, data has shown a sharp rise in Netflix subscribers due to the lockdown that followed the Coronavirus escalation. The idea is that people are forced to stay at home and therefore are more likely to watch tv.<br><br>
+
+					The same scenario has resulted in a rise in electricity bills. People are using more electricity at home compared to when they were at work all day.<br><br>
+
+					If you were blindly comparing the rise in Netflix subscribers versus the rise in electricity usage during the month of lockdown, you might reasonably conclude that the two have a relationship.<br><br>
+
+					However, having some perspective on the manner, it is clear that the two are not related and that it is not likely that fluctuations in one will impact the other moving forward. Rather, the lockdown, an external variable, is the causation for both of these trends.<br><br>
+				</a>
+			</p>
+			<p>
+				<b style="color:#A569BD; font-size: 22px">What is a correlation coefficient?</b><a style="color:black; font-size: 19px"><br>
+				<a style="color:black; font-size: 19px">
+					We’ve discussed that fluctuations in the stock prices of Apple and Microsoft tend to have a relationship. You might then notice other tech companies also correlate well with the two.<br><br>
+
+					But not all relationships are equal, and the correlation coefficient can help assess the strength of a correlation.<br><br>
+
+					There are a few different ways of calculating a correlation coefficient, but the most popular methods result in a number between -1 and +1.<br><br>
+
+					The closer the number is to +1, the stronger the relationship. If the figure is close to -1, it indicates that there is a strong inverse relationship.<br><br>
+
+					In the finance world, an inverse relationship is where one asset rises while the other drops. Stocks and gold prices have a long-standing inverse relationship.<br><br>
+
+					The closer the correlation coefficient is to zero, the more likely it is that the two variables being compared don’t have any relationship to each other.<br><br>
+				</a>
+			</p>
+			<p>
+				<b style="color:#A569BD; font-size: 22px">Breaking down the math to calculate the correlation coefficient</b><br><br>
+				<img src="res/img/nn1.png" alt="Nature" class="responsive"> <br> <br>
+				<a style="color:black; font-size: 19px">
+					The above formula is what’s used to calculate a correlation coefficient using the Pearson method. We will break down this formula.<br><br>
+
+					There are libraries available that can do this automatically, but the following example will show how we can make the calculation manually.<br><br>
+
+					We will start by creating a dataset. We can use the Numpy library to create some random data for us. Here is the code:<br><br>
+				</a>
+			</p>
+		<p style="color: black; font-size: 19px" >
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						import numpy as np
+import pandas as pd
+df = pd.DataFrame(np.random.randint(0,10,size=(5, 2)), columns=list('xy'))
+  					</code>
+				</pre><br>
+
+		</p>
+		<p>
+			The image below shows what my DataFrame looks like. If you’re following along, the data will look different for you as Numpy is filling in random numbers. But the format should look the same.
+			<img src="res/img/nn2.jpg" alt="Nature" class="responsive"> <br> <br>
+			Now that we have a dataset let’s move on to the formula. We will start by separating the first part of the formula.<br>
+			<img src="res/img/nn3.png" alt="Nature" class="responsive"> <br> <br>
+			We can break this down further.<br>
+			<img src="res/img/nn4.png" alt="Nature" class="responsive"> <br> <br>
+			For the formula above, we need to take each value of x and subtract it by the mean of x.<br><br>
+
+			We can use the <code>mean()</code> function in Pandas to create the mean for us. Like this:
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						df.x.mean()
+  					</code>
+  					
+				</pre><br>
+				<a style="color:black; font-size: 19px">But we still need to subtract the mean from x. And we also need to temporarily store this information somewhere. Let’s create a new column for that and call it step1.</a>
+
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						df['step1'] = df.x - df.x.mean()
+  					</code>
+  					
+				</pre><br>
+		</p>
+		<p>
+			This is what our DataFrame looks like at this point.<br>
+			<img src="res/img/nn5.jpg" alt="Nature" class="responsive"> <br> <br>
+			Now that we have the calculations needed for the first step. Let’s keep going.<br>
+			<img src="res/img/o1.png" alt="Nature" class="responsive"> <br> <br>
+			The second step involves doing the same thing for the y column.
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						df['step2'] = df.y - df.y.mean()
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">That's easy enough, what's next?</a><br>
+			<img src="res/img/o2.png" alt="Nature" class="responsive"> <br> <br>
+			<a style="color:black; font-size: 19px">The formula tells us that we need to take all the values we gathered in step 1 and multiply them by the values in step 2. We will store this in a new column labeled step3.</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						df['step3'] = df.step1 * df.step2
+  					</code>
+  					
+				</pre><br>
+				<a style="color:black; font-size: 19px">This is what the DataFrame looks like at this point:</a>
+				<img src="res/img/o3.jpg" alt="Nature" class="responsive"> <br> <br>
+				<a style="color:black; font-size: 19px">We can now move on to the last operation in this part of the formula.</a><br>
+				<img src="res/img/f1.png" alt="Nature" class="responsive"> <br> <br>
+				<a style="color:black; font-size: 19px">This means we need to add up all the values from the previous step.</a>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						step4 = df.step3.sum()
+  					</code>
+  					
+				</pre><br>
+		</p>
+		<p>
+			Great, we have summed up the values and have stored it in a variable called step4. We will come back to this later. For now, we can start on the second part of the formula.<br>
+			<img src="res/img/f3.png" alt="Nature" class="responsive"> <br> <br>
+			<a style="color:black; font-size: 19px">We have already found in the following in step1, so we can use that data. We will store this data in a new column labeled step5.</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						df['step5'] = df.step1 ** 2
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">The next part of the formula tells us to do the same thing for the y values.</a>
+			<img src="res/img/f4.png" alt="Nature" class="responsive"> <br> <br>
+			<a style="color:black; font-size: 19px">We can take the values that we created in step 2 and square them.</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						df['step6'] = df.step2 ** 2
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">This is what our DataFrame looks like at this point:</a>
+			<img src="res/img/z1.jpg" alt="Nature" class="responsive"> <br> <br>
+			<a style="color:black; font-size: 19px">Let’s look at the next part of the formula:</a>
+			<img src="res/img/z2.png" alt="Nature" class="responsive"> <br> <br>
+			<a style="color:black; font-size: 19px">This tells us that we have to take the sum of what we did in step 5 and multiply it with the sum of what we did in step 6.</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						step7 = df.step5.sum() * df.step6.sum()
+  					</code>
+  					
+				</pre><br>
+		</p>
+		<p>
+			Let’s keep going, almost there!
+			<img src="res/img/f2.png" alt="Nature" class="responsive"> <br> <br>
+			The last portion of this part is to simply take the square root of the figure from our previous step. We can use the Numpy library to calculate the square root.
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						step8 = np.sqrt(step7)
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">Now that we’ve done that, all that is left is to take the answer from the first part of the formula and divide it by the answer in the second part.</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						step4/step8
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">And there you have it, we’ve manually calculated a correlation coefficient. To make sure that the calculation is correct, we can use the <code style="color:red">corr()</code> function which is built into Pandas to calculate the coefficient.</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						df.x.corr(df.y)
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">Here is our final result. Your correlation coefficient will be different, but it should match the output from the Pandas calculation.</a>
+			<img src="res/img/z3.jpg" alt="Nature" class="responsive"> <br> <br>
+		</p>
+		<p>
+				<b style="color:#A569BD; font-size: 22px">How to calculate the correlation coefficients for a watchlist?</b><br><br>
+				Calculating a correlation coefficient in Python is quite simple as there are several libraries that can do the heavy lifting for you. In this guide, we will be using python and the libraries from this <a style="color: #0BADE6" href="https://github.com/PythonForForex/Python-Correlation-and-Relationships-Guide">GitHub repository.</a><br><br>
+				<b>Step one – Gathering and cleaning up historical data</b><br><br>
+				We are using the <a style="color: #0BADE6" href="https://github.com/RomelTorres/alpha_vantage">Alpha Vantage library</a> in this step.
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						import pandas as pd
+from alpha_vantage.timeseries import TimeSeries
+  					</code>
+  					
+				</pre><br>
+				<a style="color:black; font-size: 19px">
+				Our first step is to import the Pandas library as we will be using it to store our data and calculate the correlation coefficient. We’ve also imported the Timeseries class from the alpha_vantage library, which will retrieve historical data.<br><br>
+
+				We have exported our watchlist to a CSV file so in the next step we will import it and convert it to a list format. There are several ways to read a CSV file in Python but since we are already using Pandas, we might as well use it here rather than importing another library just for this step.<br><br>
+
+				If you don’t have your watchlist in CSV format, you can just as easily create a Python list that includes the tickers within your watchlist.<br><br>	
+				</a>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						#grab tickers from csv file
+watchlist_df = pd.read_csv('watchlist.csv', header=None)
+watchlist = watchlist_df.iloc[0].tolist()
+  					</code>
+  					
+				</pre><br>
+				<a style="color:black; font-size: 19px">We now have a Python list of the five stock tickers we will use in this example. Our next step is to iterate through the watchlist and download historical data.</a>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						#instantiate TimeSeries class from alpha_vantage library
+app = TimeSeries(output_format='pandas')
+  					</code>
+  					
+				</pre><br>
+				<a style="color:black; font-size: 19px">First, we instantiate the Timeseries class from the alpha_vantage library. We’ve passed through a parameter here so that the output will be a Pandas dataframe. This will save a lot of time having to format the data.</a>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						#itter through watchlist and retrieve daily price data
+stocks_df = pd.DataFrame()
+for ticker in watchlist:
+	alphav_df = app.get_daily_adjusted(ticker)
+	alphav_df = alphav_df[0]
+	alphav_df.columns = [i.split(' ')[1] for i in alphav_df.columns]
+
+	stocks_df[ticker] = alphav_df['adjusted'].pct_change()
+  					</code>
+  					
+				</pre><br>
+
+		</p>
+		<p>
+			Next, we iterate through our Python list of stock tickers and call the Alpha Vantage API for each ticker's data. But before doing that, we’ll create an empty Pandas dataframe that we can append data to.<br><br>
+
+			What we’ve done is taken the ‘adjusted’ column, which is the adjusted daily close, and appended it to our <code>stocks_df</code> dataframe. Note the additional <code>pct_change()</code> function. This will normalize our data by converting the price data to a percentage return. This is what our dataframe looks like at this point.<br>
+			<img src="res/img/hi1.jpg" alt="Nature" class="responsive"> <br> <br>
+			Now we have a nicely formated time-series dataframe in less than 20 lines of code!<br><br>
+		</p>
+		<p>
+			<b>Step Two – Calculating the correlation coefficient</b><br><br>
+			Now that we have our data, we can easily check the correlation coefficient between any stocks within our dataframe. Here is how we check the correlation between AAPL and MSFT.
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(stocks_df.AAPL.corr(stocks_df.MSFT))
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">What we’ve done here is taken the column of adjusted closing prices for AAPL and compared it with the column for MSFT. To access a single column, we specify the name of the dataframe and column like so:</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(stocks_df.AAPL)
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">alternatively, we can also access it like this:</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(stocks_df['AAPL'])
+  					</code>
+  					
+				</pre><br>
+		</p>
+		<p>
+			When dealing with a single column we are no longer working with a dataframe. Rather, we are working with a <a style="color: #0BADE6" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html">Pandas series</a>. The basic syntax for calculating the correlation between different series is as follows:
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						Series.corr(other_series)
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">
+				In our example, we found a correlation coefficient of 0.682 between AAPL and MSFT. Remember, the closer to 1, the higher the positive correlation. So in this example, there is a very strong correlation between these two stocks.<br><br>
+
+				Let’s take a look at the correlation between Apple and Netflix:
+			</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(stocks_df.AAPL.corr(stocks_df.NFLX)
+  					</code>
+  					
+				</pre><br>
+			
+			<!-- <pre class="line-numbers"> -->
+			<a style="color:black; font-size: 19px">
+				The correlation coefficient is -0.152. It’s quite close to zero, which indicates that there was no correlation between these two stocks. At least during that time period.<br><br>
+
+				There are three main methods used in calculating the correlation coefficient: Pearson, Spearman, and Kendall. We will discuss these methods in a bit more detail later on in the guide.<br><br>
+
+				By default, Pandas will use the Pearson method. You can pass through different methods as parameters if you desire to do so. Here is an example of a calculation using the Spearman method:<br><br>
+			</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(stocks_df.AAPL.corr(stocks_df.NFLX, method='spearman')
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">And this is how you would get the correlation coefficient using the Kendall method:</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(stocks_df.AAPL.corr(stocks_df.NFLX, method='kendall'))
+  					</code>
+  					
+				</pre><br>
+		</p>
+		<p>
+				<b style="color:#A569BD; font-size: 22px">Correlation of returns versus prices</b><br><br>
+				We calculated the percentage return between each price point in our dataset and ran our correlation function on that rather than calculating it on the raw data itself. We do this to get a more accurate correlation coefficient.<br><br>
+
+				The reasoning behind it is that it standardizes the data which is beneficial no matter which calculation method you use.<br><br>
+
+				If you’re using the Spearman or Kendall method, which utilizes a ranking system, returns data will remove some of the extremes from your dataset, which can otherwise influence the entire ranking system.<br><br>
+
+				The Pearson method doesn’t use a ranking system but heavily relies on the mean of your data set. Using returns data narrows the range of your dataset, which in turn puts more emphasis on deviations from the mean, resulting in higher accuracy.<br>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						values_x = [10, 11, 13, 16, 17, 4, 5, 6]
+values_y = [10, 11, 13, 16, 17, 18, 19, 20]
+  					</code>
+  					
+				</pre><br>
+		</p>
+		<p>
+			Take a look at the above two datasets as an example.<br><br>
+
+			Notice how they both have almost the same data? The difference is that <code>values_x</code> dropped off sharply in the third last value from 17 to 4. However, it continued to rise by one in the last two values, the same way <code>values_y</code> did.<br><br>
+
+			This type of behavior can often happen in the markets. For example, a stock might have reported earnings, which caused a sharp but temporary drop in its price. But aside from the momentary drop, the overall fluctuations in the stock price have not changed much at all compared to other correlated stocks.<br><br>
+
+			The ranking systems used in correlation calculations, however, will view the momentary decline differently. It will assign an arbitrarily low value to the last three values in values_x since they are the lowest in the dataset. At the same time, it will rank the last three values in values_y as the largest.<br><br>
+
+			This creates a major discrepancy that will ultimately cause our correlation coefficient to be much lower than it should be.<br><br>
+
+			In a non-ranking system such as the Pearson method, the last three values will drag down the mean value for the entire dataset.<br><br>
+
+			If we take the returns instead, we are comparing how much one value fluctuated relative to the value before it.<br><br>
+
+			In that case, there would have been a major decline when the values in values_x dropped from 17 to 4, but the divergence in correlation stops there as both the data sets rose in value in the last two places.<br><br>
+
+		</p>
+		<p>
+				<b style="color:#A569BD; font-size: 22px">How to create a time-series dataset in Pandas?</b><br><br>
+				A time-series is simply a dataset that follows regular, timed intervals. The previous example, where we had data for five stocks, is a good example of a time-series dataset.<br><br>
+
+				Further, Pandas intuitively lined up price data when we merged all five stocks into one dataframe based on the date column, which all of our data had in common. This column then acts as an index for our data.<br><br>
+
+				We can just as easily create a dataframe with a time-series index from scratch. The next example will show how to do that with data we have saved in a CSV file.<br>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						import pandas as pd
+
+TSLA_df = pd.read_csv('TSLA.CSV')
+print(TSLA_df)
+  					</code>
+  					
+				</pre><br>
+		</p>
+		<p>
+			Here we’ve imported price data for TSLA based on 15-minute intervals. In other words, 15-minute bars for TSLA.<br>
+			<img src="res/img/dn1.jpg" alt="Nature" class="responsive"> <br> <br>
+			Next we will check the data type for our newly-created index.
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(TSLA_df.index[:4])
+  					</code>
+  					
+				</pre><br>
+			<img src="res/img/dn2.jpg" alt="Nature" class="responsive"> <br> <br>
+			<a style="color:black; font-size: 19px">As you can see, the dtype shows the index as an object. We can convert it to a DateTime like so:</a>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						TSLA_df.index = pd.to_datetime(TSLA_df.index)
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">If we check the index again, we will now see the dtype as ‘datetime64[ns]’ which is what we are after.</a><br>
+			<img src="res/img/dn3.jpg" alt="Nature" class="responsive"> <br> <br>
+		</p>
+		<p>
+			When importing a CSV file, we can pass through <code>parse_dates=True</code> into the <code>pd.read_csv()</code> function to automatically parse the dates as a DateTime object.
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						TSLA_df = pd.read_csv('TSLA.CSV', index_col=0, parse_dates=True)
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">We did it manually in this example just to illustrate how it can be done in the event you are creating a dataframe using other methods than from a CSV.</a>
+		</p>
+		<p>
+				<b style="color:#A569BD; font-size: 22px">What is a correlation matrix?</b><br><br>
+				The previous examples have shown how to calculate a correlation coefficient for two stocks. But if we have a dataframe full of stocks? Surely there has to be an easier way to get the coefficient for everything in the dataframe?<br><br>
+
+				That’s where the correlation matrix comes in. It is a table or a matrix that will display the correlation coefficient for everything in the dataframe. To create this, simply type your dataframe name, followed by <code>.corr()</code>. Or in our example, <code>stocks_df.corr()</code>.<br><br>
+				<img src="res/img/dn4.jpg" alt="Nature" class="responsive"> <br> <br>
+				Here we have our correlation matrix. The first column in the first row is the correlation between AAPL and AAPL, which obviously will have the highest correlation when comparing data with itself.<br><br>
+
+				Looking at this matrix, we can easily see that the correlation between Apple (AAPL) and Exxon Mobile (XOM) is the strongest while the correlation between Netflix (NFLX) and AAPL is the weakest.<br><br>
+
+				Further, there is fairly notable negative correlation between AAPL and GLD which is an ETF that tracks gold prices.<br><br>
+
+				We can also create a heatmap. This will allow us to visualize the correlation between the different stocks.<br><br>
+
+				To do this, we will use the Seaborn library, which is a great tool for plotting and charting. It is built on top of the popular matplotlib library and does all the heavy lifting involved in creating a plot.<br><br>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						import seaborn as sns
+import matplotlib.pyplot as plt
+
+ax = sns.heatmap(stocks_df.corr())
+plt.show()
+  					</code>
+  					
+				</pre><br>
+		</p>
+		<p>
+			Here we’ve imported the library and called the heatmap function to display the heatmap. At this stage, we’ve only passed through the correlation matrix dataframe.<br>
+			<img src="res/img/dn5.jpg" alt="Nature" class="responsive"> <br> <br>
+			We can now assess the strength in correlation based on color, and there is a useful guide on the right-hand side. But since we are used to seeing things in red and green in the finance world, let’s customize it a bit.
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						ax = sns.heatmap(stocks_df.corr(), cmap='RdYlGn', linewidths=.1)
+plt.show()
+  					</code>
+  					
+				</pre><br>
+
+		</p>
+		<p>
+			The above code snippet sets the Red, Yellow, Green values to cmap which defines our colors. We have also passed through a line width of .1 to create a bit of space between the boxes just to improve the visual aesthetics.<br>
+			<img src="res/img/dn6.jpg" alt="Nature" class="responsive"> <br> <br>
+			There you have it. It is much easier to see that AAPL and NFLX have the weakest correlation. We can also easily see that GLD has a negative correlation with all of the other assets.<br><br>
+		</p>
+		<p>
+				<b style="color:#A569BD; font-size: 22px">What is a correlation matrix?</b><br><br>
+				You can use a correlation matrix to filter out stocks for various reasons quickly. Maybe you’re already in a trade, and you don’t want to trade other instruments with a strong correlation. Another reason might be to check other strongly correlated instruments to ensure your analysis produces a similar signal.<br><br>
+
+				As an example, say you’ve already taken a long position in AAPL. Now your automated trading algo is sending you a signal to buy MSFT. This is very likely to happen since we’ve already determined that the two have a strong correlation with each other.<br><br>
+
+				In this case, you might want to skip that trade because it is only increasing your risk exposure. In other words, when the correlation is that high, it’s not all that different from just doubling up your exposure in AAPL, and that is something to avoid.<br><br>
+
+				In the same way, we can also confirm if our signal is strong enough to act on. For example, let’s say we are trading a breakout strategy, and we buy a stock when it exceeds more than one standard deviation from its average.<br><br>
+
+				We get a signal to buy NFLX. We can see what stock is most closely correlated with NFLX to determine if it has also exceeded one standard deviation from its average. We can use the <code>idxmax()</code> function from Pandas to figure out the strongest correlation.<br><br>
+
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						nflx_corr_df = stocks_df.corr().NFLX
+print(nflx_corr_df.idxmax())
+  					</code>
+  					
+				</pre><br>
+				<a style="color:black; font-size: 19px">But wait, we already know that the highest correlation is going to be with NFLX itself, it produces a correlation of 1. So we want to filter for correlations less than 1.</a><br>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(nflx_corr_df[ nflx_corr_df < 1 ].idxmax())
+  					</code>
+  					
+				</pre><br>
+		</p>
+		<p>
+			The above code returns ‘MSFT’. Now we can check where Microsoft is trading relative to its standard deviation. If it is trading below it, we can even wait until it exceeds it to give us a stronger signal on our original NFLX buy signal.<br><br>
+
+			In the same manner, we can easily check for inverse correlations with NFLX as follows<br>
+			<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(nflx_corr_df.idxmin())
+  					</code>
+  					
+				</pre><br>
+			<a style="color:black; font-size: 19px">This returned ‘XOM’. If our analysts gives us a bearish signal for XOM it would once again provide more conviction on our bullish NFLX trade.</a>
+		</p>
+		<p align="center" style="font-size: 19px">
+				<a class="button" href="goodpairs.html"> << Back </a>
+					<!-- <a class="button" href="tsys2.html">Next</a> -->
+				</p>
+
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+			<!-- <div class="snap-pad"></div> -->
+
+
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+		</div>
+
+
+	<script src="res/js/prism.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="res/js/typing_text.js" type="text/javascript"></script>
+	<script src="res/js/work_carousel.js" type="text/javascript"></script>
+	<script src="res/js/scroll_top.js" type="text/javascript"></script>
+	<script src="res/js/sticky_navbar.js" type="text/javascript"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

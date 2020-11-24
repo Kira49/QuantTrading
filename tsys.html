@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> AJ </title>
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="res/css/styles.css">
+</head>
+
+<!-- --------------------nav end------------------------------------ -->
+<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
+	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
+	<div class="navbar-nav" id="navbar-collapsed">
+		<a href="#home" class="nav-item nav-link navbar-brand">
+			<img src="res/img/home-24px.svg" alt="H">
+		</a>
+		<a href="#stuff" class="nav-item nav-link navbar-brand">
+			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
+		</a>
+
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse">
+		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
+			<a href="index.html#home" class="nav-item nav-link">HOME</a>
+
+			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
+		</div>
+	</div>
+</nav>
+<!-- ------------------------------------------ -->
+<body  align="center" bgcolor="black">
+		<br>
+		<div id="home" class="tsys main3 container-fluid">
+			<div class="snap-pad"></div>
+			<button type="button" id="top_button" onclick="goToTop()">
+				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
+			</button>
+			<h2 class="ourproject_title title_padding" style="color:black"> Trading Systems </h2>
+			<p style="color: black; ">Here, we will have an overview of different kinds of quantitative trading strategies possible.  Then we will explore the details of a trading strategy called Pair-Trading with code snippets that gives an idea of how it can be made possible.</p>
+			<h4 class="ourproject_title title_padding" style="color:#A569BD;"><br>
+				<b>Alternative Data</b>
+			</h4>
+			<p>Alternative data is non-traditional (not price or volume) data that has predictive value in the financial markets.</p>
+			<p style="color: black; ">
+				<b style="color: black; font-size: 19px">Examples of Alternative Data Strategies: </b>
+					<ul style="color: black; font-size: 19px">
+  						<li>Satellite images of Walmart parking lots allow hedge fund to analyse the change in the number of people going to Walmart. This enables them to predict Walmart’s sales figures</li><br>
+  						<li>Surveyors record the number of trucks leaving Company A’s factories. This data allows traders to predict Company A’s revenue.</li><br>
+  						<li>Having social media foot traffic data (such as Foursquare’s check-in data) around Restaurant X’s outlets allows traders to predict Restaurant X’s sales figures.</li>
+					</ul>
+				</p>
+				<p>
+				<b style="color: black; font-size: 19px">The 5 popular types of alternative data are: </b>
+				<ul style="color: black; font-size: 19px">
+  					<li>Location Data</li>
+  					<li>Consumer Expenditure Data</li>
+  					<li>Satellite/Drone Imagery</li>
+  					<li>Weather Data</li>
+  					<li>Web-scrapped Data</li>
+				</ul>
+			</p>
+			<p>
+				As tradition trading opportunities decreases, traders need information that can put them one step ahead of the competition.<br><br>
+				They need to be creative with their information sources. Not only do they need quality alternative data, they need quality alternative data they other traders don’t have access to.<br><br>
+				Traders and hedge funds either buy these data from data providers or collect them themselves.
+			</p><br>
+			<p>
+			 <b style="color:#A569BD;">Arbitrage</b><br> There are different forms of arbitrage, but at its core, it involves simultaneous buying and selling of assets and or its derivatives. The goal is to take advantage of mispricing and to minimize downside risk.
+			</p><br>
+			<p>
+				 <b style="color:#A569BD;">Pairs Trading</b><br>
+				Similar to arbitrage, this involves buying one asset and selling another. The difference in pairs trading there can be two different assets that make up the strategy whereas in arbitrage there is typically only one asset.<br><br>
+				We will be discussing Pairs Trading in more detail.
+			</p><br>
+			<p>
+			 <b style="color:#A569BD;">Technical Analysis</b><br> This method heavily relies on price movements in the past to predict what an asset will do next.
+			</p><br><br>
+			<p align="center">
+					<a class="button" href="index.html"> << Back Home </a>
+					<a class="button" href="tsys2.html"> Next >> </a>
+		     		<!-- <a class="button" href="tsys2.html">Next</a> -->
+	     	</p>
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+			<!-- <div class="snap-pad"></div> -->
+
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+			<!-- <div class="snap-pad"></div> -->
+
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+		</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="res/js/typing_text.js" type="text/javascript"></script>
+	<script src="res/js/work_carousel.js" type="text/javascript"></script>
+	<script src="res/js/scroll_top.js" type="text/javascript"></script>
+	<script src="res/js/sticky_navbar.js" type="text/javascript"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

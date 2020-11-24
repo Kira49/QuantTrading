@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> AJ </title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="res/css/styles.css">
+</head>
+	<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
+	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
+	<div class="navbar-nav" id="navbar-collapsed">
+		<a href="#home" class="nav-item nav-link navbar-brand">
+			<img src="res/img/home-24px.svg" alt="H">
+		</a>
+		<a href="#about" class="nav-item nav-link navbar-brand">
+			<img src="res/img/person-24px.svg" style="filter: invert(0);" alt="A">
+		</a>
+		<a href="#work" class="nav-item nav-link navbar-brand">
+			<img src="res/img/Psyduck-512.png" style="width: 25px; height: 25px;" alt="W">
+		</a>
+		<a href="#stuff" class="nav-item nav-link navbar-brand">
+			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
+		</a>
+		<a href="#team" class="nav-item nav-link navbar-brand">
+			<img src="res/img/perm_phone_msg-24px.svg" style="filter: invert(0);" alt="C">
+		</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse">
+		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
+			<a href="index.html#home" class="nav-item nav-link">HOME</a>
+			<a href="index.html#about" class="nav-item nav-link">ABOUT</a>
+			<a href="index.html#work" class="nav-item nav-link">PREREQs</a>
+			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
+			<a href="index.html#team" class="nav-item nav-link">TEAM</a>
+		</div>
+	</div>
+</nav>
+<!-- --------------------nav end------------------------------------ -->
+	<br><br>
+	<p align="center">
+				<a class="button" href="index.html"> << Back Home</a>
+				<a class="button" href="greek2.html"> Next >> </a>
+	     		<!-- <a class="button" href="tsys2.html">Ne</a> -->
+     	</p>
+<body id="vert_page" align="center">
+	 <div id="home" class="greek main3 container-fluid"> 
+			<div class="snap-pad"></div>
+			<button type="button" id="top_button" onclick="goToTop()">
+				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
+			</button>
+			<br><br>
+			<h2 align="center" class="ourproject_title title_padding" style="color:#FF1700"> GREEKS </h2>
+
+			
+			<p align="center" style="color:rgb(53, 49, 49)">Derivations and Applications of Greeks in Option Derivatives</p><br> <br>
+			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+				<b>Abstract</b>
+			</h4>
+			<p style="color: black; font-size: 19px">In this article, we introduce the definitions of Greek letters. We also provide the derivations of Greek letters for call and put options on both dividends-paying stock and non-dividends stock. Then we discuss some applications of Greek letters. Finally, we show the relationship between Greek letters, one of the examples can be seen from the Black-Scholes partial differential equation as already derived before.<br><br>
+			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+				<b>Keywords</b>
+			</h4>
+			<p style="color: black; font-size: 19px">
+			Greek letters, Delta, Theta, Gamma, Vega, Rho, Black-Scholes option pricing model, Black-Scholes partial differential equation.<br><br>
+			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+				<b>Introduction</b>
+			</h4><p style="color: black; font-size: 19px">“Greek letters” are defined as the sensitivities of the option price to a single-unit change in the value of either a state variable or a parameter. Such sensitivities can represent the different dimensions to the risk in an option. Financial institutions who sell option to their clients can manage their risk by Greek letters analysis.<br><br>
+			In this chapter, we will discuss the definitions and derivations of Greek letters. We also specifically derive Greek letters for call (put) options on non-dividend stock and dividends-paying stock. Some examples are provided to explain the application of Greek letters. Finally, we will describe the relationship between Greek letters and the implication in delta neutral portfolio.<br><br>
+			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+				<b>Delta(&#916;)</b></h4><p style="color: black; font-size: 19px">
+			The delta of an option,&#916; , is defined as the rate of change of the option price respected to the rate of change of underlying asset price:	<br><br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &#916;=<sup>∂π</sup>&frasl;<sub>∂S</sub> <br><br>where π is the option price and S is underlying asset price. We next show the derivation of delta for various kinds of stock option.
+			<br><br>
+			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+				<b>Derivation of Delta for Different Kinds of Stock Options</b></h4>
+				<p style="color: black; font-size: 19px">
+				From Black-Scholes option pricing model, we know the price of call option on a non-dividend stock can be written as:<br><br>
+				&nbsp &nbsp &nbsp &nbsp &nbspC<sub>t</sub>=S<sub>t</sub>N(d<sub>1</sub>)-Xe<sup>-rτ</sup>N(d<sub>2</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (1)<br><br>
+				and the price of put option on a non-dividend stock can be written as:<br><br>
+				&nbsp &nbsp &nbsp &nbsp &nbspP<sub>t</sub>=Xe<sup>-rτ</sup>N(-d<sub>2</sub>)-S<sub>t</sub>N(-d<sub>1</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (2)<br><br>where<br><br>
+				<img  src="res/img/image038.gif" alt="ok">
+				<br><br><img  src="res/img/image040.gif" alt="ok"><br><br>
+				τ=T-t<br><br>
+				N(.) is the cumulative density function of normal distribution.<br><br>
+				 
+				<!--<img  src="res/img/image110.png" alt="ok">--> 
+				N(d<sub>1</sub>)=&int;<sup>d<sub>1</sub></sup><sub>&infin;</sub>f(u)du = &int;<sup>d<sub>1</sub></sup><sub>&infin;</sub>(1/&radic;2&pi;)e<sup>-u<sup>2</sup>/2</sup>du   <br><br>
+				<br><br>First,we calculate
+				<br><br><img  src="res/img/image042.gif" alt="ok">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (3)<br><br>
+				<img  src="res/img/image044.gif" alt="ok">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (4)<br><br>
+				Eq. (2) and Eq. (3) will be used repetitively in determining following Greek letters when the underlying asset is a non-dividend paying stock.<br><br>
+				For a European call option on a non-dividend stock, delta can be shown as<br><br>
+				&#916;=N(d<sub>1</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (5)<br><br>
+				<!--The derivation of Eq. (5) is in the following:<br><br>
+				
+				<img  src="res/img/image110.png" alt="ok" width="700">-->
+				For a European put option on a non-dividend stock, delta can be shown as<br><br>
+				&#916;=N(d<sub>1</sub>)-1&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (6)<br><br>
+				<!--The derivation of Eq. (6) is<br><br>
+				<img  src="res/img/image110.png" alt="ok" width="700"><br><br>-->
+				If the underlying asset is a dividend-paying stock providing a dividend yield at rate q, Black-Scholes formulas for the prices of a European call option on a dividend-paying stock and a European put option on a dividend-paying stock are<br><br>
+				&nbsp &nbsp &nbsp &nbsp &nbspC<sub>t</sub>=S<sub>t</sub>e<sup>-qτ</sup>N(d<sub>1</sub>)-Xe<sup>-rτ</sup>N(d<sub>2</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (7)<br><br> and <br><br>
+				&nbsp &nbsp &nbsp &nbsp &nbspP<sub>t</sub>=Xe<sup>-rτ</sup>N(-d<sub>2</sub>)-S<sub>t</sub>e<sup>-qτ</sup>N(-d<sub>1</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (8)<br><br>
+				where<br><br>
+				<img  src="res/img/image038.gif" alt="ok"><br><br>
+				<img  src="res/img/image040.gif" alt="ok"><br><br>
+				To make the following derivations more easily, we calculate Eq. (9) and Eq. (10) in advance.
+				)<br><br>
+				<!--<img  src="res/img/image110.png" alt="ok">--> N<sup>'</sup>(d<sub>1</sub>) = (1/&radic;2&pi;)e<sup>-d<sub>1</sub><sup>2</sup>/2</sup>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (9)<br><br>
+				<!--<img  src="res/img/image110.png" alt="ok">-->  N<sup>'</sup>(d<sub>2</sub>) = (1/&radic;2&pi;)e<sup>-d<sub>1</sub><sup>2</sup>/2</sup>.(S<sub>t</sub>/X)e<sup>(r-q)&tau;</sup>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (10)<br><br>
+				For a European call option on a dividend-paying stock, delta can be shown as<br><br>&#916;=e<sup>-qτ</sup>N(d<sub>1</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (11)<br><br>
+				The derivation of (11) is<br><br>
+				<img  src="res/img/image048.gif" alt="ok" width="700"><br><br>
+				For a European call option on a dividend-paying stock, delta can be shown as<br><br>&#916;=e<sup>-qτ</sup>[N(d<sub>1</sub>)-1]&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (12)<br><br>
+				The derivation of (12) is<br><br>
+				<img  src="res/img/image052.gif" alt="ok" width="700"><br><br>
+			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+				<b>Application of Delta</b></h4><p style="color: black; font-size: 19px">
+				Figure 1 shows the relationship between the price of a call option and the price of its underlying asset. The delta of this call option is the slope of the line at the point of A corresponding to current price of the underlying asset.<br><br>
+				<img  src="res/img/image054.jpg" alt="ok"><br>Figure 1<br><br>
+				By calculating delta ratio, a financial institution that sells option to a client can make a delta neutral position to hedge the risk of changes of the underlying asset price. Suppose that the current stock price is $100, the call option price on stock is $10, and the current delta of the call option is 0.4. A financial institution sold 10 call option to its client, so that the client has right to buy 1,000 shares at time to maturity. To construct a delta hedge position, the financial institution should buy 0.4 x 1,000 = 400 shares of stock. If the stock price goes up to $1, the option price will go up by $0.4. In this situation, the financial institution has a $400 ($1 x 400 shares) gain in its stock position, and a $400 ($0.4 x 1,000 shares) loss in its option position. The total payoff of the financial institution is zero. On the other hand, if the stock price goes down by $1, the option price will go down by $0.4. The total payoff of the financial institution is also zero.<br><br>
+				However, the relationship between option price and stock price is not linear, so delta changes over different stock price. If an investor wants to remain his portfolio in delta neutral, he should adjust his hedged ratio periodically. The more frequently adjustment he does, the better delta-hedging he gets.<br><br>
+				Figure 2 exhibits the change in delta affects the delta-hedges. If the underlying stock has a price equal to $20, then the investor who uses only delta as risk measure will consider that his portfolio has no risk. However, as the underlying stock prices changes, either up or down, the delta changes as well and thus he will have to use different delta hedging. Delta measure can be combined with other risk measures to yield better risk measurement. We will discuss it further in the following sections.<br><br>
+				<img  src="res/img/image055.png" alt="ok"><br>Figure 2<br><br>
+	
+	
+	
+												
+					</p>
+
+</div>
+<script src="res/js/prism.js"></script>
+	<script type="text/javascript">
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) 
+	{
+  		coll[i].addEventListener("click", function() {
+    	this.classList.toggle("active");
+    	var content = this.nextElementSibling;
+    	if (content.style.display === "block") {
+      	content.style.display = "none";
+    	} else {
+      	content.style.display = "block";
+    }
+  });
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="res/js/typing_text.js" type="text/javascript"></script>
+	<script src="res/js/work_carousel.js" type="text/javascript"></script>
+	<script src="res/js/scroll_top.js" type="text/javascript"></script>
+	<script src="res/js/sticky_navbar.js" type="text/javascript"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+

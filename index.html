@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> AJ </title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="res/css/styles.css">
+</head>
+	<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
+	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
+	<div class="navbar-nav" id="navbar-collapsed">
+		<a href="#home" class="nav-item nav-link navbar-brand">
+			<img src="res/img/home-24px.svg" alt="H">
+		</a>
+		<a href="#about" class="nav-item nav-link navbar-brand">
+			<img src="res/img/person-24px.svg" style="filter: invert(0);" alt="A">
+		</a>
+		<a href="#work" class="nav-item nav-link navbar-brand">
+			<img src="res/img/Psyduck-512.png" style="width: 25px; height: 25px;" alt="W">
+		</a>
+		<a href="#stuff" class="nav-item nav-link navbar-brand">
+			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
+		</a>
+		<a href="#team" class="nav-item nav-link navbar-brand">
+			<img src="res/img/perm_phone_msg-24px.svg" style="filter: invert(0);" alt="C">
+		</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse">
+		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
+			<a href="index.html#home" class="nav-item nav-link">HOME</a>
+			<a href="index.html#about" class="nav-item nav-link">ABOUT</a>
+			<a href="index.html#work" class="nav-item nav-link">PREREQs</a>
+			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
+			<a href="index.html#team" class="nav-item nav-link">TEAM</a>
+		</div>
+	</div>
+</nav>
+<body onload="addCounter()">
+	<div id="vert_page">
+		<div id="home" class="section main container-fluid">
+			<div class="snap-pad"></div>
+			<div class="row h-adjust-first">
+				<div class="col-xl vertical-center">
+					<h1 class="main_greeting"> Hello! </h1>
+					<h2 class="main_intro"> This is Team AJ </h2>
+					<p style="color: white; font-size: 40px"class="main_desc"> <span id="main_type"></span> <span id="main_cursor"></span></p>
+				</div>
+			</div>
+		</div>
+
+		<div id="about" class="section ourproject container-fluid">
+			<div class="snap-pad"></div>
+			<button type="button" id="top_button" onclick="goToTop()">
+				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
+			</button>
+			<div class="row h-adjust">
+				<div class="col-xl-6 vertical-center">
+					<h2 class="ourproject_title title_padding" style="color:black"> <b>Our Project</b> </h2>
+					<p class="ourproject_desc" style="color:black ; font-size: 22px"> We have explored the area of High-Frequency trading with a focus on algorithms, heuristics, and engineering that deal with High-Performance computing <br><br>
+					Here, we document what we have learnt and derived from this project </p>
+					
+
+				</div>
+				<div class="col-xl-6 vertical-center">
+					 <img src="res/img/here.svg" alt="Nature" class="responsive2"> <br> <br>
+
+				</div>
+			</div>
+		</div>
+
+		<div id="work" class="section prereq container-fluid">
+			<div class="snap-pad"></div>
+			<div class="row h-adjust">
+				<div class="col-xl-6 vertical-center">
+					<h2 class="prereq_title title_padding" style="color:#A569BD "> PREREQUISITES </h2>
+					<p class="prereq_desc" style="color:white; font-size:22px"> If you're new to this field, these might help you understand a few key terms better, and aid in better visualisation of the algorithms </p>
+				</div>
+				<!-- <div class="col-xl-6 vertical-center carousel-column">
+					<div id="carousel-container">
+					<div id="prereq-carousel" data-interval="false" class="carousel slide-manual" data-ride="carousel">
+						<div class="carousel-button-container">
+							<button id="carousel-manual-prev" class="carousel-manual-button" onclick="carPrev()">
+								<span class="carousel-control-prev-icon"> </span>
+							</button>
+							<button id="carousel-manual-next" class="carousel-manual-button" onclick="carNext()">
+								<span class="carousel-control-next-icon"> </span>
+							</button>
+						</div>
+
+
+
+							<div class="carousel-inner car-card">
+						  <div id="carousel_bs" class="carousel-item active">
+							<img class="d-block w-100" src="res/img/numbers.jpg" alt="Better$plit">
+							<div class="car-card-ext">
+								<div class="car-card-title"> <a href="https://www.investopedia.com/articles/financialcareers/08/quants-quantitative-analyst.asp"> Numbers </a></div>
+								<div class="car-card-desc">
+									Quantitative traders must be exceptionally good with mathematics and quantitative analysis.In-depth knowledge of math is a must for researching data, testing the results, and implementing identified trade strategies.
+								</div>
+							</div>
+						  </div>
+						  <div id="carousel_px" class="carousel-item active">
+							<img class="d-block w-100" src="res/img/tradconcept.jpg" alt="PX+">
+							<div class="car-card-ext">
+								<div class="car-card-title"> <a href="https://www.investopedia.com/articles/trading/09/quant-strategies.asp"> Trading concepts </a> </div>
+									<div class="car-card-desc">
+										Quants are expected to discover and design their own unique trading strategies and models from scratch as well as customize established models.
+									</div>
+								</div>
+							</div>
+						  <div id="carousel_web" class="carousel-item active">
+							<img class="d-block w-100" src="res/img/program.jpg" alt="This Website">
+							<div class="car-card-ext">
+								<div class="car-card-title"> <a href="https://www.freetutorialsus.com/algorithmic-trading-quantitative-analysis-using-python/">Programming skills</a></div>
+								<div class="car-card-desc">
+									Quant traders must be familiar with data mining, research, analysis, and automated trading systems.  A good understanding of at least one programming language is a must. C++, Java, Python, and Perl are a few commonly used programming languages.
+								</div>
+							</div>
+							</div>
+						</div>
+						<div id="carousel_new" class="carousel-item active">
+							<img class="d-block w-100" src="res/img/quantprereq.jpg" alt="This Website">
+							<div class="car-card-ext">
+								<div class="car-card-title"> <a href="https://www.myquant.cn/uploads/default/original/1X/4c7037365a4bf1623734c1c899baed7855061ace.pdf">Basic Quantitative Trading</a></div>
+								<div class="car-card-desc">
+									A book to get basic idea of Quantitative Trading	</div>
+								</div>
+							</div>
+						</div>
+					  </div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<div id="stuff" class="section ourwork container-fluid">
+			<div class="snap-pad"></div>
+			<div class="row h-adjust">
+				<div class="col-xl-6 vertical-center">
+					<h2 class="ourwork_title title_padding" style="color: black"> OUR WORK </h2>
+					<!-- <p class="ourwork_desc" style="color: #707B7C "> We could do better </p> -->
+				</div>
+				<div class="col-xl-6 vertical-center">
+					<div class="row">
+						<div class="snt_card">
+							<span class="snt_div_text">
+								<div class="snt_card_title">
+									BUILD1
+								</div>
+								<div class="snt_card_desc">
+									A short description before redirecting
+								</div>
+							</span>
+							<span class="snt_div_button">
+								<button class="snt_card_button" onclick="window.location.href = 'tsys.html';">
+									GO!
+								</button>
+							</span>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="snt_card">
+							<span class="snt_div_text">
+								<div class="snt_card_title">
+									Option Strategies
+								</div>
+								<div class="snt_card_desc">
+									A short description before redirecting
+								</div>
+							</span>
+							<span class="snt_div_button">
+								<button class="snt_card_button" onclick="window.location.href = 'options.html';">
+									GO!
+								</button>
+							</span>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="snt_card">
+							<span class="snt_div_text">
+								<div class="snt_card_title">
+									Trading Systems
+								</div>
+								<div class="snt_card_desc">
+									A short description before redirecting
+								</div>
+							</span>
+							<span class="snt_div_button">
+								<button class="snt_card_button" onclick="window.location.href = 'tsys.html';">
+									GO!
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="team" class="section2 team container-fluid">
+			<div class="snap-pad"></div>
+			<div class="row h-adjust">
+				<div class="col-xl-6 vertical-center">
+					<h2 class="team_title title_padding" style="color: #A569BD "> OUR TEAM </h2>
+					<p class="team_desc" style="color: lightgrey"> this is us </p>
+				</div>
+				<div class="col-xl-6 vertical-center" style="display: flex; justify-content: center; align-items: center;">
+					<div class="team_container">
+						<div  class="row team_detail">
+							<span id="mail_icon">
+								<img src="res/img/fem.svg" style="height: calc(20px + 1.5vw); width: calc(20px + 1.5vw);">
+							</span>
+							<span id="mail_desc"> <span class="inline-bold">Pavani Babburi</span>
+						</div>
+						<div class="row team_detail">
+							<span id="mobile_icon">
+								<img src="res/img/idc.svg" style="height: calc(20px + 1.5vw); width: calc(20px + 1.5vw);">
+							</span>
+							<span id="mobile_desc"> 2019101033</span>
+						</div>
+
+
+
+
+					</div>
+
+				</div>
+								<div class="col-xl-6 vertical-center" style="display: flex; justify-content: center; align-items: center;">
+					<div class="team_container">
+						<div  class="row team_detail">
+							<span id="mail_icon">
+								<img src="res/img/mal.svg" style="height: calc(20px + 1.5vw); width: calc(20px + 1.5vw);">
+							</span>
+							<span id="mail_desc"> <span class="inline-bold">Alapan Sau</span>
+						</div>
+						<div class="row team_detail">
+							<span id="mobile_icon">
+								<img src="res/img/idc.svg" style="height: calc(20px + 1.5vw); width: calc(20px + 1.5vw);">
+							</span>
+							<span id="mobile_desc"> 2019101081 </span>
+						</div>
+
+					</div>
+				</div>
+								<div class="col-xl-6 vertical-center" style="display: flex; justify-content: center; align-items: center;">
+					<div class="team_container">
+						<div  class="row team_detail">
+							<span id="mail_icon">
+								<img src="res/img/fem.svg" style="height: calc(20px + 1.5vw); width: calc(20px + 1.5vw);">
+							</span>
+							<span id="mail_desc"> <span class="inline-bold">Sharadha Iyer</span>
+						</div>
+						<div class="row team_detail">
+							<span id="mobile_icon">
+								<img src="res/img/idc.svg" style="height: calc(20px + 1.5vw); width: calc(20px + 1.5vw);">
+							</span>
+							<span id="mobile_desc"> 2019101048 </span>
+						</div>
+
+					</div>
+				</div>
+								<div class="col-xl-6 vertical-center" style="display: flex; justify-content: center; align-items: center;">
+					<div class="team_container">
+						<div  class="row team_detail">
+							<span id="mail_icon">
+								<img src="res/img/mal.svg" style="height: calc(20px + 1.5vw); width: calc(20px + 1.5vw);">
+							</span>
+							<span id="mail_desc"> <span class="inline-bold">Nirmal Manoj</span></span>
+						</div>
+						<div class="row team_detail">
+							<span id="mobile_icon">
+								<img src="res/img/idc.svg" style="height: calc(20px + 1.5vw); width: calc(20px + 1.5vw);">
+							</span>
+							<span id="mobile_desc">  2019111011</span>
+						</div>
+
+
+					</div>
+				</div>
+								<div class="col-xl-6 vertical-center" style="display: flex; justify-content: center; align-items: center;">
+					<div class="team_container">
+						<div  class="row team_detail">
+							<span id="mail_icon">
+								<img src="res/img/fem.svg" style="height: calc(20px + 1.5vw); width: calc(20px + 1.5vw);">
+							</span>
+							<span id="mail_desc"> <span class="inline-bold">Hasvitha Varma</span></span>
+						</div>
+						<div class="row team_detail">
+							<span id="mobile_icon">
+								<img src="res/img/idc.svg" style="height: calc(20px + 1.5vw); width: calc(20px + 1.5vw);">
+							</span>
+							<span id="mobile_desc"> 2019101030 </span>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script src="res/js/typing_text.js" type="text/javascript"></script>
+	<script src="res/js/work_carousel.js" type="text/javascript"></script>
+	<script src="res/js/scroll_top.js" type="text/javascript"></script>
+	<script src="res/js/sticky_navbar.js" type="text/javascript"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

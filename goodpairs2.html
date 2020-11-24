@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> AJ </title>
+	<link href="res/css/prism.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="res/css/styles.css">
+</head>
+
+<!-- --------------------nav end------------------------------------ -->
+<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
+	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
+	<div class="navbar-nav" id="navbar-collapsed">
+		<a href="#home" class="nav-item nav-link navbar-brand">
+			<img src="res/img/home-24px.svg" alt="H">
+		</a>
+		<a href="#stuff" class="nav-item nav-link navbar-brand">
+			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
+		</a>
+
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse">
+		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
+			<a href="index.html#home" class="nav-item nav-link">HOME</a>
+
+			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
+		</div>
+	</div>
+</nav>
+
+<!-- ------------------------------------------ -->
+<body>
+
+		<br>
+
+		<div id="home" class="gpair2 main3 container-fluid">
+			<div class="snap-pad"></div>
+			<button type="button" id="top_button" onclick="goToTop()">
+				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
+			</button>
+		<p>
+			This is what it looks like.<br><br>
+			 <img src="res/img/gp4.jpg" alt="Nature" class="responsive2"> <br> <br>
+			 From here, we can try and pick out a pair with a strong correlation to see if the relationship is appropriate for pairs trading.<br><br>
+
+			 In this case, the matrix is small enough for us to eyeball the best pair. But let’s automate this part too, in case we have to deal with a much larger correlation matrix down the road.<br><br>
+		</p>
+		<p>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+					cor = stocks_df.corr()
+  					</code>
+				</pre><br>
+		</p>
+		<p>
+			In the code above, we start by saving the correlation table to a variable. We then want the largest number in the correlation matrix.<br><br>
+
+			We first want to remove any perfect correlations which are denoted by 1. This is simply the coefficient of the stock to itself, not very useful. We can change any instances of 1 to 0.<br><br>
+		</p>
+		<p>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+					cor[cor==1] = 0
+  					</code>
+				</pre><br>
+		</p>
+		<p>
+			Now we can determine which coefficient is the largest. The idxmax function will return the largest, except it will do so for each column. If we stack the DataFrame first, it will return only the pair with the strongest correlation.<br><br>
+		</p>
+		<p>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+						cor.stack().idxmax()
+  					</code>
+				</pre><br>
+		</p>
+		<p>
+			In this case, the code returned a tuple containing BAC and JPM.<br><br>
+
+			Now that we know that BAC and JPM have the strongest correlation in our table, let’s quickly plot a chart to visually confirm it.<br>
+		</p>
+		<p>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+						%matplotlib inline
+						bac_jpm = pd.concat([stocks_df.BAC, stocks_df.JPM], axis=1)
+						bac_jpm.plot()
+  					</code>
+				</pre><br>
+		</p>
+		<p>
+			We’ve created another DataFrame with only the BAC and JPM data. We then used the plot() function from Pandas to display a chart in our Jupyter notebook.<br><br>
+			 <img src="res/img/gp5.jpg" alt="Nature" class="responsive"> <br> <br>
+		</p>
+		<p>
+			Visually, it looks like a good correlation, just as our correlation coefficient had suggested.<br><br>
+
+			But a good correlation alone does not imply that the two bank stocks are cointegrated.<br><br>
+
+			Now, a concept called <b><i>cointegration</b></i> is going to be introduced.<br><br>
+
+			Correlation and cointegration are two very different things. We are only using correlation to try and narrow down our focus.<br><br>
+
+			There could be a scenario where one stock consistently outperforms another. In that case, the two stocks will still have a fairly high correlation, but the synthetic pair will not be stationary or cointegrated.<br><br>
+
+			Let’s dig a little deeper to try and find out if this pair is suitable for a cointegration strategy.<br><br>
+
+			The next step is to calculate the spread between BAC and JPM and plot it. After all, that is what we will be trading. If the two stocks are cointegrated, the chart should have some consistency in the variance from its mean.<br><br>
+		</p>
+		<p>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						spread = stocks_df.BAC - stocks_df.JPM
+						spread.cumsum().plot()
+  					</code>
+				</pre><br>
+		</p>
+		<p>
+			To calculate the spread, we need to subtract one stock from another. This is because we are using percent change data. If we were using closing prices, we would have divided one by the other to derive the spread.<br><br>
+			 <img src="res/img/gp6.jpg" alt="Nature" class="responsive"> <br> <br>
+			The chart above does not show consistency in variance.<br><br>
+
+			There is enough evidence here that the spread is mean-reverting between BAC and JPM. There was a larger than usual dip in July, but overall, the spread seems to revert to the 0 level continuously. This could be a good candidate for a cointegration strategy.<br><br>
+
+			This should have given an intuitive idea of cointegration. Now, we are going to look at rigorous statistical methods that are employed to find the cointegration between pairs.<br><br>
+		</p>
+		<p style="color: black; font-size: 19px" >
+			<a href="stat.html" target="_blank" style="color: black;"><b>Read more: </b><b style="color: #0BADE6"> statistical methods to find cointegration</b></a>
+		</p>
+		<p style="color: black; font-size: 19px" >
+			The code below will use the <a style="color: #0BADE6" href="https://www.statsmodels.org/stable/index.html" target="_blank">statsmodel</a> python library.<br><br>
+
+			The first statistical method we explained was the ADF test. We can use the `adfuller` method from the statsmodels library in order to run this.<br><br>
+
+			The second method we explained is the <a style="color: #0BADE6" href="https://en.wikipedia.org/wiki/Cointegration" target="_blank">Engle-Granger two-step method</a>. We can use the <code>coint</code> method from statsmodels library in order to run this. <br><br>
+
+			We will start by importing both methods.<br><br>
+		</p>
+		<p>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						from statsmodels.tsa.stattools import coint, adfuller
+  					</code>
+				</pre><br>
+		</p>
+		<p style="color: black; font-size: 19px" >
+			We will run our spread Dataframe through the adfuller method. This will let us know if our data is stationary or not.<br><br>
+
+			Recall that if two assets combined produce a stationary time series, then those two assets are considered to be cointegrated.<br><br>
+
+			But before running the test, we need to clean up our data. The statsmodels library currently does not handle missing data.<br><br>
+
+			We can use the dropna function from Pandas to delete any empty rows.<br><br>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						spread.dropna(inplace=True)
+  					</code>
+				</pre><br>
+
+		</p>
+		<p style="color: black; font-size: 19px" >
+			Next, we will save the results from the adfuller method to a variable called adf_results.
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						adf_results = adfuller(spread)
+  					</code>
+				</pre><br>
+
+		</p>
+		<p style="color: black; font-size: 19px" >
+			The output might seem a bit confusing, so the next part of the code cleans it up a bit so it is easier to read.
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(f'ADF Test Statistic: {adf_results[0]}')
+  						print(f'PValue: {adf_results[1]}')
+  						print(f'Number of lags used: {adf_results[2]}')
+  						print(f'Number of observations: {adf_results[3]}')
+  						print('Critical Values:')
+  						for k,v in adf_results[4].items():
+  							print(f'{k}: {v}')
+  					</code>
+				</pre><br>
+
+		</p>
+		<p>
+			And here are our results.<br><br>
+			 <img src="res/img/gp7.jpg" alt="Nature" class="responsive2"> <br> <br>
+		</p>
+		<p style="color: black; font-size: 19px" >
+			The first thing we will look at is the P-Value. It should be below a certain threshold. Some discretion can be used to determine exactly what that threshold is.<br><br>
+
+			Commonly used thresholds are either 5% or 1% (0.05 or 0.01). In this case, the P-Value falls well below the threshold.<br><br>
+
+			Next, we will look at the test statistic which is roughly -9.9. We can compare this to the Critical Values provided by the test.<br><br>
+
+			Since our test statistic is less than the 1% critical value of -3.5, we can assume that our data is stationary with 99% certainty.<br><br>
+
+			In other words, this test tells us that we have found a cointegrated pair based on the data we have supplied.<br><br>
+
+			The next test we will run is the `coint` test from the statsmodels library.<br><br>
+
+			In the last test, we used the spread DataFrame that we created by subtracting percentage change data from one stock to another.<br><br>
+
+			This test requires the percentage change data from both stocks. We have this available already in our `stocks_df` DataFrame.<br><br>
+
+			Once again, we will start by removing any empty rows. Then we will save the results from the test to a variable.<br><br>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						stocks_df.dropna(inplace=True)
+						coint_results = coint(stocks_df.BAC, stocks_df.JPM)
+  					</code>
+				</pre><br>
+
+		</p>
+		<p style="color: black; font-size: 19px" >
+			We can then output the results to the screen.<br><br>
+				<pre class="line-numbers">
+  					<code class="language-python" style="text-align:left">
+  						print(f'T-statistic of unit-root test on residuals {coint_results[0]}')
+						print(f'PValue: {coint_results[1]}')
+						print(f'Critical Values: {coint_results[2]}')
+  					</code>
+				</pre><br>
+
+		</p>
+		<p>
+			In this test, we are only focused on the P-Value. Just like the Augmented Dickey-Fuller test, if the value is below a certain threshold, we can consider the data to be cointegrated.<br><br>
+			 <img src="res/img/gp8.jpg" alt="Nature" class="responsive2"> <br> <br>
+			The P-Value, in this case, is well below 0.01 which lets us know that our two stocks are cointegrated.<br><br>
+
+			We now have both visual confirmation from our graphs and statistical confirmation that this strategy is suitable for a cointegration strategy.<br><br>
+
+			However, there is one other important consideration. Recall that the ADF test showed us the number of observations was 98.<br><br>
+
+			This means we tested 98 trading days worth of data. This is a rather small sample.<br><br>
+
+			It may very well be that the pair shows cointegration during some periods and not others. We can run further tests on a larger sample to gain more insight.<br><br>
+
+			We can also customize our data to an extent.<br><br>
+
+			For example, let’s say it is determined that this spread moves well beyond the norm during earnings reports, and it is not profitable to trade during that time. So we can avoid these periods of an anomaly.<br><br>
+		</p>
+		<p style="color: black; font-size: 19px" >
+			Here is a summary of the things we have covered so far in Trading Systems<br><br>
+			<ol style="color: black; font-size: 19px">
+				<li>Here is a summary of the things we have covered so far in Trading Systems<br>
+					<ul style="color: black; font-size: 19px">
+						<li>Alternative Data</li>
+						<li>Arbitrage</li>
+						<li>Pairs Trading</li>
+						<li>High Frequency Trading</li>
+					</ul>
+				</li>
+				<li>Understood the idea behind Pair Trading.</li>
+				<li>Looked at advantages as well as disadvantages of Pairs Trading</li>
+				<li>Looked at statistical methods to find good pairs. We have also shown the different libraries that can be utilized to make a trading system. The statistical method we explained is for correlation and cointegration.</li>
+				<li>Looked at statistical methods to find good pairs. We have also shown the different libraries that can be utilized to make a trading system. The statistical method we explained is for correlation and cointegration.</li>
+			</ol>
+		</p>
+		<p>
+			Now, using what we have discussed so far, we can successfully find pairs that can be traded. But, there is a vital part of the quantitative that is yet to be discussed. It is the back-testing of the strategy we have made.
+		</p>
+		<p align="center" style="font-size: 19px">
+				<a class="button" href="goodpairs.html"> << Back </a>
+				 <a class="button" href="backtesting.html"> Go To Backtesting </a>
+					<!-- <a class="button" href="tsys2.html">Next</a> -->
+				</p>
+
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+			<!-- <div class="snap-pad"></div> -->
+
+
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+		</div>
+
+
+	<script src="res/js/prism.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="res/js/typing_text.js" type="text/javascript"></script>
+	<script src="res/js/work_carousel.js" type="text/javascript"></script>
+	<script src="res/js/scroll_top.js" type="text/javascript"></script>
+	<script src="res/js/sticky_navbar.js" type="text/javascript"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
