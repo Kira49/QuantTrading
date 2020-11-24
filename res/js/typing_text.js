@@ -1,4 +1,4 @@
-var descList = [ "hi", "", "Cried and Died", "Come Up With This", ];
+var descList = ["Stayed up long nights", "Wished We'd Started Earlier", "Cried and Died", "Finally Come Up With This", ];
 var curr = 0;
 var currIdx = 0;
 var interval;
