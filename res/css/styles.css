@@ -143,8 +143,26 @@ p {
 	color: white;
 }
 .ops {
-	height: 20vh;
-	width: 70%;
+	height: 2280vh;
+	width: 900px;
+	font-size: 22px;
+	color: white;
+}
+.ops2 {
+	height: 1750vh;
+	width: 900px;
+	font-size: 22px;
+	color: white;
+}
+.ops3 {
+	height: 2495vh;
+	width: 900px;
+	font-size: 22px;
+	color: white;
+}
+.ops4 {
+	height: 2470vh;
+	width: 900px;
 	font-size: 22px;
 	color: white;
 }
