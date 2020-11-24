@@ -31,19 +31,12 @@
 	<div class="collapse navbar-collapse" id="navbar-collapse">
 		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
 			<a href="index.html#home" class="nav-item nav-link">HOME</a>
-			<a href="index.html#about" class="nav-item nav-link">ABOUT</a>
-			<a href="index.html#work" class="nav-item nav-link">PREREQs</a>
-			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
-			<a href="index.html#team" class="nav-item nav-link">TEAM</a>
+			<a href="index.html#work" class="nav-item nav-link">WORK</a>
+			
 		</div>
 	</div>
 </nav>
 <!-- --------------------nav end------------------------------------ -->
-	<br><br><p align="center">
-				<a class="button" href="index.html"> << Back Home</a>
-				<a class="button" href="greek2.html"> << Back </a>
-	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
-     	</p>
 <body id="vert_page" align="center">
 	 <div id="home" class="greek3 main3 container-fluid"> 
 			<div class="snap-pad"></div>
@@ -56,118 +49,128 @@
 			
     
     
-                        <h4 class="ourproject_title title_padding" style="color:#FDD060">
+                        <h4 class="ourproject_title title_padding" style="color:#1184a7">
 	<b>Vega(&nu;)</b></h4>
 	<p style="color:black; font-size: 19px">	
 		The vega of an option,  , is defined as the rate of change of the option price respected to the volatility of the underlying asset:<br><br>
-		&nu; = &part;&Pi;/&part;&sigma;<sup>'</sup> <br><br>
+		<img  src="res/img/gk47.png" alt="ok"  height="90px" width="600px"><br><br>
 		where &Pi;  is the option price and &sigma;  is volatility of the stock price. We next show the derivation of vega for various kinds of stock option.
-		<h4 class="ourproject_title title_padding" style="color:#FDD060">
+		<h4 class="ourproject_title title_padding" style="color:#fd6082">
 			<b>Derivation of Vega for Different Kinds of Stock Option</b></h4>
 			<p style="color:black; font-size: 19px">	
 				For a European call option on a non-dividend stock, vega can be shown as
 					<br><br>
-				<img  src="res/img/image137.gif" alt="ok"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (21)<br><br>
-				The derivation of (21) is<br><br>
-				<img  src="res/img/image139.gif" alt="ok" width="700"><br><br>
+					<img  src="res/img/gk48.png" alt="ok  height="90px" width="600px""><br><br>
+					The derivation of (21) is<br><br>
+					<img  src="res/img/gk49.png" alt="ok"  height="400px" width="600px">
+					<img  src="res/img/gk49x.png" alt="ok"  height="100px" width="600px"><br><br>
+
 				For a European put option on a non-dividend stock, vega can be shown as
 				<br><br>
-				<img  src="res/img/image137.gif" alt="ok"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (22)<br><br>
+				<img  src="res/img/gk50.png" alt="ok"  height="70px" width="600px"><br><br>
 				The derivation of (22) is<br><br>
-				<img  src="res/img/image141.gif" alt="ok" width="700"><br><br>
+				<img  src="res/img/gk51.png" alt="ok"  height="400px" width="600px"><br><br>
 				For a European call option on a dividend-paying stock, vega can be shown as
 				<br><br>
-				<img  src="res/img/image143.gif" alt="ok"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (23)<br><br>
+				<img  src="res/img/gk52.png" alt="ok"  height="70px" width="600px"><br><br>
 				The derivation of (23) is<br><br>
-				<img  src="res/img/image145.gif" alt="ok" width="700"><br><br>
+				<img  src="res/img/gk53.png" alt="ok"  height="400px" width="600px">
+				<img  src="res/img/gk53x.png" alt="ok"  height="100px" width="600px"><br><br>
 				For a European call option on a dividend-paying stock, vega can be shown as
 				<br><br>
-				<img  src="res/img/image143.gif" alt="ok"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (24)<br><br>
+				<img  src="res/img/gk54.png" alt="ok"  height="70px" width="600px"><br><br>
 				The derivation of (24) is<br><br>
-				<img  src="res/img/image148.gif" alt="ok" width="700"><br><br>
-				<h4 class="ourproject_title title_padding" style="color:#FDD060">
+				<img  src="res/img/gk55.png" alt="ok"  height="400px" width="600px">
+				<img  src="res/img/gk55x.png" alt="ok"  height="100px" width="300px"><br><br>
+				<h4 class="ourproject_title title_padding" style="color:#078546">
 					<b>Application of Vega(&nu;)</b></h4>
 					<p style="color:black; font-size: 19px">	
 						Suppose a delta-neutral and gamma-neutral portfolio has a vega equal to &nu;  and the vega of a particular option is &nu;<sub>0</sub> . Similar to gamma, we can add a position of -&nu;/&nu;<sub>0</sub>  in option to make a vega-neutral portfolio. To maintain delta-neutral, we should change the underlying asset position. However, when we change the option position, the new portfolio is not gamma-neutral. Generally, a portfolio with one option cannot maintain its gamma-neutral and vega-neutral at the same time. If we want a portfolio to be both gamma-neutral and vega-neutral, we should include at least two kind of option on the same underlying asset in our portfolio.
 					<br><br>	For example, a delta-neutral and gamma-neutral portfolio contains option A, option B, and underlying asset. The gamma and vega of this portfolio are -3,200 and -2,500, respectively. Option A has a delta of 0.3, gamma of 1.2, and vega of 1.5. Option B has a delta of 0.4, gamma of 1.6 and vega of 0.8. The new portfolio will be both gamma-neutral and vega-neutral when adding  &omega;<sub>A</sub> of option A and  &omega;<sub>B</sub> of option B into the original portfolio.
-				<br><br>	Gamma Neuteal : -3200 + 1.2&omega;<sub>A</sub> + 1.6&omega;<sub>B</sub>	= 0<br><br>
-				<br><br>	Vega Neuteal : -2500 + 1.5&omega;<sub>A</sub> + 0.8&omega;<sub>B</sub>	= 0<br><br>
+				<!--<br><br>	Gamma Neuteal : -3200 + 1.2&omega;<sub>A</sub> + 1.6&omega;<sub>B</sub>	= 0<br><br>
+				<br><br>	Vega Neuteal : -2500 + 1.5&omega;<sub>A</sub> + 0.8&omega;<sub>B</sub>	= 0<br><br>-->
+				<br><br><img  src="res/img/gk56.png" alt="ok"  height="150px" width="600px"><br><br>
 				From two equations shown above, we can get the solution that &omega;<sub>A</sub> = 1000 and &omega;<sub>B</sub> = 1250. The delta of new portfolio is 1000 x .3 + 1250 x 0.4 = 800. To maintain delta-neutral, we need to short 800 shares of the underlying asset.	
-				<h4 class="ourproject_title title_padding" style="color:#FDD060">
+				<h4 class="ourproject_title title_padding" style="color:#e71968">
 					<b>Rho(&rho;)</b></h4>
 					<p style="color:black; font-size: 19px">	
 						The rho of an option is defined as the rate of change of the option price respected to the interest rate:<br><br>
-						&rho; = &part;&Pi;/&part;r <br><br>
+						<img  src="res/img/gk57.png" alt="ok"  height="90px" width="600px"><br><br>
 						where &Pi;  is the option price and r is interest rate. The rho for an ordinary stock call option should be positive because higher interest rate reduces the present value of the strike price which in turn increases the value of the call option. Similarly, the rho of an ordinary put option should be negative by the same reasoning. We next show the derivation of rho for various kinds of stock option. 
-						<h4 class="ourproject_title title_padding" style="color:#FDD060">
+						<h4 class="ourproject_title title_padding" style="color:#918e07">
 							<b>Derivation of Rho for Different Kinds of stock option</b></h4>
 							<p style="color:black; font-size: 19px">	
 								For a European call option on a non-dividend stock, rho can be shown as
 								<br><br>
-							<img  src="res/img/image168.gif" alt="ok"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (25)<br><br>
-							The derivation of (25) is<br><br>
-							<img  src="res/img/image170.gif" alt="ok" width="700"><br><br>
-							For a European put option on a non-dividend stock, rho can be shown as
+								<img  src="res/img/gk58.png" alt="ok"  height="90px" width="600px"><br><br>
+								The derivation of (25) is<br><br>
+								<img  src="res/img/gk59.png" alt="ok"  height="350px" width="600px"><br><br>
+								For a European put option on a non-dividend stock, rho can be shown as
 							<br><br>
-							<img  src="res/img/image172.gif" alt="ok"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (26)<br><br>
+							<img  src="res/img/gk60.png" alt="ok"  height="90px" width="600px"><br><br>
 							The derivation of (26) is<br><br>
-							<img  src="res/img/image174.gif" alt="ok" width="700"><br><br>
+							<img  src="res/img/gk61.png" alt="ok"  height="350px" width="600px"><br><br>
 							For a European call option on a dividend-paying stock, rho can be shown as
 							<br><br>
-							<!--<img  src="res/img/image110.png" alt="ok">-->rho = X&tau;.e<sup>-r&tau;</sup>N(d<sub>2</sub>) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (27)<br><br>
+							<img  src="res/img/gk62.png" alt="ok"  height="90px" width="600px"><br><br>
 							The derivation of (27) is<br><br>
-							<img  src="res/img/image177.gif" alt="ok" width="700"><br><br>
+							<img  src="res/img/gk63.png" alt="ok"  height="350px" width="600px"><br><br>
 							For a European put option on a dividend-paying stock, rho can be shown as
 							<br><br>
-							<!--<img  src="res/img/image110.png" alt="ok">-->rho = -X&tau;.e<sup>-r&tau;</sup>N(-d<sub>2</sub>) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (28)<br><br>
+							<img  src="res/img/gk64.png" alt="ok"  height="90px" width="600px"><br><br>
 							The derivation of (28) is<br><br>
-							<img  src="res/img/image179.gif" alt="ok" width="700"><br><br>	
-							<h4 class="ourproject_title title_padding" style="color:#FDD060">
+							<img  src="res/img/gk65.png" alt="ok"  height="350px" width="600px"><br><br>	
+							<h4 class="ourproject_title title_padding" style="color:#1127a1">
 								<b>Application of Rho(&rho;)</b></h4>
 								<p style="color:black; font-size: 19px">	
 									Assume that an investor would like to see how interest rate changes affect the value of a 3-month European put option she holds with the following information. The current stock price is $65 and the strike price is $58. The interest rate and the volatility of the stock is 5% and 30% per annum respectively. The rho of this European put can be calculated as following.<br><br>
 									<br><br>
-									<img  src="res/img/image182.gif" alt="ok"><br><br>
+									<img  src="res/img/gk66.png" alt="ok"  height="90px" width="600px"><br><br>
 									This calculation indicates that given 1% change increase in interest rate, say from 5% to 6%, the value of this European call option will decrease 0.03168 (0.01 x 3.168). This simple example can be further applied to stocks that pay dividends using the derivation results shown previously.
-									<h4 class="ourproject_title title_padding" style="color:#FDD060">
+									<h4 class="ourproject_title title_padding" style="color:#0a9405">
 										<b>
 											Derivation of Sensitivity for Stock Options Respective with Exercise Price
 											</b></h4>
 										<p style="color:black; font-size: 19px">	
 											For a European call option on a non-dividend stock, sensitivity can be shown as
 								<br><br>
-							<img  src="res/img/image184.gif" alt="ok"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (29)<br><br>
-							The derivation of (29) is<br><br>
-							<img  src="res/img/image186.gif" alt="ok" width="700"><br><br>
+								<img  src="res/img/gk67.png" alt="ok"  height="70px" width="600px"><br><br>
+								The derivation of (29) is<br><br>
+								<img  src="res/img/gk68.png" alt="ok"  height="350px" width="600px"><br><br>
 							For a European put option on a non-dividend stock, sensitivity can be shown as
 							<br><br>
-							<img  src="res/img/image188.gif" alt="ok"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (30)<br><br>
+							<img  src="res/img/gk69.png" alt="ok"  height="70px" width="600px"><br><br>
 							The derivation of (30) is<br><br>
-							<img  src="res/img/image190.gif" alt="ok" width="700"><br><br>
+							<img  src="res/img/gk70.png" alt="ok"  height="350px" width="600px"><br><br>
 							For a European call option on a dividend-paying stock, sensitivity can be shown as
 							<br><br>
-							<img  src="res/img/image184.gif" alt="ok"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (31)<br><br>
+							<img  src="res/img/gk71.png" alt="ok"  height="70px" width="600px"><br><br>
 							The derivation of (31) is<br><br>
-							<img  src="res/img/image192.gif" alt="ok" width="700"><br><br>
+							<img  src="res/img/gk72.png" alt="ok"  height="350px" width="600px"><br><br>
 							For a European put option on a dividend-paying stock, sensitivity can be shown as
 							<br><br>
-							<img  src="res/img/image188.gif" alt="ok"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (32)<br><br>
+							<img  src="res/img/gk73.png" alt="ok"  height="70px" width="600px"><br><br>
 							The derivation of (32) is<br><br>
-							<img  src="res/img/image194.gif" alt="ok" width="700"><br><br>	
-							<h4 class="ourproject_title title_padding" style="color:#FDD060">
+							<img  src="res/img/gk74.png" alt="ok"  height="400px" width="600px"><br><br>	
+							<h4 class="ourproject_title title_padding" style="color:#f0145d">
 								<b>Relationship between Delta, Theta, and Gamma</b></h4>
 								<p style="color:black ;font-size: 19px">
 									So far, the discussion has introduced the derivation and application of each individual Greeks and how they can be applied in portfolio management. In practice, the interaction or trade-off between these parameters is of concern as well. For example, recall the partial differential equation for the Black-Scholes formula with non-dividend paying stock can be written as<br><br>
-									<img  src="res/img/image196.gif" alt="ok"><br><br>
+									<img  src="res/img/gk75.png" alt="ok"  height="90px" width="600px"><br><br>
 									Where &Pi;  is the value of the derivative security contingent on stock price, S is the price of stock, r is the risk-free rate, and &sigma; is the volatility of the stock price, and t is the time to expiration of the derivative. Given the earlier derivation, we can rewrite the Black-Scholes PDE as<br><br>			
-									<img  src="res/img/image201.gif" alt="ok"><br><br>
+									<img  src="res/img/gk76.png" alt="ok"  height="90px" width="600px"><br><br>
 									This relation gives us the trade-off between delta, gamma, and theta. For example, suppose there are two delta neutral (&delta; = 0)  portfolios, one with positive gamma (&Gamma; > 0) and the other one with negative gamma (&Gamma; < 0) and they both have value of $1 (&Pi; = 1) . The trade-off can be written as<br<br>
-									<img  src="res/img/image211.gif" alt="ok"><br><br>
+									<img  src="res/img/gk77.png" alt="ok"  height="90px" width="600px"><br><br>
 									For the first portfolio, if gamma is positive and large, then theta is negative and large. When gamma is positive, change in stock prices result in higher value of the option. This means that when there is no change in stock prices, the value of the option declines as we approach the expiration date. As a result, the theta is negative. On the other hand, when gamma is negative and large, change in stock prices result in lower option value. This means that when there is no stock price changes, the value of the option increases as we approach the expiration and theta is positive. This gives us a trade-off between gamma and theta and they can be used as proxy for each other in a delta neutral portfolio.  
 									<br><br>							
 					</p>
 
 </div>
+			<p align="center">
+				<a class="button" href="index.html"> << Back Home</a>
+				<a class="button" href="greek2.html"> << Back </a>
+	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
+     	</p>
 <script src="res/js/prism.js"></script>
 	<script type="text/javascript">
 	var coll = document.getElementsByClassName("collapsible");

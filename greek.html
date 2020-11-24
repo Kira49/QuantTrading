@@ -31,20 +31,12 @@
 	<div class="collapse navbar-collapse" id="navbar-collapse">
 		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
 			<a href="index.html#home" class="nav-item nav-link">HOME</a>
-			<a href="index.html#about" class="nav-item nav-link">ABOUT</a>
-			<a href="index.html#work" class="nav-item nav-link">PREREQs</a>
-			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
-			<a href="index.html#team" class="nav-item nav-link">TEAM</a>
+			<a href="index.html#work" class="nav-item nav-link">WORK</a>
+			
 		</div>
 	</div>
 </nav>
 <!-- --------------------nav end------------------------------------ -->
-	<br><br>
-	<p align="center">
-				<a class="button" href="index.html"> << Back Home</a>
-				<a class="button" href="greek2.html"> Next >> </a>
-	     		<!-- <a class="button" href="tsys2.html">Ne</a> -->
-     	</p>
 <body id="vert_page" align="center">
 	 <div id="home" class="greek main3 container-fluid"> 
 			<div class="snap-pad"></div>
@@ -54,84 +46,81 @@
 			<br><br>
 			<h2 align="center" class="ourproject_title title_padding" style="color:#FF1700"> GREEKS </h2>
 
-			
 			<p align="center" style="color:rgb(53, 49, 49)">Derivations and Applications of Greeks in Option Derivatives</p><br> <br>
-			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+			<h4 class="ourproject_title title_padding" style="color:#7439fd">
 				<b>Abstract</b>
 			</h4>
 			<p style="color: black; font-size: 19px">In this article, we introduce the definitions of Greek letters. We also provide the derivations of Greek letters for call and put options on both dividends-paying stock and non-dividends stock. Then we discuss some applications of Greek letters. Finally, we show the relationship between Greek letters, one of the examples can be seen from the Black-Scholes partial differential equation as already derived before.<br><br>
-			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+			<h4 class="ourproject_title title_padding" style="color:#ec496c">
 				<b>Keywords</b>
 			</h4>
 			<p style="color: black; font-size: 19px">
 			Greek letters, Delta, Theta, Gamma, Vega, Rho, Black-Scholes option pricing model, Black-Scholes partial differential equation.<br><br>
-			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+			<h4 class="ourproject_title title_padding" style="color:#52f022">
 				<b>Introduction</b>
 			</h4><p style="color: black; font-size: 19px">“Greek letters” are defined as the sensitivities of the option price to a single-unit change in the value of either a state variable or a parameter. Such sensitivities can represent the different dimensions to the risk in an option. Financial institutions who sell option to their clients can manage their risk by Greek letters analysis.<br><br>
 			In this chapter, we will discuss the definitions and derivations of Greek letters. We also specifically derive Greek letters for call (put) options on non-dividend stock and dividends-paying stock. Some examples are provided to explain the application of Greek letters. Finally, we will describe the relationship between Greek letters and the implication in delta neutral portfolio.<br><br>
-			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+			<h4 class="ourproject_title title_padding" style="color:#c06007">
 				<b>Delta(&#916;)</b></h4><p style="color: black; font-size: 19px">
 			The delta of an option,&#916; , is defined as the rate of change of the option price respected to the rate of change of underlying asset price:	<br><br>
-			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &#916;=<sup>∂π</sup>&frasl;<sub>∂S</sub> <br><br>where π is the option price and S is underlying asset price. We next show the derivation of delta for various kinds of stock option.
-			<br><br>
-			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+			<img  src="res/img/gk1.png" alt="ok" height="70px" width="500px"  ><br>
+			<h4 class="ourproject_title title_padding" style="color:#08aa9d">
 				<b>Derivation of Delta for Different Kinds of Stock Options</b></h4>
 				<p style="color: black; font-size: 19px">
-				From Black-Scholes option pricing model, we know the price of call option on a non-dividend stock can be written as:<br><br>
-				&nbsp &nbsp &nbsp &nbsp &nbspC<sub>t</sub>=S<sub>t</sub>N(d<sub>1</sub>)-Xe<sup>-rτ</sup>N(d<sub>2</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (1)<br><br>
-				and the price of put option on a non-dividend stock can be written as:<br><br>
-				&nbsp &nbsp &nbsp &nbsp &nbspP<sub>t</sub>=Xe<sup>-rτ</sup>N(-d<sub>2</sub>)-S<sub>t</sub>N(-d<sub>1</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (2)<br><br>where<br><br>
-				<img  src="res/img/image038.gif" alt="ok">
-				<br><br><img  src="res/img/image040.gif" alt="ok"><br><br>
-				τ=T-t<br><br>
+				From Black-Scholes option pricing model, we know the price of call option on a non-dividend stock can be written as:
+				<br><br><img  src="res/img/gk2.png" alt="ok" height="80px" width="500px" ><br>
+				and the price of put option on a non-dividend stock can be written as:
+				<br><img  src="res/img/gk3.png" alt="ok" height="80px" width="500px" ><br>where<br><br>
+				<img  src="res/img/gk4.png" alt="ok" height="300px" width="400px" ><br><br>
 				N(.) is the cumulative density function of normal distribution.<br><br>
-				 
-				<!--<img  src="res/img/image110.png" alt="ok">--> 
-				N(d<sub>1</sub>)=&int;<sup>d<sub>1</sub></sup><sub>&infin;</sub>f(u)du = &int;<sup>d<sub>1</sub></sup><sub>&infin;</sub>(1/&radic;2&pi;)e<sup>-u<sup>2</sup>/2</sup>du   <br><br>
+				<img  src="res/img/gk5.png" alt="ok" height="80px" width="400px" >
 				<br><br>First,we calculate
-				<br><br><img  src="res/img/image042.gif" alt="ok">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (3)<br><br>
-				<img  src="res/img/image044.gif" alt="ok">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (4)<br><br>
+				<br><br><img  src="res/img/gk6.png" alt="ok" height="400px" width="600px" ><br><br>
 				Eq. (2) and Eq. (3) will be used repetitively in determining following Greek letters when the underlying asset is a non-dividend paying stock.<br><br>
-				For a European call option on a non-dividend stock, delta can be shown as<br><br>
-				&#916;=N(d<sub>1</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (5)<br><br>
-				<!--The derivation of Eq. (5) is in the following:<br><br>
-				
-				<img  src="res/img/image110.png" alt="ok" width="700">-->
+				For a European call option on a non-dividend stock, delta can be shown as<br>
+				&nbsp&nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp<img  src="res/img/gk7.png" alt="ok" height="100px" width="600px" ><br>
+				<img  src="res/img/gk8.png" alt="ok" height="400px" width="600px" ><br><br>
 				For a European put option on a non-dividend stock, delta can be shown as<br><br>
-				&#916;=N(d<sub>1</sub>)-1&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (6)<br><br>
-				<!--The derivation of Eq. (6) is<br><br>
-				<img  src="res/img/image110.png" alt="ok" width="700"><br><br>-->
+				<!--SPECIALLLLL-->
+				<img  src="res/img/gk18.png" alt="ok" height="100px" width="600px" ><br>
+			<img  src="res/img/gk9.png" alt="ok" height="400px" width="600px" ><br><br>
 				If the underlying asset is a dividend-paying stock providing a dividend yield at rate q, Black-Scholes formulas for the prices of a European call option on a dividend-paying stock and a European put option on a dividend-paying stock are<br><br>
-				&nbsp &nbsp &nbsp &nbsp &nbspC<sub>t</sub>=S<sub>t</sub>e<sup>-qτ</sup>N(d<sub>1</sub>)-Xe<sup>-rτ</sup>N(d<sub>2</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (7)<br><br> and <br><br>
-				&nbsp &nbsp &nbsp &nbsp &nbspP<sub>t</sub>=Xe<sup>-rτ</sup>N(-d<sub>2</sub>)-S<sub>t</sub>e<sup>-qτ</sup>N(-d<sub>1</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (8)<br><br>
-				where<br><br>
-				<img  src="res/img/image038.gif" alt="ok"><br><br>
-				<img  src="res/img/image040.gif" alt="ok"><br><br>
+				&nbsp&nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp	&nbsp&nbsp &nbsp &nbsp			<img  src="res/img/gk10.png" alt="ok" height="100px" width="500px" ><br><br>and
+				<br><br><img  src="res/img/gk11.png" alt="ok" height="70px" width="600px" ><br><br>
+				where
+				<br><br><img  src="res/img/gk12.png" alt="ok" height="200px" width="500px" ><br><br>
 				To make the following derivations more easily, we calculate Eq. (9) and Eq. (10) in advance.
-				)<br><br>
-				<!--<img  src="res/img/image110.png" alt="ok">--> N<sup>'</sup>(d<sub>1</sub>) = (1/&radic;2&pi;)e<sup>-d<sub>1</sub><sup>2</sup>/2</sup>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (9)<br><br>
-				<!--<img  src="res/img/image110.png" alt="ok">-->  N<sup>'</sup>(d<sub>2</sub>) = (1/&radic;2&pi;)e<sup>-d<sub>1</sub><sup>2</sup>/2</sup>.(S<sub>t</sub>/X)e<sup>(r-q)&tau;</sup>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (10)<br><br>
-				For a European call option on a dividend-paying stock, delta can be shown as<br><br>&#916;=e<sup>-qτ</sup>N(d<sub>1</sub>)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (11)<br><br>
-				The derivation of (11) is<br><br>
-				<img  src="res/img/image048.gif" alt="ok" width="700"><br><br>
-				For a European call option on a dividend-paying stock, delta can be shown as<br><br>&#916;=e<sup>-qτ</sup>[N(d<sub>1</sub>)-1]&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp  (12)<br><br>
-				The derivation of (12) is<br><br>
-				<img  src="res/img/image052.gif" alt="ok" width="700"><br><br>
-			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+				)
+				<br><br><img  src="res/img/gk13.png" alt="ok" height="400px" width="600px" ><br><br>
+				For a European call option on a dividend-paying stock, delta can be shown as
+				<br><br><img  src="res/img/gk14.png" alt="ok" height="70px" width="600px" ><br><br>
+				The derivation of (11) is
+				<br><br><img  src="res/img/gk15.png" alt="ok"height="300px" width="500px"  ><br><br>
+				For a European call option on a dividend-paying stock, delta can be shown as
+				<br><br><img  src="res/img/gk16.png" alt="ok" height="70px" width="600px" ><br><br>
+				The derivation of (12) is
+				<br><br><img  src="res/img/gk17.png" alt="ok" height="300px" width="500px" ><br><br>
+			<h4 class="ourproject_title title_padding" style="color:#d41062">
 				<b>Application of Delta</b></h4><p style="color: black; font-size: 19px">
 				Figure 1 shows the relationship between the price of a call option and the price of its underlying asset. The delta of this call option is the slope of the line at the point of A corresponding to current price of the underlying asset.<br><br>
-				<img  src="res/img/image054.jpg" alt="ok"><br>Figure 1<br><br>
+				<img  src="res/img/gk19.png" alt="ok" height="500px" width="500px"><br>Figure 1<br><br>
 				By calculating delta ratio, a financial institution that sells option to a client can make a delta neutral position to hedge the risk of changes of the underlying asset price. Suppose that the current stock price is $100, the call option price on stock is $10, and the current delta of the call option is 0.4. A financial institution sold 10 call option to its client, so that the client has right to buy 1,000 shares at time to maturity. To construct a delta hedge position, the financial institution should buy 0.4 x 1,000 = 400 shares of stock. If the stock price goes up to $1, the option price will go up by $0.4. In this situation, the financial institution has a $400 ($1 x 400 shares) gain in its stock position, and a $400 ($0.4 x 1,000 shares) loss in its option position. The total payoff of the financial institution is zero. On the other hand, if the stock price goes down by $1, the option price will go down by $0.4. The total payoff of the financial institution is also zero.<br><br>
 				However, the relationship between option price and stock price is not linear, so delta changes over different stock price. If an investor wants to remain his portfolio in delta neutral, he should adjust his hedged ratio periodically. The more frequently adjustment he does, the better delta-hedging he gets.<br><br>
 				Figure 2 exhibits the change in delta affects the delta-hedges. If the underlying stock has a price equal to $20, then the investor who uses only delta as risk measure will consider that his portfolio has no risk. However, as the underlying stock prices changes, either up or down, the delta changes as well and thus he will have to use different delta hedging. Delta measure can be combined with other risk measures to yield better risk measurement. We will discuss it further in the following sections.<br><br>
-				<img  src="res/img/image055.png" alt="ok"><br>Figure 2<br><br>
+				<img  src="res/img/gk20.png" alt="ok" height="500px" width="500px"><br>Figure 2<br><br>
 	
 	
 	
 												
 					</p>
 
+
 </div>
+<p align="center">
+	<a class="button" href="index.html"> << Back Home</a>
+	<a class="button" href="greek2.html"> Next >> </a>
+	 <!-- <a class="button" href="tsys2.html">Ne</a> -->
+</p>
 <script src="res/js/prism.js"></script>
 	<script type="text/javascript">
 	var coll = document.getElementsByClassName("collapsible");
