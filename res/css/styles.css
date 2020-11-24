@@ -103,7 +103,26 @@ p {
 	font-size: 22px;
 	color: white;
 }
+.greek {
+	height: 1170vh;
+	width: 800px;
+	font-size: 22px;
+	color: white;
+}
 
+.greek2 {
+	height: 1540vh;
+	width: 800px;
+	font-size: 22px;
+	color: white;
+}
+
+.greek3 {
+	height: 1600vh;
+	width: 800px;
+	font-size: 22px;
+	color: white;
+}
 
 .btest {
 	height: 20vh;
