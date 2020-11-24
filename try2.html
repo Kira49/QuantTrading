@@ -44,56 +44,56 @@
 				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
 			</button>
 			<br><br>
-			<h2 align="center" class="ourproject_title title_padding" style="color:#FF1700"> Black Scholes </h2>
+			<h2 class="ourproject_title title_padding" style="color:black"> Black Scholes </h2>
 		
 
 
 
-<h4 class="ourproject_title title_padding" style="color:#EA60FD">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Stochastic Differential Equations</b>
 			</h4>
-<p style="color: black; font-size: 19px">Now that we have defined Brownian motion, we can utilise it as a building block to start constructing stochastic differential equations (SDE). We need SDE in order to discuss how functions f=f(s) and their derivatives with respect to S behave, where S is a stock price determined by a Brownian motion.
+<p style="color: black; font-size: 19px">Now that we have defined Brownian motion, we can utilise it as a building block to start constructing stochastic differential equations (SDE). We need SDE in order to discuss how functions <i>f=f(s)</i> and their derivatives with respect to <i>S</i> behave, where <i>S</i> is a stock price determined by a Brownian motion.
 <br> <br>Some of the rules of ordinary calculus do not work as expected in a stochastic world. We need to modify them to take into account both the random behaviour of Brownian motion as well as its non-differentiable nature. We will begin by discussing stochastic integrals, which will lead us naturally to the concept of an SDE.
 </p>
-<h4 class="ourproject_title title_padding" style="color:#FD60C9">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Definition (Stochastic Integral)</b>
 			</h4>
 <p style="color: black; font-size: 19px">
-	A stochastic integral of the function f=f(t) is a function 
-	<br><br>W=W(t),t &#8712; [0,T] given by:
+	A stochastic integral of the function <i>f=f(t)</i> is a function 
+	<br><br><i>W=W(t),t</i> &#8712; [0,T] given by:
 	<br> <br> <img  src="res/img/img11.png" alt="ok" height="100px" width="500px">
-		<br><br> where t<sub>k</sub>=kt/N.
-	<br>Note that the function f is non-anticipatory, in the sense that it is evaluated within the summation sign at time t<sub>k</sub>-1. This means that it has no information as to what the random variable at X(t<sub>k</sub>) is. Supposing that f represented some portfolio allocation based on B, then if it were not evaluated at t<sub>k</sub>−1, but rather at t<sub>k</sub>, we would be able to anticipate the future and modify the portfolio accordingly.
+		<br><br> where <i>t<sub>k</sub>=kt/N.</i>
+	<br>Note that the function <i>f</i> is non-anticipatory, in the sense that it is evaluated within the summation sign at time <i>t<sub>k</sub>-1.</i> This means that it has no information as to what the random variable at <i>X(t<sub>k</sub>)</i> is. Supposing that <i>f</i> represented some portfolio allocation based on B, then if it were not evaluated at <i>t<sub>k</sub>−1</i>, but rather at <i>t<sub>k</sub></i>, we would be able to anticipate the future and modify the portfolio accordingly.
 
-	<br> <br> The previous expression provided for W(t) is an integral expression and thus is well-defined for a non-differentiable variable, B(t), due the property of finiteness as well as the chosen mean and variance. However, we wish to be able to write it in differential form:
+	<br> <br> The previous expression provided for <i>W(t)</i> is an integral expression and thus is well-defined for a non-differentiable variable, <i>B(t)</i>, due the property of finiteness as well as the chosen mean and variance. However, we wish to be able to write it in differential form:
 	<br> <br> <img  src="res/img/img12.png" alt="ok" height="70px" width="500px">
 	<br><br>One can consider the term dB as being a normally distributed random variable with zero mean and variance dt. The formal definition is provided:
 </p>
-<h4 class="ourproject_title title_padding" style="color:#FD6090">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Definition (Stochastic Differential Equation)</b>
 			</h4>
-<p style="color: black; font-size: 19px">Let B(t) be a Brownian motion. If W(t) is a sequence of random variables, such that for all t,
+<p style="color: black; font-size: 19px">Let <i>B(t)</i> be a Brownian motion. If <i>W(t)</i> is a sequence of random variables, such that for all <i>t</i>,
 	<br> <br> <img  src="res/img/img13.png" alt="ok" height="70px" width="500px">
 	<br><br> is a random variable with mean and variance that rae o(&#948;t), then:
 	<br> <br> <img  src="res/img/img14.png" alt="ok" height="70px" width="500px">
-	<br><br>is a stochastic differential equation for W(t).
+	<br><br>is a stochastic differential equation for <i>W(t)</i>.
 
 <br> <br>A sequence of random variables given by the above is termed an Ito drift-diffusion process, or simply an Ito process or a stochastic process.
-<br> <br> It can be seen that μ and σ are both functions of t and W. μ has the interpretation of a non-stochastic drift coefficient, while σ represents the coefficient of volatility - it is multiplied by the stochastic dB term. Hence, stochastic differential equations have both a non-stochastic and stochastic component.
+<br> <br> It can be seen that <i>μ</i> and <i>σ</i> are both functions of <i>t</i> and <i>W</i>. <i>μ</i> has the interpretation of a non-stochastic drift coefficient, while σ represents the coefficient of volatility - it is multiplied by the stochastic dB term. Hence, stochastic differential equations have both a non-stochastic and stochastic component.
 <br> <br> In the following section on geometric Brownian motion, a stochastic differential equation will be utilised to model asset price movements.
 </p>
-<h4 class="ourproject_title title_padding" style="color:#FD7160">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Geometric Brownian Motion</b>
 			</h4>
 <p style="color: black; font-size: 19px">
-The usual model for the time-evolution of an asset price S(t) is given by the geometric Brownian motion, represented by the following stochastic differential equation:	
+The usual model for the time-evolution of an asset price <i>S(t)</i> is given by the geometric Brownian motion, represented by the following stochastic differential equation:	
 <br> <br> <img  src="res/img/img15.png" alt="ok" height="70px" width="500px">
-<br><br>Note that the coefficients μ and σ, representing the drift and volatility of the asset, respectively, are both constant in this model. In more sophisticated models they can be made to be functions of t,S(t) and other stochastic processes.
+<br><br>Note that the coefficients <i>μ</i> and <i>σ</i>, representing the drift and volatility of the asset, respectively, are both constant in this model. In more sophisticated models they can be made to be functions of <i>t,S(t)</i> and other stochastic processes.
 <br><br> <img  src="res/img/img16.png" alt="ok" width="600" height="300">
-<br><br>The solution S(t) can be found by the application of Ito's Lemma to the stochastic differential equation.
-<br> Dividing through by S(t) in the above equation leads to:
+<br><br>The solution <i>S(t)</i> can be found by the application of Ito's Lemma to the stochastic differential equation.
+<br> Dividing through by <i>S(t)</i> in the above equation leads to:
 <br> <br> <img  src="res/img/img17.png" alt="ok" height="70px" width="500px">
-<br><br>Notice that the left hand side of this equation looks similar to the derivative of logS(t). Applying Ito's Lemma to logS(t) gives:
+<br><br>Notice that the left hand side of this equation looks similar to the derivative of <i>logS(t)</i>. Applying Ito's Lemma to <i>logS(t)</i> gives:
 <br> <br> <img  src="res/img/img41.png" alt="ok" height="100px" width="500px">
 <br><br> This becomes:
 <br> <br> <img  src="res/img/img18.png" alt="ok" height="100px" width="500px">
@@ -103,13 +103,13 @@ The usual model for the time-evolution of an asset price S(t) is given by the 
 <br> <br> <img  src="res/img/img20.png" alt="ok" height="100px" width="500px">
 <br><br>This is the solution the stochastic differential equation. In fact it is one of the only analytical solutions that can be obtained from stochastic differential equations.
 </p>
-<h4 class="ourproject_title title_padding" style="color:#D2FD60">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Ito’s Lemma</b>
 			</h4>
 <p style="color: black; font-size: 19px">Ito's Lemma is a key component in the Ito Calculus, used to determine the derivative of a time-dependent function of a stochastic process. It performs the role of the chain rule in a stochastic setting, analogous to the chain rule in ordinary differential calculus. Ito's Lemma is a cornerstone of quantitative finance and it is intrinsic to the derivation of the Black-Scholes equation for contingent claims (options) pricing.
 <br><br>It is necessary to understand the concepts of Brownian motion, stochastic differential equations and geometric Brownian motion before proceeding.
 </p>
-<h4 class="ourproject_title title_padding" style="color:#09A9B3">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>The Chain Rule</b>
 			</h4>
 <p style="color: black; font-size: 19px">One of the most fundamental tools from ordinary calculus is the chain rule. It allows the calculation of the derivative of chained functional composition. Formally, if W(t) is a continuous function, and:
@@ -122,7 +122,7 @@ The usual model for the time-evolution of an asset price S(t) is given by the 
 <br><br>
 The primary task is now to correctly extend the ordinary calculus version of the chain rule to be able to cope with random variables.
 </p>
-<h4 class="ourproject_title title_padding" style="color:#FDF355">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Theorem(Ito's Lemma)</b>
 			</h4>
 <p style="color: black; font-size: 19px">
@@ -133,7 +133,7 @@ The primary task is now to correctly extend the ordinary calculus version of the
 <br> <br> <img  src="res/img/img25.png" alt="ok" height="130px" width="500px">
 <br><br>With dW(t)<sup>2</sup> given by: dt<sup>2</sup>=0, dtdB(t)=0&#8743;dB(t)<sup>2</sup>=dt.
 </p>
-<h4 class="ourproject_title title_padding" style="color:#00E52B">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Deriving the Black-Scholes</b>
 			</h4>
 <p style="color: black; font-size: 19px">Now that we have derived Ito's Lemma, we are in a position to derive the Black-Scholes equation.
@@ -172,11 +172,11 @@ One payoff function we can use is that of a European call option struck at K. T
 <br>We are now in a position to solve the Black-Scholes equation.
 
 </p>
-<h4 class="ourproject_title title_padding" style="color:#5583FD">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Black Scholes Pricing formula</b>
 			</h4>
 <p style="color: black; font-size: 19px">
-It has already been outlined that the reader is to be familiar with the Black-Scholes formula for the pricing of European Vanilla Calls and Puts. For completeness, the price of a European Vanilla Call, C(S,t) is given below, where S is the underlying asset, K is the strike price, r is the risk-free rate, T is the time to maturity and σ is the (constant) volatility of the underlying  S(N is described below):
+It has already been outlined that the reader is to be familiar with the Black-Scholes formula for the pricing of European Vanilla Calls and Puts. For completeness, the price of a European Vanilla Call, <i>C(S,t)</i> is given below, where <i>S</i> is the underlying asset, <i>K</i> is the strike price, <i>r</i> is the risk-free rate, <i>T</i> is the time to maturity and σ is the (constant) volatility of the underlying  S(N is described below):
 <br> <br> <img  src="res/img/img34.png" alt="ok" height="70px" width="500px">
 <br><br>With d<sub>1</sub> and d<sub>2</sub> defined as follows:
 <br><!--<img  src="res/img/image104.png" alt="ok">-->
@@ -192,7 +192,7 @@ In addition, we would like to have closed form solutions for the "Greeks", which
 <br> <br> <img  src="res/img/img40.png" alt="ok" height="100px" width="500px">
 <br><br>
 </p>	
-<h4 class="ourproject_title title_padding" style="color:#F10C7B">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Code Snippets To Calculate the Black-Scholes Pricing Value:</b>
 			</h4>
 			
@@ -265,24 +265,7 @@ def vanilla_put_price(S, K, r, v, T):
 				<a class="button" href="try.html"> << Back  </a>
 	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
      	</p>
-<script src="res/js/prism.js"></script>
-	<script type="text/javascript">
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
 
-	for (i = 0; i < coll.length; i++) 
-	{
-  		coll[i].addEventListener("click", function() {
-    	this.classList.toggle("active");
-    	var content = this.nextElementSibling;
-    	if (content.style.display === "block") {
-      	content.style.display = "none";
-    	} else {
-      	content.style.display = "block";
-    }
-  });
-}
-</script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
