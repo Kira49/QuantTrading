@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> AJ </title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="res/css/styles.css">
+</head>
+	<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
+	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
+	<div class="navbar-nav" id="navbar-collapsed">
+		<a href="#home" class="nav-item nav-link navbar-brand">
+			<img src="res/img/home-24px.svg" alt="H">
+		</a>
+		<a href="#about" class="nav-item nav-link navbar-brand">
+			<img src="res/img/person-24px.svg" style="filter: invert(0);" alt="A">
+		</a>
+		<a href="#work" class="nav-item nav-link navbar-brand">
+			<img src="res/img/Psyduck-512.png" style="width: 25px; height: 25px;" alt="W">
+		</a>
+		<a href="#stuff" class="nav-item nav-link navbar-brand">
+			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
+		</a>
+		<a href="#team" class="nav-item nav-link navbar-brand">
+			<img src="res/img/perm_phone_msg-24px.svg" style="filter: invert(0);" alt="C">
+		</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse">
+		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
+			<a href="index.html#home" class="nav-item nav-link">HOME</a>
+			<a href="index.html#work" class="nav-item nav-link">WORK</a>
+			
+		</div>
+	</div>
+</nav>
+
+<!-- --------------------nav end------------------------------------ -->
+
+
+<body  align="center" bgcolor="black">
+		<br>
+		
+		<div id="home" class="ops3 main3 container-fluid">
+			<div class="snap-pad"></div>
+			<button type="button" id="top_button" onclick="goToTop()">
+				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
+			</button>
+			<h2 align="center" class="ourproject_title title_padding" style="color:black"> Option Strategies </h2>
+
+            
+
+<p>
+	<b style="color:#A569BD">Bull Put Ladder:</b><br><br>
+	The bull put ladder is a bearish strategy very similar to the bear call ladder. It is an extension of Bull Put Spread but has 3 legs rather than 2.	<br><br>
+    <!--<img src="res/img/ss22.png" alt="Nature" class="responsive"><br><br>-->
+    <b>Example of Bull Put Ladder:</b><br><br>
+    <ul style="color: black; font-size: 19px">
+<li>	Strike price of Short Put = 20000</li>
+<li>	Strike price of Middle Long Put = 19000</li>
+<li>Strike price of Lower Long Put = 18500</li>
+<li>	Short Put premium (higher strike) = ₹1,500</li>
+<li>	Long Put premium (middle strike) = ₹700</li>
+<li>	Long Put premium (lower strike) = ₹600</li>
+<li>	Net Credit = ₹200 (1500 - 700 - 600)</li>
+<li>	Net Credit (in value terms) = ₹4,000 (200 * 20)</li>
+<li>	Upper breakeven point = 19800 (20000 - 200)</li>
+<li>	Lower breakeven point = 17700 (18500 + 19000 - 20000 + 200)</li>
+<li>	Maximum upside reward = ₹4,000</li>
+<li>Maximum downside reward = unlimited</li>
+<li>	Maximum risk = ₹16,000 ((20000 - 19000 - 200) * 20)</li>
+</ul>
+</p>
+<p>
+	<b >Strategy</b><br><br>
+	<ul style="color: black; font-size: 19px">
+		<li>Sell ATM put option</li>
+		<li>Buy OTM middle strike option .</li>
+		<li>Sell OTM lower strike option.</li></ul>
+		<p>
+			Note that the options belong to the same underlying, have same expiration date and are in the same ratio (1:1:1).
+<br><br>
+			This might be a net credit strategy (mostly, might vary depending on the strikes chosen.).	
+	<br><br>
+	<img src="res/img/ss23.png" alt="Nature" class="responsive"><br><br>
+	<img src="res/img/new4.jpeg" alt="Nature" class="responsive"><br><br>
+	The calculations are as follows:
+<br><br>
+Net Credit = Premium of ATM put option - (Premium of middle OTM strike + Premium of Lower OTM strike)
+<br><br>
+Upper Breakeven Point = Strike of ATM Put – Net Credit
+<br><br>
+Lower Breakeven Point = Strike of Lower OTM Put + Strike of Middle OTM Put – Strike of ATM Put + Net Credit
+<br><br>
+Maximum Profit = Unlimited
+<br><br>
+Maximum Loss = Strike of ATM – Strike of middle OTM – Net Credit
+<br><br>	
+<b >Option Greeks:</b><br><br>
+<b >Delta:</b><br><br>
+Because this strategy is neutral to bullish at initiation, Delta initially is positive and hence benefits the position when the underlying price rises, and vice
+
+versa. However, Delta turns negative when the underlying price drops and inches towards the strikes of the long Puts. When this happens, falling prices start benefiting the option position.
+<br><br>
+<b >Gamma:</b><br><br>	
+Gamma is slightly negative at initiation but bottoms out at the higher strike, causing the Delta to become more positive when the underlying price falls. However, if the price fall continues, Gamma turns positive, causing the Delta to eventually move into the negative zone. Gamma peaks out at the lower strike, causing the Delta to become more negative if the underlying price continues dropping.
+<br><br>
+<b >Vega:</b><br><br>	
+When the underlying price is below the lower breakeven point or above the upper breakeven point, Vega is positive and hence, rising volatility is helpful to the position, and vice versa. On the other hand, when the underlying price is between the two breakeven points, Vega is negative and hence, rising volatility hurts the position, and vice versa.
+<br><br>
+<b >Theta:</b><br><br>
+When the underlying price is below the lower breakeven point or above the upper breakeven point, Theta is negative because of which time decay hurts the position. On the other hand, when the underlying price is between the two breakeven points, Theta is positive because of which time decay benefits the position.
+<br><br>
+Benefits of the strategy:
+<ul style="color: black; font-size: 19px">
+	<li>Potential for unlimited profit if the underlying price rises sharply</li>
+	<li>
+		Potential to retain the net premium received if the underlying price stays below the lower strike
+	</li>
+
+	</ul>
+<p>Drawbacks of the strategy:
+	<ul style="color: black; font-size: 19px">
+		<li>If the underlying price stays between the two breakeven points, the trader will suffer a loss</li>
+		<li>Sometimes, the strategy could be a net debit strategy</li>
+	</ul>
+<p>
+	<b style="color:#A569BD">Put Ratio Back spread:</b><br><br>
+	The Pull ratio back spread is very similar to call ratio back spread except that the strategy is executed when the view on the market is bearish. The Put Ratio Back Spread is a 3-leg option strategy as it involves buying two OTM Put options and selling one ITM Put option. This is the classic 2:1 combo.
+	<br>
+	<img src="res/img/ss28.png" alt="Nature" class="responsive"><br><br>
+	<b >Strategy</b><br><br>
+	<ul style="color: rgb(177, 165, 165); font-size: 19px">
+		<li>Sell one ITM put option</li>
+		<li>Buy two OTM put options .</li></ul>
+		<p>Note that the options belong to the same underlying, have same expiration date and are in the same ratio (1:2).
+<br><br>
+			Usually this is a net credit strategy, where the selling of the ITM put option finances the buying of the two OTM put options.
+	<br><br>
+	<img src="res/img/ss29.png" alt="Nature" class="responsive"><br><br>
+	<img src="res/img/ss30.png" alt="Nature" class="responsive">
+	<img src="res/img/ss31.png" alt="Nature" class="responsive"><br><br>
+	The calculations are as follows:
+	<br><br> 𝑆𝑝𝑟𝑒𝑎𝑑 = 𝐻𝑖𝑔ℎ𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 – 𝐿𝑜𝑤𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 
+	<br>𝐶𝑟𝑒𝑑𝑖𝑡 = 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝐼𝑇𝑀 𝑜𝑝𝑡𝑖𝑜𝑛 – 2∗𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝐴𝑇𝑀 𝑜𝑝𝑡𝑖𝑜𝑛
+	<br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = 𝑆𝑝𝑟𝑒𝑎𝑑 – 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡
+	<br><br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝑃𝑟𝑜𝑓𝑖𝑡 = 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑
+	<br><br> 𝐿𝑜𝑤𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 𝑃𝑜𝑖𝑛𝑡 = 𝐿𝑜𝑤𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 – 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠
+	<br><br> 𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 𝑃𝑜𝑖𝑛𝑡 = 𝐿𝑜𝑤𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 + 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠
+<br><br>
+	A Pull Ratio Back Spread with puts is the same as selling a bull put spread and simultaneously buying a put with the same strike price as the long put in the bull put spread. The net premium received from the bull put spread is used to at least partially pay for the long put. The position profits if the underlying stock falls sharply beyond the strike price of the long puts.	
+	<br><br>	
+	<b >Option Greeks:</b><br><br>
+	<b >Delta:</b><br><br>
+	Long puts have negative deltas, and short puts have positive deltas. The net delta of a pull ratio back spread varies from −1.00 to +1.00, depending on the relationship of the stock price to the strike prices of the options. When established, the initial delta of a pull ratio back spread is negative. Furthermore, the delta falls (gets more negative) as the stock price falls and rises (gets less negative) as the stock price
+
+rises. In the language of options, this is known as a “positive gamma.” As expiration approaches, the position delta approaches +1.00 if the short put is in the money and the long puts are out of the money. In this case, the delta of the short put approaches +1.00, and the deltas of the long puts approach zero. When the stock price is below the strike price of the long puts as expiration approaches, the position delta approaches −1.00, because the delta of the short put approaches +1.00 and the deltas of the two long puts approach −1.00 each. The position delta approaches zero as the stock price rises above the strike price of the short put, because the deltas of all puts approach zero.
+<br><br>
+<b >Gamma:</b><br><br>	
+Gamma is initially negligible or slightly negative when the underlying price is at or near the lower strike. It starts rising as the underlying price rises and moves away from the lower strike. This causes the Delta to turn positive and move higher. Gamma peaks out near the higher strike and starts tapering after that. As a result, once the underlying moves above the higher strike, Delta continues rising but at a slower rate as it approaches its upper extreme.
+<br><br>
+<b >Vega:</b><br><br>	
+In general a pull ratio back spread has a net positive Vega, because the position has two long puts and one short put. However, the impact of changing volatility, i.e., the net Vega, varies depending on the relationship of the stock price to the strike prices and on the time to expiration. When first established, assuming the stock price is close to the strike price of the short put and there are 28 days or more to expiration, the net Vega is positive, because the total positive Vega of the two long puts is greater than the negative Vega of the one short put. As expiration approaches, if the stock price is close to or below the strike price of the long puts (lower strike), then the net Vega is positive. If the stock price is close to the strike price of the short put (higher strike), then the net Vega tends to be negative. The net Vega approaches zero if the stock price rises above the higher strike.
+<br>
+<img src="res/img/ss32.png" alt="Nature" class="responsive"><br><br>
+<b >Theta:</b><br><br>	
+In general pull ratio back spread has a net negative theta, because the position has two long puts and one short put. However, the impact of time erosion varies depending on the relationship of the stock price to the strike prices and on the time to expiration. When first established, assuming the stock price is close to the strike price of the short put and there are 14 days or more to expiration, the net theta is negative, because the total negative theta of the two long puts is greater than the positive theta of the one short put. As a result, the position loses money from time decay. As expiration approaches, if the stock price is close to or below the strike price of the long puts (lower strike), then the net theta is negative. If the stock price is close to the strike price of the short put (higher strike), then the net theta tends to be positive. The net theta approaches zero if the stock price rises above the higher strike.		
+<br><br>
+Benefits of the strategy:
+<ul style="color: black; font-size: 19px">
+	<li> More often than not, this is a net credit strategy that requires no upfront payment
+</li>
+<li>This strategy can profit from a down move in price as well</li>
+
+<li>This strategy has an unlimited profit potential in case the underlying rallies sharply
+</li>
+<li>This strategy is subject to limited risk
+</li>
+	</ul>
+<p>Drawbacks of the strategy:
+	<ul style="color: black; font-size: 19px">
+		<li>Because this is a volatility-based strategy, stagnating underlying price can lead to losses
+</li>
+<li>Because this strategy involves selling an option, it will require a greater margin in your trading account</li>
+	</ul>
+<p>
+	<b style="color:#A569BD">Neutral Strategies:</b><br><br>
+	<b style="color:#A569BD">Long Straddle:</b><br><br>
+	A long straddle is a neutral strategy to profit from a big price change, either up or down in the underlying stock.
+<br><br>
+<img src="res/img/ss33.png" alt="Nature" class="responsive"><br><br>
+<b >Strategy</b><br><br>
+	<ul style="color: black; font-size: 19px">
+		<li>Buy an ATM call option</li>
+		<li>Buy an ATM put option</li></ul>
+		<p>	
+			<br><br>
+			Note that the options belong to the same underlying, have same expiration date, have the same strike price and are in the same ratio (1:1).
+			<br><br>
+			The calculations are as follows:
+			<br><br> 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 = 𝑁𝑒𝑡 𝐷𝑒𝑏𝑖𝑡 = 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝐶𝑎𝑙𝑙 𝑂𝑝𝑡𝑖𝑜𝑛 + 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝑃𝑢𝑡 𝑂𝑝𝑡𝑖𝑜𝑛 
+			<br>𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑃𝑎𝑖𝑑
+			<br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝑃𝑟𝑜𝑓𝑖𝑡 = 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑
+			<br> 𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 + 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚
+			<br> 𝐿𝑜𝑤𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 – 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚
+			<br><br>
+			<img src="res/img/ss34.png" alt="Nature" class="responsive"><br><br>
+            <img src="res/img/new3.jpeg" alt="Nature" class="responsive"><br><br>
+            A long straddle is established for a net debit (or net cost) and profits if the underlying stock rises above the upper break-even point or falls below the lower break-even point. Profit potential is unlimited on the upside and substantial on the downside. Potential loss is limited to the total cost of the straddle.
+			<br><br>	
+	<b >Option Greeks:</b><br><br>
+	<b >Delta and Gamma:</b><br><br>
+	When the stock price is at or near the strike price of the straddle, the positive delta of the call and negative delta of the put very nearly offset each other. Thus, for small changes in stock price near the strike price, the price of a straddle does not change very much. This means that a straddle has a “near-zero delta”. Delta estimates how much an option price will change as the stock price changes.
+<br><br>
+However, if the stock price “rises fast enough” or “falls fast enough,” then the straddle rises in price. This happens because, as the stock price rises, the call rises in price more than the put falls in price. Also, as the stock price falls, the put rises in price more than the call falls. In the language of options, this is known as “positive gamma.” Gamma estimates how much the delta of a position changes as the stock price changes. Positive gamma means that the delta of a position changes in the same direction as the change in price of the underlying stock. As the stock price rises, the net delta of a straddle becomes more and more positive, because the delta of the long call becomes more and more positive and the delta of the put goes to zero. Similarly, as the stock price falls, the net delta of a straddle becomes more and more negative, because the delta of the long put becomes more and more negative and the delta of the call goes to zero.
+<br><br>
+<b >Vega:</b><br><br>
+As volatility rises, option prices – and straddle prices – tend to rise if other factors such as stock price and time to expiration remain constant. Therefore, when volatility increases, long straddles increase in price and make money. When volatility falls, long straddles decrease in price and lose money. In the language of options, this is known as “positive vega.” The time left to expiry determines the effect of vega on the position. More the time left to expiry, more the strategy profits due to increased volatility.
+<br><br>
+<img src="res/img/ss37.png" alt="Nature" class="responsive"><br><br>
+<b >Theta:</b><br><br>		
+The time value portion of an option’s total price decreases as expiration approaches. This is known as time erosion, or time decay. Since long straddles consist of two long options, the sensitivity to time erosion is higher than for single-option positions. Long straddles tend to lose money rapidly as time passes and the stock price does not change.
+<br><br>
+Benefits of the strategy:
+<ul style="color: black; font-size: 19px">
+<li>	This strategy has risk that is limited to the extent of net premium paid
+</li>
+<li>This strategy has a potential for unlimited reward
+</li>
+<li>This strategy can profit from either side move in the price of the underlying instrument, provided the move is substantial
+</li>	</ul>
+<p>Drawbacks of the strategy:
+	<ul style="color: black; font-size: 19px">
+		<li>Because the trader would buy two ATM options, this strategy can be quite expensive
+</li>
+<li>There is a possibility that the trader could lose 100% of his/her investment if the underlying price is exactly at the strike price on expiration
+	</li>	
+<li>Because both the options bought are ATM, they will be subject to highest time decay if the underlying price does not move much
+</li>		
+<li> If volatility does not pick up or if the underlying price stays range bound, time decay would erode the values of both the options	
+</li>
+</ul>
+<p>
+	<b style="color:#A569BD">Short Straddle:</b><br><br>
+	A short straddle is a neutral strategy which aims to profit from little to no price movement in the underlying stock and is opposite to the long straddle.
+	<img src="res/img/ss38.png" alt="Nature" class="responsive"><br><br>
+	<b >Strategy</b><br><br>
+	<ul style="color: black; font-size: 19px">
+		<li>Sell one ATM call option</li>
+		<li>Sell one ATM put option</li></ul>
+		<p>	
+			<br><br>
+
+			Note that the options belong to the same underlying, have same expiration date, have the same strike price and are in the same ratio (1:1).
+			<br><br>
+			𝑇ℎ𝑒 𝑐𝑎𝑙𝑐𝑢𝑙𝑎𝑡𝑖𝑜𝑛𝑠 𝑎𝑟𝑒 𝑎𝑠 𝑓𝑜𝑙𝑙𝑜𝑤𝑠:
+			<br><br>
+			𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 = 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡 = 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝐴𝑇𝑀 𝑐𝑎𝑙𝑙 𝑜𝑝𝑡𝑖𝑜𝑛 + 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝐴𝑇𝑀 𝑃𝑢𝑡 𝑜𝑝𝑡𝑖𝑜𝑛
+			<br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐺𝑎𝑖𝑛 = 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡
+			<br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑 
+			<br>𝐿𝑜𝑤𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 – 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚
+			<br> 𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 + 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚
+			<img src="res/img/ss39.png" alt="Nature" class="responsive"><br><br>
+            <img src="res/img/new5.jpeg" alt="Nature" class="responsive"><br><br>
+            A short straddle is established for a net credit (or net receipt) and profits if the underlying stock trades in a narrow range between the break-even points. Profit potential is limited to the total premiums received. Potential loss is unlimited if the stock price rises and substantial if the stock price falls.
+			<br><br>	
+	<b >Option Greeks:</b><br><br>
+	<b >Delta and Gamma:</b><br><br>
+	When the stock price is at or near the strike price of the straddle, the positive delta of the call and negative delta of the put very nearly offset each other. Thus, for small changes in stock price near the strike price, the price of a straddle does not change very much. This means that a straddle has a “near-zero delta.” Delta estimates how much an option price will change as the stock price changes.
+<br><br>
+However, if the stock price “rises fast enough” or “falls fast enough,” then the straddle rises in price, and a short straddle loses money. This happens because, as the stock price rises, the short call rises in price more and loses more than the short put makes by falling in price. Also, as the stock price falls, the short put rises in price more and loses more than the call makes by falling in price. In the language of options, this is known as “negative gamma.” Gamma estimates how much the delta of a position changes as the stock price changes. Negative gamma means that the delta of a position changes in the opposite direction as the change in price of the underlying stock. As the stock price rises, the net delta of a straddle becomes more and more negative, because the delta of the short call becomes more and more negative and the delta of the short put goes to zero. Similarly, as the stock price falls, the net delta of a straddle becomes more and more positive, because the delta of the short put becomes more and more positive and the delta of the short call goes to zero.
+<br><br>
+<b >Vega:</b><br><br>
+Volatility is a measure of how much a stock price fluctuates in percentage terms, and volatility is a factor in option prices. As volatility rises, option prices – and straddle prices – tend to rise if other factors such as stock price and time to expiration remain constant. Therefore, when volatility increases, short straddles increase in price and lose money. When volatility falls, short straddles decrease in price and make money. In the language of options, this is known as “negative vega.”
+<br><br>
+<b >Theta:</b><br><br>
+The time value portion of an option’s total price decreases as expiration approaches. This is known as time erosion, or time decay. Since short straddles consist of two short options, the sensitivity to time erosion is higher than for single-option positions. Short straddles tend to make money rapidly as time passes and the stock price does not change.
+<br><br>
+Benefits of the strategy:
+<ul style="color: black; font-size: 19px">
+<li>	This strategy is a net credit strategy</li>
+
+<li>This strategy can be a good source of income if used under right market conditions
+</li>	
+<li> For this strategy, time decay is immensely beneficial</li>
+</ul>
+<p>Drawbacks of the strategy:
+	<ul style="color: black; font-size: 19px">
+	<li>	This strategy has an unlimited risk profile</li>
+
+	<li>This strategy has a limited reward profile</li>
+		
+	<li> An unexpected rise in volatility would be detrimental to the success of the strategy
+		</li>
+		<li> Any unexpected price-sensitive news or event could spell big trouble to the trader
+		</li>
+		<li> A sharp gap up or gap down opening can be detrimental	</li>	
+</ul>
+
+
+
+
+</p>
+			<p align="center">
+				<a class="button" href="index.html"> << Back Home </a>
+				<a class="button" href="options4.html"> Next >> </a>
+	     		 <a class="button" href="options2.html"> << Back</a> 
+     		</p>
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+		</div>
+		
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="res/js/typing_text.js" type="text/javascript"></script>
+	<script src="res/js/work_carousel.js" type="text/javascript"></script>
+	<script src="res/js/scroll_top.js" type="text/javascript"></script>
+	<script src="res/js/sticky_navbar.js" type="text/javascript"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

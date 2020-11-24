@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> AJ </title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="res/css/styles.css">
+</head>
+	<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
+	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
+	<div class="navbar-nav" id="navbar-collapsed">
+		<a href="#home" class="nav-item nav-link navbar-brand">
+			<img src="res/img/home-24px.svg" alt="H">
+		</a>
+		<a href="#about" class="nav-item nav-link navbar-brand">
+			<img src="res/img/person-24px.svg" style="filter: invert(0);" alt="A">
+		</a>
+		<a href="#work" class="nav-item nav-link navbar-brand">
+			<img src="res/img/Psyduck-512.png" style="width: 25px; height: 25px;" alt="W">
+		</a>
+		<a href="#stuff" class="nav-item nav-link navbar-brand">
+			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
+		</a>
+		<a href="#team" class="nav-item nav-link navbar-brand">
+			<img src="res/img/perm_phone_msg-24px.svg" style="filter: invert(0);" alt="C">
+		</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse">
+		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
+			<a href="index.html#home" class="nav-item nav-link">HOME</a>
+			<a href="index.html#work" class="nav-item nav-link">WORK</a>
+			
+		</div>
+	</div>
+</nav>
+<!-- --------------------nav end------------------------------------ -->
+
+<body  align="center" bgcolor="black">
+		<br>
+		
+		<div id="home" class="ops4 main3 container-fluid">
+			<div class="snap-pad"></div>
+			<button type="button" id="top_button" onclick="goToTop()">
+				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
+			</button>
+			<h2 align="center" class="ourproject_title title_padding" style="color:black"> Option Strategies </h2>
+
+<p>
+	<b style="color:#A569BD">Long Strangle:</b><br><br>
+	A long strangle is a neutral strategy to profit from a big price change – either up or down – in the underlying stock. The strangle is an improvisation over the straddle. The improvisation mainly helps in terms of reduction of the strategy cost, however as a trade-off the points required to breakeven increases.
+<br><br><img src="res/img/ss43.png" alt="Nature" class="responsive"><br><br>
+<b >Strategy</b><br><br>
+	<ul style="color: black; font-size: 19px">
+		<li>Buy an OTM call option</li>
+		<li>Buy an OTM put option</li></ul>
+		<p>	
+			<br><br>	
+			Note that the options belong to the same underlying, have same expiration date, have the same strike price and are in the same ratio (1:1).
+<br><br>
+The OTM options are cheaper than the ATM options and hence, the strategy cost is less compared to that of a straddle.	
+<br><br>
+<img src="res/img/ss44.png" alt="Nature" class="responsive"><br><br>
+<img src="res/img/new6.jpeg" alt="Nature" class="responsive"><br><br>
+The calculations are as follows:
+<br><br>
+Net Premium = Net Debit = Premium of Call Option + Premium of Put Option
+<br>
+ Maximum Loss = Net Premium Paid
+<br>
+Maximum Profit = Unlimited
+<br>
+Upper Breakeven = Strike Price + Net Premium
+<br>
+ Lower Breakeven = Strike Price – Net Premium
+<br><br>
+A long strangle is established for a net debit (or net cost) and profits if the underlying stock rises above the upper break-even point or falls below the lower break-even point. Profit potential is unlimited on the upside and substantial on the downside. Potential loss is limited to the total cost of the strangle.
+<br><br>
+The effect of the option Greeks is similar to that on the Long Straddle
+<br><br>
+Benefits of the strategy:
+<ul style="color: black; font-size: 19px">
+<li>	This strategy has risk that is limited to the extent of net premium paid
+</li>
+<li> This strategy has a potential for unlimited reward
+	</li>
+<li>This strategy can profit from either side move in the price of the underlying instrument, provided the move is substantial
+	</li>
+<li> Compared to a Long Straddle, this strategy costs less</li>
+</ul>
+<p>Drawbacks of the strategy:
+	<ul style="color: black; font-size: 19px">
+	<li>	This is a net debit strategy because of the two options that are purchased
+</li>
+		<li> There is a possibility that the trader could lose 100% of his/her investment if the underlying price is somewhere between the two strikes on expiration
+		</li>
+		<li> Because both the options are long, time decay is the biggest enemy of this strategy
+		</li>
+		<li>If volatility does not pick up or if the underlying price stays range bound, time decay would erode the values of both the options	</li>
+</ul>
+<p>
+	<b style="color:#A569BD">Comparison of LONG STRADDLE and LONG STRANGLE:</b><br><br>
+	Cost and Maximum Risk: Higher in Straddle than in Strangle which means more number of strangles can be purchased than straddles for a given capital.
+<br><br>
+	Breakeven Points: Closer for Straddle than for Strangle
+<br><br>	
+	Time Decay: Long straddles are less sensitive to time decay than long strangles. Thus, when there is little or no stock price movement, a long straddle will experience a lower percentage loss over a given time period than a comparable strangle.
+<br><br>
+<b style="color:#A569BD">Short Strangle:</b><br><br>
+A short strangle is a neutral strategy which aims to profit from little to no price movement in the underlying stock and is opposite to the long strangle.
+<br><br><img src="res/img/ss47.png" alt="Nature" class="responsive"><br><br>
+<b >Strategy</b><br><br>
+	<ul style="color: black; font-size: 19px">
+		<li>Sell one OTM call option</li>
+		<li>Sell one OTM put option</li></ul>
+		<p>	
+			<br><br>Note that the options belong to the same underlying, have same expiration date, have the same strike price and are in the same ratio (1:1).
+<br><br>
+			A short strangle is established for a net credit (or net receipt) and profits if the underlying stock trades in a narrow range between the break-even points. Profit potential is limited to the total premiums received. Potential loss is unlimited if the stock price rises and substantial if the stock price falls.
+<br><br>
+The calculations are as follows:
+<br><br>
+𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 = 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡 = 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝑂𝑇𝑀 𝑐𝑎𝑙𝑙 𝑜𝑝𝑡𝑖𝑜𝑛 + 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝑂𝑇𝑀 𝑃𝑢𝑡 𝑜𝑝𝑡𝑖𝑜𝑛
+<br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐺𝑎𝑖𝑛 = 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡
+<br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑
+<br> 𝐿𝑜𝑤𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 – 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚
+<br> 𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 + 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚
+<br><br>
+<img src="res/img/ss48.png" alt="Nature" class="responsive"><br><br>
+<img src="res/img/ss49.png" alt="Nature" class="responsive">
+<img src="res/img/ss50.png" alt="Nature" class="responsive"><br><br>
+The effect of Greeks is similar to that of Short Straddle.
+<br><br>
+Benefits of the strategy:
+<ul style="color: black; font-size: 19px">
+<li>	This strategy is a net credit strategy</li>
+
+	<li> This strategy can be a good source of income if used under right market conditions
+	</li>
+	<li> For this strategy, time decay is immensely beneficial
+	</li>
+	<li> Compared to a Short Straddle, this strategy has a wider maximum profit zone
+	</li>
+	<li> Compared to a Short Straddle, this strategy has wider breakeven point</li>
+</ul>
+<p>Drawbacks of the strategy:
+	<ul style="color: black; font-size: 19px">
+	<li>	This strategy has an unlimited risk profile</li>
+
+		<li> This strategy has a limited reward profile</li>
+		
+		<li> Compared to a Short Straddle, this strategy has a smaller net credit
+		</li>
+		<li> An unexpected rise in volatility would be detrimental to the success of the strategy
+		</li>
+		<li>Any unexpected price-sensitive news or event could spell big trouble to the trader
+	</li>
+	</ul>
+<p>
+	<b style="color:#A569BD">Comparison of SHORT STRADDLE and SHORT STRANGLE:</b><br><br>
+	Profit: The premium received and maximum profit potential for selling one strangle are lower than for one straddle.
+<br><br>
+	Breakeven Points: Closer for Strangle than for Straddle which means there is a greater chance of making 100% of the premium received if a short strangle is held to expiration when compared to a Straddle.
+<br><br>	
+	Time Decay: Short strangles are less sensitive to time decay than short straddles. Thus, when there is little or no stock price movement, a short strangle will experience a greater percentage profit over a given time period than a comparable short straddle.
+<br><br>
+<b style="color:#A569BD">Long Iron Condor:</b><br><br>
+A long iron condor spread is four-part strategy consisting of a bear put spread and a bull call spread in which the strike price of the long put is lower than the strike price of the long call. All options have the same expiration date.
+<br><br>
+A long iron condor spread is the strategy of choice when the forecast is for a stock price move outside the range of the highest and lowest strike prices. Unlike a long strangle, however, the profit potential of a long iron condor spread is limited. Also, the commissions for a condor spread are higher than for a strangle. The trade-off is that a long iron condor spread has breakeven points closer to the current stock price than a comparable long strangle.
+<br><br>
+<img src="res/img/ss51.png" alt="Nature" class="responsive"><br><br>
+<b >Strategy</b><br><br>
+	<ul style="color: black; font-size: 19px">
+	<li>	Sell a slightly OTM call option (Upper Middle Strike)
+</li>
+		<li> Sell a slightly OTM put option (Lower Strike)
+		</li>
+		<li> Buy a further OTM call option to protect the short Call option (Upper Strike)
+		</li>
+		<li> Buy a further OTM put option to protect the short Put option (Lower Middle Strike)	
+</li>	</ul>
+		<p>	
+			A long iron condor spread is established for a net debit, and both the potential profit and maximum risk are limited. The maximum profit potential is realized if the stock price is above the highest strike or below the lowest strike at expiration. The maximum risk is realized if the stock price is equal to or between the strike prices of the long options on the expiration date, in which case all options expire worthless.
+			<img src="res/img/ss52.png" alt="Nature" class="responsive"><br><br>
+			<img src="res/img/ss53.png" alt="Nature" class="responsive"><br><br>
+			In the example above, one 95 Put is sold, one 100 put is purchased, one 105 Call is purchased and one 110 Call is sold, so the four strike prices are equidistant. However, it is normal for the distance between the long call and long put to be greater than the distance between the long and short options of the same type. For example, an 85-90 Bear Put Spread might be combined with a 105-110 Bull Call Spread to create a long iron condor in which the distance between the strike prices of the long options is 15 points while the distance between the strike prices of the bull and bear spreads are 5 points.
+<br><br>
+			The calculations are as follows:
+			<br><Br> 𝑁𝑒𝑡 𝐷𝑒𝑏𝑖𝑡 = 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝑙𝑜𝑛𝑔 𝑜𝑝𝑡𝑖𝑜𝑛𝑠 – 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝑠ℎ𝑜𝑟𝑡 𝑜𝑝𝑡𝑖𝑜𝑛𝑠
+				<br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = 𝑁𝑒𝑡 𝐷𝑒𝑏𝑖𝑡
+		<br>	
+			𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝑃𝑟𝑜𝑓𝑖𝑡 = 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 (𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝐿𝑜𝑛𝑔 𝐶𝑎𝑙𝑙 – 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝑆ℎ𝑜𝑟𝑡 𝐶𝑎𝑙𝑙,𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝐿𝑜𝑛𝑔 𝑃𝑢𝑡 −𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝑆ℎ𝑜𝑟𝑡 𝑃𝑢𝑡) – 𝑁𝑒𝑡 𝐷𝑒𝑏𝑖𝑡
+			<br> 𝐿𝑜𝑤𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝐿𝑜𝑛𝑔 𝑃𝑢𝑡 – 𝑁𝑒𝑡 𝐷𝑒𝑏𝑖𝑡
+			<br> 𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 𝑜𝑓 𝐿𝑜𝑛𝑔 𝐶𝑎𝑙𝑙 – 𝑁𝑒𝑡 𝐷𝑒𝑏𝑖𝑡
+			<br><br>
+			<b >Option Greeks:</b><br><br>
+			<b >Delta:</b><br><br>		
+			Delta is at or near zero at initiation. It tends to bottom out below zero when the underlying price is below the lower strike and peak out above zero when the underlying price is above the higher strike. That said, while Delta does become non-zero as the underlying price moves, it does not deviate much from zero. As such, changes in the price of the underlying do not have much impact on this strategy because of the way it is structure
+			<br><br>
+			<b >Gamma:</b><br><br>
+			Gamma is positive and is at its highest point in between the two middle strikes. As the underlying price moves away from the midpoint of the two middle strike and approaches either the lower or the higher strike, Gamma tends to move into negative before bottoming out around these extreme strikes.
+			<br><br>
+			<b >Vega:</b><br><br>
+			Vega is positive and is at its highest point between the two middle strikes, meaning the positive impact of a rise in volatility is the greatest around the middle strikes. Volatility benefits as long as the position in unprofitable. That
+
+			said, Vega turns negative when the position becomes profitable, meaning rising volatility now starts hurting the position.
+			<br><br>
+			<b >Theta:</b><br><br>
+			Theta is negative and is at its lowest point between the two middle strikes, meaning time decay hurts the most around the middle strikes. Time decay hurts the position as long as it is unprofitable. That said, Theta turns positive when the position becomes profitable, meaning time decay now starts benefiting the position.
+			<br><br>
+			Benefits of the strategy:
+			<ul style="color: black; font-size: 19px">
+			<li>	This strategy is direction neutral as the trader can profit from either direction, up or down
+</li>
+				<li> Maximum loss under this strategy is limited</li>
+				
+				<li> Rising volatility has a beneficial impact on the strategy payoff
+	</li>		</ul>
+			<p>Drawbacks of the strategy:
+				<ul style="color: black; font-size: 19px">
+					<li>The cost/risk of this strategy tends to exceed the potential reward
+</li>
+					<li> There are chances that the trader could lose 100% of his net investment
+					</li>
+					<li> When the underlying price is within the confines of the two middle strikes, a decline in volatility would hurt the position
+					</li>
+					<li> A sharp move below the lower strike or above the higher strike would lead to an opportunity loss as maximum profit potential under this strategy is capped
+					</li>
+					<li>Time decay would hurt the trader, especially when the position is unprofitable
+			</li>	</ul>
+			<p>
+				<br><br>
+				<b style="color:#A569BD">Short Iron Condor:</b><br><br>
+				A short iron condor is a neutral strategy
+
+which aims to profit from neutral stock price
+
+action between the strike price of the short options
+
+with limited risk.
+<br><br>
+A short iron condor spread is a four-part strategy consisting of a bull put spread and a bear call spread in which the strike price of the short put is lower than the strike price of the short call. All options have the same expiration date.
+<br><br>
+<img src="res/img/ss54.png" alt="Nature" class="responsive"><br><br>
+<b >Strategy</b><br><br>
+	<ul style="color: black; font-size: 19px">
+	<li>	Buy a slightly OTM put option (Lower Strike)
+</li>
+		<li> Buy a slightly OTM call option (Upper Strike)
+		</li>
+		<li> Sell a farther OTM put option  (Lower Middle Strike)
+		</li>
+		<li> Sell a further OTM call option  (Upper Middle Strike)	
+</li>	</ul>
+		<p>			
+<br><br>
+			A Short Iron Condor is a strategy that involves buying a lower strike Put, selling a lower middle strike Put, selling a higher middle strike Call, and buying a higher strike Call. Each of these options would have the same underlying instrument and expiration date. Usually, the lower strike and the lower middle strike Puts are OTM Puts, whereas the higher middle strike and the higher strike Calls are OTM Calls. At the time of initiating this strategy, the underlying price is usually somewhere between the two middle strikes. Usually, all the four options are equidistant from each other. That said, this is not a hard and fast rule.
+<br><br>
+			A Short Iron Condor is a net credit strategy. In terms of the risk reward profile, a Short Iron Condor is quite attractive. In absolute terms, the maximum potential profit under this strategy tends to be larger than the maximum
+			
+			potential loss. As a result, this strategy can be initiated by intermediate option traders as well. Also, as we shall later see, Short Iron Condor has a similar payoff structure as a Long Call Condor or a Long Put Condor. However, there are differences. The major difference is that Long Call/Put Condor are net debit strategies, while a Short Iron Condor is a net credit strategy.
+<br><br>			
+			An iron condor improvises a short strangle by plugging in the open ends. Essentially, it is like hedging a short strangle. This decreases the risk of the strategy, but the tradeoff is lower profits.
+<br><br>			
+			The calculations are as follows:
+			<br><br> 𝑆𝑝𝑟𝑒𝑎𝑑 = 𝐷𝑖𝑓𝑓𝑒𝑟𝑒𝑛𝑐𝑒 𝑖𝑛 𝑃𝑟𝑖𝑐𝑒𝑠 𝑜𝑓 𝑡ℎ𝑒 𝐵𝑢𝑙𝑙 𝑃𝑢𝑡 𝑆𝑝𝑟𝑒𝑎𝑑 (𝑜𝑟 𝐵𝑒𝑎𝑟 𝐶𝑎𝑙𝑙 𝑆𝑝𝑟𝑒𝑎𝑑)
+			<br> 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡 = 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝑆ℎ𝑜𝑟𝑡 𝐶𝑎𝑙𝑙𝑠 – 𝑃𝑟𝑒𝑚𝑖𝑢𝑚 𝑜𝑓 𝐿𝑜𝑛𝑔 𝐶𝑎𝑙𝑙𝑠
+			<br>
+			 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝑃𝑟𝑜𝑓𝑖𝑡 = 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡
+			 <br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = 𝑆𝑝𝑟𝑒𝑎𝑑 – 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡
+
+			 <br><br>
+			 <img src="res/img/ss55.png" alt="Nature" class="responsive"><br><br>
+			 <img src="res/img/ss56.png" alt="Nature" class="responsive"><br><br>
+			 <b >Option Greeks:</b><br><br>
+			 <b >Delta:</b><br><br>	
+			 Delta is at or near zero at initiation. It tends to peak out above zero when the underlying price is below the lower strike and bottom out below zero when the underlying price is above the higher strike. That said, while Delta does become non-zero as the underlying price moves, it does not deviate much from zero. As such, changes in the price of the underlying do not have much impact on this strategy because of the way it is structured.
+			 <br><br>
+			 <b >Gamma:</b><br><br>
+			 Gamma is negative and is at its lowest point in between the two middle strikes. As the underlying price starts moving away from the midpoint of the two middle strikes and approaches either the lower or the higher strike, Gamma tends to move into positive before peaking out around these extreme strikes.
+			 <br><br>
+			 <b >Vega:</b><br><br>
+			 Vega is negative and is at its lowest point between the two middle strikes, meaning the negative impact of a rise in volatility is the highest around the middle strikes. Volatility hurts as long as the position in profitable. That said, Vega turns positive when the position becomes unprofitable, meaning a rise in volatility now starts helping the position.
+			 <br><br>
+			 <b >Theta:</b><br><br>
+			 Theta is positive and is at its highest point between the two middle strikes, meaning time decay is most helpful around the middle strikes. Time decay benefits the position as long as it is profitable. That said, Theta turns negative when the position becomes unprofitable, meaning time decay now starts hurting the position.
+			 <br><br>
+			 Benefits of the strategy:
+			 <ul style="color: black; font-size: 19px">
+			<li>	This is a net credit strategy</li>
+
+				<li> The risk of this strategy tends to be smaller than the potential reward
+				</li>
+				<li> Time decay benefits the position, as long as it is profitable
+				</li>
+				<li> Maximum loss under this strategy is limited </li>
+			</ul>
+			 <p>Drawbacks of the strategy:
+				 <ul style="color: black; font-size: 19px">
+				<li>	When the underlying price is between the middle strikes, rise in volatility would hurt the position
+</li>
+<li> If the underlying price moves outside one of the two breakeven points, the trader will incur a loss
+</li>				</ul>
+			 <p>
+				 <br><br>
+				<b >Max Pain:</b><br><br>
+				Max pain, or the max pain price, is the strike price with the most open contract puts and calls and the price at which the stock would cause financial losses for the largest number of option holders at expiration.
+<br><br>
+				According to the Max Pain Theory, almost 90% of the options expire worthless. While this number varies among different books and sources, the main idea is that a huge number of the options expire worthless. Based on this statement, a set of logical deductions can be made which in turn are used to predict a price at which the market is most likely to expire.
+<br><br>
+The deductions are as follows:
+<ul style="color: black; font-size: 19px">
+<li>	As options are “zero-sum”, only one party can make money, that is, either the option writers make money or the option buyers do. From the above statement, the option-writers are making money.
+</li>
+	<li> If the option writers are the ones making money, then the price of the underlying on the date of expiry will be driven to the point where it causes the least amount of loss to option writers.	</li>		</ul>
+ <p><br><br>
+	This means that the option prices are driven to a point which causes least pain to the option writers. Based on the open interest, we can calculate this price. If this theory holds, then the market would expire at that price. As we can calculate the position of maximum pain, we can essentially know the expiry strike price. Note that this value changes on a daily basis and thus, calculating it on the day of expiry gives the best result.
+<br><br>
+Steps to Calculate Max Pain:
+<ul style="color: black; font-size: 19px">
+<li>List down the various strikes on the exchange and note down the open interest of both calls and puts for these strikes.
+</li>
+	<li> For each of the strike price that you have noted, assume that the market expires at that strike.
+	</li>
+	<li> Calculate how much money is lost by option writers (both call option and put option writers) assuming the market expires as per the assumption in step 2.
+	</li>
+	<li> Add up the money lost by call and put option writers.</li>
+	
+	<li>Identify the strike at which the money lost by option writers is least
+</li>
+	</ul>
+		 <p>
+			 <br><br>
+			This level, at which least amount of money is lost by option writers is the point at which maximum pain is caused to option buyers. Therefore this is the price at which the market is most likely to expire.
+<br><br>
+<img src="res/img/ss57.png" alt="Nature" class="responsive"><br><br>
+			
+Plotting the above values on a graph we get,
+<br><br>
+<img src="res/img/ss58.png" alt="Nature" class="responsive"><br><br>
+			
+As you can see, the 7800 strike is the point at which option writers would lose the least amount of money, so as per the option pain theory, 7800 is where the market is likely to expire
+<br><br>
+			</p>
+
+
+</p>
+
+
+
+</p>
+			<p align="center">
+				<a class="button" href="index.html"> << Back Home </a>
+				<a class="button" href="options3.html"> << Back </a>
+	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
+     		</p>
+		<!-- </div> -->
+		<!-- <div id="home" class="section main container-fluid"> -->
+		</div>
+		
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="res/js/typing_text.js" type="text/javascript"></script>
+	<script src="res/js/work_carousel.js" type="text/javascript"></script>
+	<script src="res/js/scroll_top.js" type="text/javascript"></script>
+	<script src="res/js/sticky_navbar.js" type="text/javascript"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

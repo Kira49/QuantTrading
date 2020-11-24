@@ -9,44 +9,48 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="res/css/styles.css">
 </head>
-
-<!-- --------------------nav end------------------------------------ -->
-<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
+	<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
 	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
 	<div class="navbar-nav" id="navbar-collapsed">
 		<a href="#home" class="nav-item nav-link navbar-brand">
 			<img src="res/img/home-24px.svg" alt="H">
 		</a>
+		<a href="#about" class="nav-item nav-link navbar-brand">
+			<img src="res/img/person-24px.svg" style="filter: invert(0);" alt="A">
+		</a>
+		<a href="#work" class="nav-item nav-link navbar-brand">
+			<img src="res/img/Psyduck-512.png" style="width: 25px; height: 25px;" alt="W">
+		</a>
 		<a href="#stuff" class="nav-item nav-link navbar-brand">
 			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
 		</a>
-
+		<a href="#team" class="nav-item nav-link navbar-brand">
+			<img src="res/img/perm_phone_msg-24px.svg" style="filter: invert(0);" alt="C">
+		</a>
 	</div>
 	<div class="collapse navbar-collapse" id="navbar-collapse">
 		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
 			<a href="index.html#home" class="nav-item nav-link">HOME</a>
-
-			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
+			<a href="index.html#work" class="nav-item nav-link">WORK</a>
+			
 		</div>
 	</div>
 </nav>
-<!-- ------------------------------------------ -->
+<!-- --------------------nav end------------------------------------ -->
+
+
 <body  align="center" bgcolor="black">
 		<br>
-		<p align="center">
-				<a class="button" href="index.html"> << Back Home</a>
-				<a class="button" href="tsys2.html"> Next >> </a>
-	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
-     	</p>
+		
 		<div id="home" class="ops main3 container-fluid">
 			<div class="snap-pad"></div>
 			<button type="button" id="top_button" onclick="goToTop()">
 				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
 			</button>
-			<h2 align="center" class="ourproject_title title_padding" style="color:#FF1700"> Option Strategies </h2>
+			<h2 align="center" class="ourproject_title title_padding" style="color:black"> Option Strategies </h2>
 			<p>
 				The various strategies discussed are as follows:<br><br>
-				<b style="color:#0BADE6">Bullish Strategies</b><br>
+				<b style="color:#A569BD">Bullish Strategies</b><br>
 				<ol style="color:black; font-size: 19px">
 					<li>Bull Call Spread</li>
 					<li>Bull Put Spread</li>
@@ -55,14 +59,14 @@
 					<li>Call Butterfly</li>
 					<li>Synthetic Call</li>
 				</ol>
-				<b style="color:#0BADE6">Bearish Strategies</b><br>
+				<b style="color:#A569BD">Bearish Strategies</b><br>
 				<ol style="color:black; font-size: 19px">
 					<li>Bear Call Spread</li>
 					<li>Bear Put Spread</li>
 					<li>Bull Put Ladder</li>
 					<li>Put Ratio Back spread</li>
 				</ol>
-				<b style="color:#0BADE6">Neutral Strategies</b><br>
+				<b style="color:#A569BD">Neutral Strategies</b><br>
 				<ol style="color:black; font-size: 19px">
 					<li>Long & Short Straddles</li>
 					<li>Long & Short Strangles</li>
@@ -71,14 +75,14 @@
 				</ol>
 			</p><br>
 			<p>
-				<b style="color:#0BADE6">Bull Call Spread</b><br><br>
+				<b style="color:#A569BD">Bull Call Spread</b><br><br>
 				The bull call spread is a strategy applied when the view on the market is moderately bullish. It is a two-leg spread strategy traditionally executed using ITM and OTM options<br><br>
 				Strategy:<br>
 				<ul style="color:black; font-size: 19px">
 					<li>Buy 1 ATM option (Leg 1)</li>
 					<li>Sell 1 OTM option (Leg 2)</li>
 				</ul>
-				<img src="res/img/ops1.png" alt="Nature" class="responsive"> <br> 
+				<img src="res/img/ops1.png" alt="Nature" class="responsive" width="200px" height="150px"> <br> 
 
 			</p>
 			<p>
@@ -108,7 +112,7 @@
 				
 			</p>
 			<p>
-				<b style="color:#0BADE6">Greeks: </b><br><br>
+				<b style="color:#A569BD">Greeks: </b><br><br>
 				<b>Delata and Gamma:</b><br><br>
 				The Bull Call Spread is a bullish strategy which makes money when the price of the underlying increases. Thus, it has a positive delta. As it consists of one long and one short call, the change in delta when the underlying changes is less. Thus, it has a near-zero gamma.<br><br>
 
@@ -124,7 +128,9 @@
 				<img src="res/img/ops7.png" alt="Nature" class="responsive"> <br> 
 				<img src="res/img/ops5.png" alt="Nature" class="responsive"> <br> 
 				<b style="font-size: 17px"> Second Half:</b><br>
-				<img src="res/img/ops8.png" alt="Nature" class="responsive"><br><img src="res/img/ops9.png" alt="Nature" class="responsive"><br>
+				<!--<img src="res/img/ops8.png" alt="Nature" class="responsive"><br><img src="res/img/ops9.png" alt="Nature" class="responsive"><br>-->
+				<img src="res/img/new1.jpeg" alt="Nature" class="responsive"><br>
+
 				<img src="res/img/ops6.png" alt="Nature" class="responsive"><br>
 				Benefits compared to naked call option:<br>
 				<ul style="color:black; font-size: 19px;">
@@ -138,11 +144,11 @@
 
 			</p>
 			<p>
-				<b style="color:#0BADE6">Bull Put Spread</b><br><br>
+				<b style="color:#A569BD">Bull Put Spread</b><br><br>
 				The bull put spread strategy is a bullish strategy, very similar to the bull call spread except that it is executed using put options rather than call options.<br><br>
 
 				Strategy:<br>
-				<ul>
+				<ul style="color:black"> 
 					<li>Buy 1 OTM Put option (Leg 1)</li>
 					<li>Sell 1 ITM Put option (Leg 2)</li>
 
@@ -167,7 +173,7 @@
 				  
 			</p>
 			<p>
-				<b style="color:#0BADE6">Call Ratio Back Spread</b><br><br>
+				<b style="color:#A569BD">Call Ratio Back Spread</b><br><br>
 				The Call Ratio Back Spread is a 3-leg strategy, applied when the view on the market is outrightly bullish. It involves buying 2 OTM call option and selling 1 OTM call option.<br>
 				Unlike the previous strategies, the profit is not capped. Also, even if the market moves against the trend, if the market moves, the strategy will still make money.<br><br>
 				<img src="res/img/ss1.png" alt="Nature" class="responsive"><br><br>
@@ -177,7 +183,6 @@
 					<li>Sell one lot of ITM options.</li>
 					<li>Buy two lots of OTM options.</li>
 				</ul><br>
-			</p>
 			<p>
 				Note that both the options belong to the same underlying, have same expiration date and are in the ratio 2:1 (OTM: ITM).<br><br>
 
@@ -192,9 +197,8 @@
 				   𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑈𝑝𝑝𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 + 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠<br><br>
 				<img src="res/img/ss2.png" alt="Nature" class="responsive"><br>
 				<img src="res/img/ss3.png" alt="Nature" class="responsive"><br><br>
-			</p>
-			<p>
-				<b style="color:#0BADE6">Greeks:</b><br><br>
+			
+				<b style="color:#A569BD">Greeks:</b><br><br>
 				<b>Delta:</b><br><br>
 				The initial delta of bull call spread is positive. Delta increases as the stock price increases; thus, the strategy position has a positive gamma. As expiration approaches, the position delta approaches −1.00 if the short call is in the money and the long calls are out of the money. In this case, the delta of the short call approaches −1.00, and the deltas of the long calls approach zero.<br><br>
 
@@ -206,8 +210,7 @@
 				The call back ratio spread has a net positive Vega, as it has two long calls and one short call. However, the impact of changing volatility (Vega) varies depending on the time to expiration and the relationship of the stock price to the strike prices.<br><br>
 				<img src="res/img/ss4.png" alt="Nature" class="responsive"><br><br>
 				The increase in volatility when there is ample time for the expiry increases the payoff of Call Ratio back spread, as can be seen in the blue and green lines. However, when there is less time to expiry, increase in volatility has a negative impact on the strategy. This is because as the volatility increases with few days left to expiry, the chances of the option to expire OTM increases, and hence premium decreases. <br><br>
-			</p>
-			<p>
+			
 				<b>Theta:</b><br><br>
 				The value of an option decreases as the expiration approaches, all other factors remaining constant. This is called time erosion. Theta measures how much time erosion affects the net price of the position. Long options have a negative theta, and short options have a positive theta.<br><br> 
 
@@ -220,7 +223,7 @@
 
 			</p>
 			<p>
-				<b style="color:#0BADE6">Bear Call Ladder:</b><br><br>
+				<b style="color:#A569BD">Bear Call Ladder:</b><br><br>
 				Contrary to the name, the bear call ladder is actually a bullish strategy. This is an improvisation of the aforementioned Call Ratio Back Spread and can be implemented when the view on the market is out rightly bullish.<br><br>
 
 				<img src="res/img/ss5.png" alt="Nature" class="responsive"><br><br>
@@ -244,9 +247,9 @@
 				𝐿𝑜𝑤𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝐿𝑜𝑤𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 + 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡<br><br>
 				𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑜𝑓 𝐴𝑇𝑀 + 𝑆𝑡𝑟𝑖𝑘𝑒 𝑜𝑓 𝑂𝑇𝑀 – 𝑆𝑡𝑟𝑖𝑘𝑒 𝑜𝑓 𝐼𝑇𝑀 – 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡<br><br>
 				This strategy makes money (limited) when the price of the underlying decreases and makes unlimited profit when the price of the underlying increases. However, it loses money (risk is limited) when the underlying does not move in either direction.<br><br>
-			</p>
+		
 			<p>
-				<b style="color:#0BADE6">Greeks:</b><br><br>
+				<b style="color:#A569BD">Greeks:</b><br><br>
 				<b>Delta:</b><br><br>
 				Because this is a bullish strategy at initiation, Delta is initially positive and thereby benefits the position when the underlying price rises, and vice versa. However, Delta turns negative as the underlying price continues rising and inches towards the strikes of the short Calls. As a result, rising underlying price eventually starts hurting the option position, and vice versa.<br><br>
 
@@ -272,10 +275,16 @@
 				<ul style="color: black; font-size: 19px">
 					<li> Loss when the market remains constant</li>
 				</ul>
-			</p>
+
+
+</p>
+
+
+
+</p>
 			<p align="center">
 				<a class="button" href="index.html"> << Back Home </a>
-				<a class="button" href="tsys2.html"> Next >> </a>
+				<a class="button" href="options2.html"> Next >> </a>
 	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
      		</p>
 		<!-- </div> -->
