@@ -12,26 +12,19 @@
 	<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
 	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
 	<div class="navbar-nav" id="navbar-collapsed">
-		<a href="#home" class="nav-item nav-link navbar-brand">
+		<a href="index.html#home" class="nav-item nav-link navbar-brand">
 			<img src="res/img/home-24px.svg" alt="H">
 		</a>
-		<a href="#about" class="nav-item nav-link navbar-brand">
-			<img src="res/img/person-24px.svg" style="filter: invert(0);" alt="A">
-		</a>
-		<a href="#work" class="nav-item nav-link navbar-brand">
-			<img src="res/img/Psyduck-512.png" style="width: 25px; height: 25px;" alt="W">
-		</a>
-		<a href="#stuff" class="nav-item nav-link navbar-brand">
+		<a href="index.html#stuff" class="nav-item nav-link navbar-brand">
 			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
 		</a>
-		<a href="#team" class="nav-item nav-link navbar-brand">
-			<img src="res/img/perm_phone_msg-24px.svg" style="filter: invert(0);" alt="C">
-		</a>
+
 	</div>
 	<div class="collapse navbar-collapse" id="navbar-collapse">
 		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
 			<a href="index.html#home" class="nav-item nav-link">HOME</a>
-			<a href="index.html#work" class="nav-item nav-link">WORK</a>
+
+			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
 		</div>
 	</div>
 </nav>
@@ -52,8 +45,8 @@ Black-Scholes Pricing Formula</p><br>
 			<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>The Markov Property</b>
 			</h4>
-			 <p style="color: black; font-size: 19px"> A sensible way to introduce the Markov property is through a sequence of random variables <i>Z<sub>i</sub></i>, which can take one of two values from the set {1,-1}. This is known as a coin toss. We can calculate the expectations of <i>Z<sub>i</sub></i>:
-				<img  src="res/img/img1.png" alt="ok" height="200px" width="500px" >
+			 <p style="color: black; font-size: 19px"> A sensible way to introduce the Markov property is through a sequence of random variables <i>Z<sub>i</sub></i>, which can take one of two values from the set {1,-1}. This is known as a coin toss. We can calculate the expectations of <i>Z<sub>i</sub></i>:<br><br>
+				<img  src="res/img/img1.png" alt="ok" class="responsive" >
 
 			</p>
 <!--</div>-->
@@ -61,18 +54,18 @@ Black-Scholes Pricing Formula</p><br>
 		<!-- <div id="home" class="section main container-fluid"> -->
 			<!-- <div class="snap-pad"></div> -->
 <p style="color: black; font-size: 19px">
-<br> <br> The key point is that the expectation of <i>Z<sub>i</sub></i> has no dependence on any previous values within the sequence. Let us take the partial sums of our random variables within our coin toss, which we will denote by <i>S<sub>i</sub></i>:
+ <br> The key point is that the expectation of <i>Z<sub>i</sub></i> has no dependence on any previous values within the sequence. Let us take the partial sums of our random variables within our coin toss, which we will denote by <i>S<sub>i</sub></i>:
 <!--<br><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp S<sub>i</sub>=&Sigma;<sub>{k=1}</sub><sup>i</sup>Z<sub>i</sub>-->
-<br><br><img  src="res/img/img2.png" alt="ok" height="100px" width="500px">
+<br><br><img  src="res/img/img2.png" alt="ok" class="responsive">
 <br> <br> We can now calculate the expectations of our partial sums, using the
  linearity of the expectation operator :
-<br><br><img  src="res/img/img3.png" alt="ok" height="150px" width="500px">
-<br> <br> <img  src="res/img/img4.png" alt="ok"height="200px" width="500px" >
+<br><br><img  src="res/img/img3.png" alt="ok" class="responsive">
+<br> <br> <img  src="res/img/img4.png" alt="ok"class="responsive" >
 <!-- </div>-->
 		<!-- <div id="home" class="section main container-fluid"> -->
 			<!-- <div class="snap-pad"></div> -->
 <br><br> We see that, again there is no dependence on the expectation of <i>S<sub>i</sub></i> of any previous value within the sequence of partials sums. We can extend this to discuss conditional expectation. Conditional expectation is the expectation of a random variable with respect to some conditional probability distribution. Hence, we can ask that if <i>i=4</i> (i.e. we carry out four coin tosses),what does this mean for the expectation of <i>S<sub>5</sub></i>?
-<br> <br><img  src="res/img/img5.png" alt="ok"height="100px" width="500px" >
+<br> <br><img  src="res/img/img5.png" alt="ok" class="responsive" >
 <br><br>That is, the expected value of <i>S<sub>i</sub></i> is only dependent upon the previousvalues <i>S<sub>i-1</sub></i>, not on any values prior to that. This is known as the Markov Property. Essentially, there is no memory of past events beyond the point our variable is currently at within the sequence. Nearly all financial models discussed in these articles will possess the Markov property.</p>
 <br></p>			
 
@@ -81,7 +74,7 @@ Black-Scholes Pricing Formula</p><br>
 				<b>The Martingle Property</b>
 			</h4>
 			<p style="color: black; font-size: 19px"> <br> An additional property that holds for our sequence of partial sums is the Martingale property. It states that the conditional expectation of the sequence of partial sums, <i>S<sub>i</sub></i> is simply the current value:
-<br><br><img  src="res/img/img6.png" alt="ok" height="100px" width="500px">
+<br><br><img  src="res/img/img6.png" alt="ok" class="responsive">
 <br><br> Essentially, the martingale property ensures that in a "fair game", knowledge of the past will be of no use in predicting future winnings.
 <br><br> These properties will be of fundamental importance in regard to defining Brownian motion, which will later be used as a model for an asset price path.<br><br>
 </p>
@@ -94,13 +87,13 @@ Black-Scholes Pricing Formula</p><br>
 <p style="color: black; font-size: 19px">
 In the previous discussion on the Markov and Martingale properties, a discrete coin toss experiment was carried out, with an arbitrary number of time steps. The current goal is to work towards a continuous-time random walk, which will provide a more sophisticated model for the time-varying price of assets. In order to achieve this, the number of time steps will need to be increased. However, the manner in which they are increased must occur in a specific fashion, so as to avoid a nonsensical (infinite) result.
 
-<br><br> <img  src="res/img/img7.png" alt="ok" height="600px" width="300px">
+<br><br> <img  src="res/img/img7.png" alt="ok" class="responsive">
 <br><br>Consider a continuous real-valued time interval [0,T], <i>T>0.</i> In this interval N coin tosses will be carried out, which each take a time T/N and hence are spaced equally. Concurrently, the payoff returned from each coin toss will be modified. The sequence of discrete random variables representing the coin toss is <i>Zi∈{-1,1}.</i><br><br> A further sequence of discrete random variables, <i>(Z<sub>i</sub> ) ̃∈T/N,-T/N,</i> can be defined. The definition of such a sequence of DRVs is used to provide a very specific quadratic variation of the coin toss.
 <br><br> The quadratic variation of a sequence of DRVs is defined to be simply the sum of the squared differences of the current and previous terms:
-<br><br> <img  src="res/img/img8.png" alt="ok" height="100px" width="500px">
+<br><br> <img  src="res/img/img8.png" alt="ok" class="responsive">
 <br><br>For <i>Z<sub>i</sub></i>, the previous coin toss random variable sequence, the quadratic variation is given by:
-<br><br><img  src="res/img/img9.png" alt="ok" height="100px" width="500px">
-<br><br> <img  src="res/img/img10.png" alt="ok" height="100px" width="500px">
+<br><br><img  src="res/img/img9.png" alt="ok" class="responsive">
+<br><br> <img  src="res/img/img10.png" alt="ok" class="responsive">
 <br><br>
 Thus, by construction, the quadratic variation of the amended coin toss (Z<sub>i</sub> ) ̃ is simply the total duration of all tosses, T.
 <br><br>Importantly, note that both the Markov and Martingale properties are retained by <i>(Z<sub>i</sub> ) ̃ .</i> As <i>N→∞</i> the random walk coin toss does not diverge. If the value of the asset at time t, with <i>t∈[0,T]</i>, is given by S(t), then its conditional expectation at the end of the interval, given that S(0)=0, is E(S(T))=0 with a variance of E(〖S(T)〗<sup>2</sup>)=T.
