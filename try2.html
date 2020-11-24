@@ -32,19 +32,11 @@
 	<div class="collapse navbar-collapse" id="navbar-collapse">
 		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
 			<a href="index.html#home" class="nav-item nav-link">HOME</a>
-			<a href="index.html#about" class="nav-item nav-link">ABOUT</a>
-			<a href="index.html#work" class="nav-item nav-link">PREREQs</a>
-			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
-			<a href="index.html#team" class="nav-item nav-link">TEAM</a>
-		</div>
+			<a href="index.html#work" class="nav-item nav-link">WORK</a>
+			</div>
 	</div>
 </nav>
 <!-- --------------------nav end------------------------------------ -->
-<br><br>	<p align="center">
-				<a class="button" href="index.html"> << Back Home</a>
-				<a class="button" href="try.html"> << Back  </a>
-	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
-     	</p>
 <body id="vert_page" align="center">
 	 <div id="home" class="black2 main3 container-fluid"> 
 			<div class="snap-pad"></div>
@@ -53,7 +45,7 @@
 			</button>
 			<br><br>
 			<h2 align="center" class="ourproject_title title_padding" style="color:#FF1700"> Black Scholes </h2>
-			
+		
 
 
 
@@ -69,22 +61,21 @@
 <p style="color: black; font-size: 19px">
 	A stochastic integral of the function f=f(t) is a function 
 	<br><br>W=W(t),t &#8712; [0,T] given by:
-	<br> <br> <!--<img  src="res/img/image046.png" alt="ok">-->
-	W(t)=&int;<sub>0</sub><sup>t</sup> f(s)dB(s) = lim<sub>n&rarr;&infin;</sub>f(t<sub>k-1</sub>) (B(t<sub>k</sub>)-B(t<sub>k-1</sub>))
-	<br><br> where t<sub>k</sub>=kt/N.
+	<br> <br> <img  src="res/img/img11.png" alt="ok" height="100px" width="500px">
+		<br><br> where t<sub>k</sub>=kt/N.
 	<br>Note that the function f is non-anticipatory, in the sense that it is evaluated within the summation sign at time t<sub>k</sub>-1. This means that it has no information as to what the random variable at X(t<sub>k</sub>) is. Supposing that f represented some portfolio allocation based on B, then if it were not evaluated at t<sub>k</sub>−1, but rather at t<sub>k</sub>, we would be able to anticipate the future and modify the portfolio accordingly.
 
 	<br> <br> The previous expression provided for W(t) is an integral expression and thus is well-defined for a non-differentiable variable, B(t), due the property of finiteness as well as the chosen mean and variance. However, we wish to be able to write it in differential form:
-	<br><br> dW = f(t)dB .
+	<br> <br> <img  src="res/img/img12.png" alt="ok" height="70px" width="500px">
 	<br><br>One can consider the term dB as being a normally distributed random variable with zero mean and variance dt. The formal definition is provided:
 </p>
 <h4 class="ourproject_title title_padding" style="color:#FD6090">
 				<b>Definition (Stochastic Differential Equation)</b>
 			</h4>
 <p style="color: black; font-size: 19px">Let B(t) be a Brownian motion. If W(t) is a sequence of random variables, such that for all t,
-	<br> <br> W(t + &#948;t) - W(t) - &#948;t&#956;(t,W(t)) - &#963;(t,B(t))(B(t+&#948;t)-B(t))
+	<br> <br> <img  src="res/img/img13.png" alt="ok" height="70px" width="500px">
 	<br><br> is a random variable with mean and variance that rae o(&#948;t), then:
-	<br><br> dW = &#956;(t,W(t))dt +  &#963;(t,W(t))dB
+	<br> <br> <img  src="res/img/img14.png" alt="ok" height="70px" width="500px">
 	<br><br>is a stochastic differential equation for W(t).
 
 <br> <br>A sequence of random variables given by the above is termed an Ito drift-diffusion process, or simply an Ito process or a stochastic process.
@@ -96,20 +87,20 @@
 			</h4>
 <p style="color: black; font-size: 19px">
 The usual model for the time-evolution of an asset price S(t) is given by the geometric Brownian motion, represented by the following stochastic differential equation:	
-<br><br> dS(t) = &#956;S(t)dt +  &#963;S(t)dB(t)
+<br> <br> <img  src="res/img/img15.png" alt="ok" height="70px" width="500px">
 <br><br>Note that the coefficients μ and σ, representing the drift and volatility of the asset, respectively, are both constant in this model. In more sophisticated models they can be made to be functions of t,S(t) and other stochastic processes.
-<br><br> <img  src="res/img/image061.png" alt="ok" width="700" height="200">
+<br><br> <img  src="res/img/img16.png" alt="ok" width="600" height="300">
 <br><br>The solution S(t) can be found by the application of Ito's Lemma to the stochastic differential equation.
 <br> Dividing through by S(t) in the above equation leads to:
-<br><br>dS(t)/S(t)=μdt + σdB(t).
+<br> <br> <img  src="res/img/img17.png" alt="ok" height="70px" width="500px">
 <br><br>Notice that the left hand side of this equation looks similar to the derivative of logS(t). Applying Ito's Lemma to logS(t) gives:
-<br><br>d(logS(t)) = (logS(t))<sup>'</sup>μS(t)dt+(logS(t))<sup>'</sup>σS(t)dB(t)+1/2(logS(t))<sup>''</sup>σ<sup>2</sup>S(t)<sup>2</sup>dt.
+<br> <br> <img  src="res/img/img41.png" alt="ok" height="100px" width="500px">
 <br><br> This becomes:
-<br><br>d(logS(t))=μdt+σdB(t)-1/2σ<sup>2</sup>dt=(μ-1/2σ<sup>2</sup>)dt+σdB(t).
+<br> <br> <img  src="res/img/img18.png" alt="ok" height="100px" width="500px">
 <br><br>This is an Ito drift-diffusion process. It is a standard Brownian motion with a drift term. Since the above formula is simply shorthand for an integral formula, we can write this as:
-<br><br>log(S(t))-log(S(0))=(μ-1/2σ<sup>2</sup>)t+σB(t).
+<br> <br> <img  src="res/img/img19.jpeg" alt="ok" height="70px" width="500px">
 <br><br> Finally,taking the exponential of this equation gives:
-<br><br>S(t)=S(0)exp((μ-1/2σ<sup>2</sup>)t+σB(t))
+<br> <br> <img  src="res/img/img20.png" alt="ok" height="100px" width="500px">
 <br><br>This is the solution the stochastic differential equation. In fact it is one of the only analytical solutions that can be obtained from stochastic differential equations.
 </p>
 <h4 class="ourproject_title title_padding" style="color:#D2FD60">
@@ -122,12 +113,11 @@ The usual model for the time-evolution of an asset price S(t) is given by the 
 				<b>The Chain Rule</b>
 			</h4>
 <p style="color: black; font-size: 19px">One of the most fundamental tools from ordinary calculus is the chain rule. It allows the calculation of the derivative of chained functional composition. Formally, if W(t) is a continuous function, and:
-	<br><br> dW(t)=μ(W(t),t)dt
+	<br> <br> <img  src="res/img/img21.png" alt="ok" height="70px" width="500px">
 	<br><br> Then the chain rule states:
-	<br><br>d(f(W(t)))=f<sup>'</sup>(W(t))μ(W(t),t)dt
+	<br> <br> <img  src="res/img/img22.png" alt="ok" height="70px" width="500px">
 	<br><br>When f has t as a direct dependent parameter also, we require additional terms and partial derivatives. In this instance, the chain rule is given by:
-<br><br> <!--<img  src="res/img/image072.png" alt="ok">	-->
-d(f(W(t) , t)) =( <box>&part;f/&part;w (W(t),t)&mu;(W(t),t) + &part;f/&part;w (W(t),t) </box> )dt
+<br><br> <img  src="res/img/img23.png" alt="ok" height="100px" width="500px">	
 <br>In order to model an asset price distribution correctly in a log-normal fashion, a stochastic version of the chain rule will be used to solve a stochastic differential equation representing geometric Brownian motion.
 <br><br>
 The primary task is now to correctly extend the ordinary calculus version of the chain rule to be able to cope with random variables.
@@ -137,10 +127,10 @@ The primary task is now to correctly extend the ordinary calculus version of the
 			</h4>
 <p style="color: black; font-size: 19px">
 	Let B(t) be a Brownian motion and W(t) be an Ito drift-diffusion process which satisfies the stochastic differential equation:
-<br><br> dW(t)=μ(W(t),t)dt+σ(W(t),t)dB(t)
+<br><br><br> <br> <img  src="res/img/img24.png" alt="ok" height="70px" width="500px">
 <br><br> If f(w,t)&#8712;C<sup>2</sup>(R<sup>2</sup>,R) then f(W(t),t) is also and Ito drift-diffusion with its differential given by:
 <br><br> <!--<img  src="res/img/image076.png" alt="ok">	<br><br>-->
-d(f(W(t) , t)) = &part;f/&part;t(W(t),t)dt + f<sup>'</sup>(W(t),t)dW + (1/2)f<sup>''</sup>(W(t) , t)dW(t)<sup>2</sup> 
+<br> <br> <img  src="res/img/img25.png" alt="ok" height="130px" width="500px">
 <br><br>With dW(t)<sup>2</sup> given by: dt<sup>2</sup>=0, dtdB(t)=0&#8743;dB(t)<sup>2</sup>=dt.
 </p>
 <h4 class="ourproject_title title_padding" style="color:#00E52B">
@@ -151,38 +141,34 @@ d(f(W(t) , t)) = &part;f/&part;t(W(t),t)dt + f<sup>'</sup>(W(t),t)dW + (1/2)f<su
 	<br><br>Since our option price,C , is a function of time t and the price of the asset S, we will use the notation C=C(S,t) to represent the price of the option. Note that we are assuming at this stage that C exists and is well-defined. We will later show this to be a justified claim.
 	<br>The first step is to utilise Ito's Lemma on the function C(S,t) to give us a SDE:
 	<br><br> <!--<img  src="res/img/image087.png" alt="ok">-->
-	dC = &part;C/&part;tdt + &part;C/&part;S(S,t)dS + (1/2)&part;<sup>2</sup>C/&part;S<sup>2</sup>(S,t)dS<sup>2</sup> 
+	<br> <br> <img  src="res/img/img26.png" alt="ok" height="100px" width="500px">
 	<br><br>
 Our asset price is modelled by a geometric Brownian motion, the expression for which is recalled here. Note that μ and σ are constant - i.e. not functions of S or t:
-<br><br>dS(t)=μS(t)dt+σS(t)dX(t)
+<br> <br> <img  src="res/img/img27.png" alt="ok" height="70px" width="500px">
 <br><br>We can substitute this expression into Ito's Lemma to obtain:
 <br><!--<img  src="res/img/image089.png" alt="ok">	<br><br>-->
-dC =( &part;C/&part;tS(S,t) + &mu;S&part;C/&part;S(S,t) + (1/2)&sigma;<sup>2</sup>S<sup>2</sup>&part;<sup>2</sup>C/&part;S<sup>2</sup>(S,t))dt +  &sigma;S&part;C/&part;S(S,t)dX
-	
+<br> <br> <img  src="res/img/img28.png" alt="ok" height="100px" width="500px">	
 <br><br>
 The thrust of our derivation argument will essentially be to say that a fully hedged portfolio, with all risk eliminated, will grow at the risk free rate. Thus, we need to determine how our portfolio changes in time. Specifically, we are interested in the infinitesimal change of a mixture of a call option and a quantity of assets. The quantity will be denoted by Δ. Hence:
 <br><!--<img  src="res/img/image090.png" alt="ok">	<br><br>-->
-d(C + &delta;S) =( &part;C/&part;t(S,t) + &mu;S&part;C/&part;S(S,t) + (1/2)&sigma;<sup>2</sup>S<sup>2</sup>&part;<sup>2</sup>C/&part;S<sup>2</sup>(S,t) + &delta;&mu;S)dt +  &delta;S(&part;C/&part;S + &delta;)dX
-
+<br> <br> <img  src="res/img/img29.png" alt="ok" height="100px" width="500px">
 This leads us to a choice for Δ which will eliminate the term associated with the randomness. If we set<!-- <img  src="res/img/image091.png" alt="ok">--> &delta; = -&part;C/&part;S(S,t), we receive:
 <br><br><!--<img  src="res/img/image092.png" alt="ok">-->
-d(C + &delta;S) = ( &part;C/&part;t(S,t) + (1/2)&sigma<sup>2</sup>S<sup>2</sup>&part;<sup>2</sup>C/&part;S<sup>2</sup>(S,t))dt 
-	
+ <img  src="res/img/img30.png" alt="ok" height="100px" width="500px">	
 <br><br>
 Note that we have glossed over the issue of what the derivative of Δ is. We will return to this later.
 <br>This technique is known as Delta-Hedging and provides us with a portfolio that is free of randomness. This is how we can apply the argument that it should grow at the risk free rate, otherwise, as with our previous arguments, we would have an arbitrage opportunity. Hence the growth rate of our delta-hedged portfolio must be equal the continuously compounding risk free rate, r.<br> Thus we are able to state that:
 <br><!--<img  src="res/img/image093.png" alt="ok">	<br><br>-->
-
-&part;C/&part;t(S,t) + (1/2)&sigma<sup>2</sup>S<sup>2</sup>&part;<sup>2</sup>C/&part;S<sup>2</sup>(S,t) = r(C - S&part;C/&part;S)
+<br> <br> <img  src="res/img/img31.png" alt="ok" height="100px" width="500px">
 <br><br>
 If we rearrange this equation, and using shorthand notation to drop the dependence on (S,T) we arrive at the famous Black-Scholes equation for the value of our contingent claim:
 <br><!--<img  src="res/img/image095.png" alt="ok">	<br><br>-->
-&part;C/&part;t + rS&part;C/&part;S + (1/2)&sigma<sup>2</sup>S<sup>2</sup>&part;<sup>2</sup>C/&part;S<sup>2</sup> -rC = 0
+<br> <br> <img  src="res/img/img32.png" alt="ok" height="100px" width="500px">
 <br><br>
 Although we have derived the equation, we do not yet possess enough conditions in order to provide a unique solution. The equation is a second-order linear partial differential equation (PDE) and without boundary conditions (such as a payoff function for our contingent claim), we will not be able to solve it.
 <br><br>
 One payoff function we can use is that of a European call option struck at K. This has a payoff function at expiry, T, of:
-<br> C(S,T)=max(S-K,0)
+<br> <br> <img  src="res/img/img33.png" alt="ok" height="70px" width="500px"><br>
 <br>We are now in a position to solve the Black-Scholes equation.
 
 </p>
@@ -191,23 +177,19 @@ One payoff function we can use is that of a European call option struck at K. T
 			</h4>
 <p style="color: black; font-size: 19px">
 It has already been outlined that the reader is to be familiar with the Black-Scholes formula for the pricing of European Vanilla Calls and Puts. For completeness, the price of a European Vanilla Call, C(S,t) is given below, where S is the underlying asset, K is the strike price, r is the risk-free rate, T is the time to maturity and σ is the (constant) volatility of the underlying  S(N is described below):
-<br><br>C(S,t)=SN(d<sub>1</sub>)-Ke<sup>-rT</sup>N(d<sub>2</sub>)
+<br> <br> <img  src="res/img/img34.png" alt="ok" height="70px" width="500px">
 <br><br>With d<sub>1</sub> and d<sub>2</sub> defined as follows:
 <br><!--<img  src="res/img/image104.png" alt="ok">-->
-d<sub>1</sub> = (log(S/K) + (r + &sigma;<sup>2</sup>/2)T)/&sigma;&#x221A;T
-<br><br>
-d<sub>2</sub>=d<sub>1</sub>-σ&#x221A;T
+<br> <br> <img  src="res/img/img35.png" alt="ok" height="120px" width="500px"><br><br>
 <br><br>Thanks to Put-Call Parity, we are also able to price a European Vanilla Put P(S,t) with the following formula:
-<br><br>P(S,t)=Ke<sup>-rT</sup>-S+C(S,t)=Ke<sup>-rT</sup>-S+(SN(d<sub>1</sub>)-Ke<sup>-rT</sup>N(d<sub>2</sub>))
-<br><br><img  src="res/img/image108.jpg" alt="ok">	<br><br>
+<br> <br> <img  src="res/img/img36.png" alt="ok" height="70px" width="500px">
+<br> <br> <img  src="res/img/img37.png" alt="ok" height="300px" width="600px">	<br><br>
 The remaining function we have yet to describe is N. This is the cumulative distribution function of the standard normal distribution. The formula for N is given by:
-<br><br><!--<img  src="res/img/image109.png" alt="ok">-->
-N(x) = 1/&#x221A;(2&pi;)&int<sup>x</sup><sub>-&infin;</sub>e<sup>-t<sup>2</sup>/2</sup>dt
-<br><br>
-<img  src="res/img/image110.png" alt="ok">	<br><br>
+<br> <br> <img  src="res/img/img38.png" alt="ok" height="100px" width="500px">
+
+<br> <br> <img  src="res/img/img39.png" alt="ok" height="300px" width="600px"><br><br>
 In addition, we would like to have closed form solutions for the "Greeks", which are the option price sensitivities to the underlying variables and parameters. For this reason we also need the formula for the probability density function of the standard normal distribution which is given below:
-<br><br><!--<img  src="res/img/image111.png" alt="ok">-->
-f(x) = 1/&#x221A;(2&pi;)e<sup>-x<sup>2</sup>/2</sup>
+<br> <br> <img  src="res/img/img40.png" alt="ok" height="100px" width="500px">
 <br><br>
 </p>	
 <h4 class="ourproject_title title_padding" style="color:#F10C7B">
@@ -266,11 +248,23 @@ def vanilla_call_price(S, K, r, v, T):
 
 def vanilla_put_price(S, K, r, v, T):
 
+	"""
+	Price of a European put option struck at K, with
+    spot S, constant rate r, constant vol v (over the
+    life of the option) and time to maturity T
     """
+    return -S * norm_cdf(-d_j(1, S, K, r, v, T)) + \
+        K*exp(-r*T) * norm_cdf(-d_j(2, S, K, r, v, T))
+
     </code>
 				</pre>
 				
 </p>
+			<p align="center">
+				<a class="button" href="index.html"> << Back Home</a>
+				<a class="button" href="try.html"> << Back  </a>
+	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
+     	</p>
 <script src="res/js/prism.js"></script>
 	<script type="text/javascript">
 	var coll = document.getElementsByClassName("collapsible");

@@ -31,19 +31,13 @@
 	<div class="collapse navbar-collapse" id="navbar-collapse">
 		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
 			<a href="index.html#home" class="nav-item nav-link">HOME</a>
-			<a href="index.html#about" class="nav-item nav-link">ABOUT</a>
-			<a href="index.html#work" class="nav-item nav-link">PREREQs</a>
-			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
-			<a href="index.html#team" class="nav-item nav-link">TEAM</a>
+			<a href="index.html#work" class="nav-item nav-link">WORK</a>
 		</div>
 	</div>
 </nav>
 <!-- --------------------nav end------------------------------------ -->
-<br><br>	<p align="center">
-				<a class="button" href="index.html"> << Back Home</a>
-				<a class="button" href="try2.html"> Next >> </a>
-	     		<!-- <a class="button" href="tsys2.html">Next</a> -->
-     	</p>
+<br><br>
+
 <body id="vert_page" align="center">
 	 <div id="home" class="black main3 container-fluid"> 
 			<div class="snap-pad"></div>
@@ -59,38 +53,35 @@ Black-Scholes Pricing Formula</p><br> <br>
 				<b>The Markov Property</b>
 			</h4>
 			<br> <p style="color: black; font-size: 19px"> A sensible way to introduce the Markov property is through a sequence of random variables Z<sub>i</sub>, which can take one of two values from the set {1,-1}. This is known as a coin toss. We can calculate the expectations of Z<sub>i</sub>:
-<br><br>&nbsp &nbsp &nbsp &nbsp E(Z<sub>i</sub> )=0,
-<br> <br>&nbsp &nbsp &nbsp &nbsp E(Z<sub>i<sup>2</sup></sub> )=1,
-<br><br>&nbsp &nbsp &nbsp &nbsp E(Z<sub>i</sub> Z<sub>k</sub> )=0
-</p>
+				<img  src="res/img/img1.png" alt="ok" height="200px" width="500px" >
+
+			</p>
 <!--</div>-->
 
 		<!-- <div id="home" class="section main container-fluid"> -->
 			<!-- <div class="snap-pad"></div> -->
 <p style="color: black; font-size: 19px">
 <br> <br> The key point is that the expectation of Z<sub>i</sub> has no dependence on any previous values within the sequence. Let us take the partial sums of our random variables within our coin toss, which we will denote by Si:
-<br><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp S<sub>i</sub>=&Sigma;<sub>{k=1}</sub><sup>i</sup>Z<sub>i</sub>
+<!--<br><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp S<sub>i</sub>=&Sigma;<sub>{k=1}</sub><sup>i</sup>Z<sub>i</sub>-->
+<br><br><img  src="res/img/img2.png" alt="ok" height="100px" width="500px">
 <br> <br> We can now calculate the expectations of our partial sums, using the
  linearity of the expectation operator :
-<br> <br> E(s<sub>i</sub>)=0,
-<br> <br> E(S<sup>2</sup><sub>i</sub>)=E(Z<sup>2</sup><sub>1</sub> + 2Z<sub>1</sub>Z<sub>2</sub> + ...)=i
-
-<br> <br> <img  src="res/img/image009.png" alt="ok" width="700" height="100">
+<br><br><img  src="res/img/img3.png" alt="ok" height="150px" width="500px">
+<br> <br> <img  src="res/img/img4.png" alt="ok"height="200px" width="500px" >
 <!-- </div>-->
 		<!-- <div id="home" class="section main container-fluid"> -->
 			<!-- <div class="snap-pad"></div> -->
 <br><br> We see that, again there is no dependence on the expectation of Si of any previous value within the sequence of partials sums. We can extend this to discuss conditional expectation. Conditional expectation is the expectation of a random variable with respect to some conditional probability distribution. Hence, we can ask that if i=4 (i.e. we carry out four coin tosses),what does this mean for the expectation of S5?
-<br> <br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp E(S<sub>5</sub>|Z<sub>1</sub>,Z<sub>2</sub>,Z<sub>3</sub>,Z<sub>4</sub>)=S<sub>4</sub>
-
+<br> <br><img  src="res/img/img5.png" alt="ok"height="100px" width="500px" >
 <br><br>That is, the expected value of Si is only dependent upon the previousvalues Si-1, not on any values prior to that. This is known as the Markov Property. Essentially, there is no memory of past events beyond the point our variable is currently at within the sequence. Nearly all financial models discussed in these articles will possess the Markov property.</p>
-<br><br><br></p>			
+<br><br></p>			
 
 	
 <h4 class="ourproject_title title_padding" style="color:#E0FD60">
 				<b>The Martingle Property</b>
 			</h4>
 			<p style="color: black; font-size: 19px"> <br> An additional property that holds for our sequence of partial sums is the Martingale property. It states that the conditional expectation of the sequence of partial sums, Si is simply the current value:
-<br><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp E(S<sub>i</sub>|S<sub>k</sub>,k < i)=S<sub>k</sub>
+<br><br><img  src="res/img/img6.png" alt="ok" height="100px" width="500px">
 <br><br> Essentially, the martingale property ensures that in a "fair game", knowledge of the past will be of no use in predicting future winnings.
 <br><br> These properties will be of fundamental importance in regard to defining Brownian motion, which will later be used as a model for an asset price path.<br><br>
 </p>
@@ -103,13 +94,13 @@ Black-Scholes Pricing Formula</p><br> <br>
 <p style="color: black; font-size: 19px">
 In the previous discussion on the Markov and Martingale properties, a discrete coin toss experiment was carried out, with an arbitrary number of time steps. The current goal is to work towards a continuous-time random walk, which will provide a more sophisticated model for the time-varying price of assets. In order to achieve this, the number of time steps will need to be increased. However, the manner in which they are increased must occur in a specific fashion, so as to avoid a nonsensical (infinite) result.
 
-<br><br> <img  src="res/img/image013.png" alt="ok">
+<br><br> <img  src="res/img/img7.png" alt="ok" height="600px" width="300px">
 <br><br>Consider a continuous real-valued time interval [0,T], T>0. In this interval N coin tosses will be carried out, which each take a time T/N and hence are spaced equally. Concurrently, the payoff returned from each coin toss will be modified. The sequence of discrete random variables representing the coin toss is Zi∈{-1,1}.<br><br> A further sequence of discrete random variables, (Z<sub>i</sub> ) ̃∈T/N,-T/N, can be defined. The definition of such a sequence of DRVs is used to provide a very specific quadratic variation of the coin toss.
 <br><br> The quadratic variation of a sequence of DRVs is defined to be simply the sum of the squared differences of the current and previous terms:
-<br><br> &Sigma;<sub>k=1</sub><sup>N</sup>(S<sub>k</sub>-S<sub>k-1</sub>)<sup>2</sup>
+<br><br> <img  src="res/img/img8.png" alt="ok" height="100px" width="500px">
 <br><br>For Zi, the previous coin toss random variable sequence, the quadratic variation is given by:
-<br><br> &Sigma;<sub>k=1</sub><sup>N</sup>(S<sub>k</sub>-S<sub>k-1</sub>)<sup>2</sup>=i
-<br><br><!-- <img  src="res/img/image021.png" alt="ok">-->
+<br><br><img  src="res/img/img9.png" alt="ok" height="100px" width="500px">
+<br><br> <img  src="res/img/img10.png" alt="ok" height="100px" width="500px">
 <br><br>
 Thus, by construction, the quadratic variation of the amended coin toss (Z<sub>i</sub> ) ̃ is simply the total duration of all tosses, T.
 <br><br>Importantly, note that both the Markov and Martingale properties are retained by (Z<sub>i</sub> ) ̃ . As N→∞ the random walk coin toss does not diverge. If the value of the asset at time t, with t∈[0,T], is given by S(t), then its conditional expectation at the end of the interval, given that S(0)=0, is E(S(T))=0 with a variance of E(〖S(T)〗<sup>2</sup>)=T.
@@ -139,8 +130,12 @@ Brownian motions are a fundamental component in the construction of stochastic 
 <p style="color: black; font-size: 19px">The previous discussion on Brownian motion and the Wiener Process we introduced the standard Brownian motion, as a means of modelling asset price paths. However, a standard Brownian motion has a non-zero probability of being negative. This is clearly not a property shared by real-world assets - stock prices cannot be less than zero. Hence, although the stochastic nature of a Brownian motion for our model should be retained, it is necessary to adjust exactly how that randomness is distributed. In particular, the concept of geometric Brownian motion (GBM) will now be introduced, which will solve the problem of negative stock prices.
 <br><br>However, before the geometric Brownian motion is considered, it is necessary to discuss the concept of a Stochastic Differential Equation (SDE). This will allow us to formulate the GBM and solve it to obtain a function for the asset price path.
 </p>
-
-
+<br><br>
+<p align="center">
+	<a class="button" href="index.html"> << Back Home</a>
+	<a class="button" href="try2.html"> Next >> </a>
+	 <!-- <a class="button" href="tsys2.html">Next</a> -->
+</p>
 
 <script src="res/js/prism.js"></script>
 	<script type="text/javascript">
