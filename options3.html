@@ -12,38 +12,29 @@
 	<nav id="navbar_top" class="navbar navbar-expand-md navbar-dark pr-0" style="background-color: #000000EE;">
 	<a href="#" class="navbar-brand navbar-logo"> AJ </a>
 	<div class="navbar-nav" id="navbar-collapsed">
-		<a href="#home" class="nav-item nav-link navbar-brand">
+		<a href="index.html#home" class="nav-item nav-link navbar-brand">
 			<img src="res/img/home-24px.svg" alt="H">
 		</a>
-		<a href="#about" class="nav-item nav-link navbar-brand">
-			<img src="res/img/person-24px.svg" style="filter: invert(0);" alt="A">
-		</a>
-		<a href="#work" class="nav-item nav-link navbar-brand">
-			<img src="res/img/Psyduck-512.png" style="width: 25px; height: 25px;" alt="W">
-		</a>
-		<a href="#stuff" class="nav-item nav-link navbar-brand">
+		<a href="index.html#stuff" class="nav-item nav-link navbar-brand">
 			<img src="res/img/work-24px.svg" style="filter: invert(0);" alt="S">
 		</a>
-		<a href="#team" class="nav-item nav-link navbar-brand">
-			<img src="res/img/perm_phone_msg-24px.svg" style="filter: invert(0);" alt="C">
-		</a>
+
 	</div>
 	<div class="collapse navbar-collapse" id="navbar-collapse">
 		<div id="navbarFull" class="navbar-nav ml-auto pr-2">
 			<a href="index.html#home" class="nav-item nav-link">HOME</a>
-			<a href="index.html#work" class="nav-item nav-link">WORK</a>
-			
+
+			<a href="index.html#stuff" class="nav-item nav-link">WORK</a>
 		</div>
 	</div>
 </nav>
-
 <!-- --------------------nav end------------------------------------ -->
 
 
 <body  align="center" bgcolor="black">
 		<br>
 		
-		<div id="home" class="ops3 main3 container-fluid">
+		<div id="home" class="tsys main3 container-fluid">
 			<div class="snap-pad"></div>
 			<button type="button" id="top_button" onclick="goToTop()">
 				<img class="top_caret" src="res/img/keyboard_arrow_up-24px.svg" alt="^">
@@ -130,9 +121,9 @@ Benefits of the strategy:
 	<b style="color:#A569BD">Put Ratio Back spread:</b><br><br>
 	The Pull ratio back spread is very similar to call ratio back spread except that the strategy is executed when the view on the market is bearish. The Put Ratio Back Spread is a 3-leg option strategy as it involves buying two OTM Put options and selling one ITM Put option. This is the classic 2:1 combo.
 	<br>
-	<img src="res/img/ss28.png" alt="Nature" class="responsive"><br><br>
+	<img src="res/img/ss28.png" alt="Nature" class="responsive5"><br><br>
 	<b >Strategy</b><br><br>
-	<ul style="color: rgb(177, 165, 165); font-size: 19px">
+	<ul style="color: black; font-size: 19px">
 		<li>Sell one ITM put option</li>
 		<li>Buy two OTM put options .</li></ul>
 		<p>Note that the options belong to the same underlying, have same expiration date and are in the same ratio (1:2).
@@ -140,7 +131,7 @@ Benefits of the strategy:
 			Usually this is a net credit strategy, where the selling of the ITM put option finances the buying of the two OTM put options.
 	<br><br>
 	<img src="res/img/ss29.png" alt="Nature" class="responsive"><br><br>
-	<img src="res/img/ss30.png" alt="Nature" class="responsive">
+	<img src="res/img/ss30.png" alt="Nature" class="responsive"><br>
 	<img src="res/img/ss31.png" alt="Nature" class="responsive"><br><br>
 	The calculations are as follows:
 	<br><br> 𝑆𝑝𝑟𝑒𝑎𝑑 = 𝐻𝑖𝑔ℎ𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 – 𝐿𝑜𝑤𝑒𝑟 𝑆𝑡𝑟𝑖𝑘𝑒 
@@ -190,7 +181,7 @@ Benefits of the strategy:
 	<b style="color:#A569BD">Long Straddle:</b><br><br>
 	A long straddle is a neutral strategy to profit from a big price change, either up or down in the underlying stock.
 <br><br>
-<img src="res/img/ss33.png" alt="Nature" class="responsive"><br><br>
+<img src="res/img/ss33.png" alt="Nature" class="responsive5"><br><br>
 <b >Strategy</b><br><br>
 	<ul style="color: black; font-size: 19px">
 		<li>Buy an ATM call option</li>
@@ -244,8 +235,8 @@ Benefits of the strategy:
 </ul>
 <p>
 	<b style="color:#A569BD">Short Straddle:</b><br><br>
-	A short straddle is a neutral strategy which aims to profit from little to no price movement in the underlying stock and is opposite to the long straddle.
-	<img src="res/img/ss38.png" alt="Nature" class="responsive"><br><br>
+	A short straddle is a neutral strategy which aims to profit from little to no price movement in the underlying stock and is opposite to the long straddle.<br>
+	<img src="res/img/ss38.png" alt="Nature" class="responsive5"><br><br>
 	<b >Strategy</b><br><br>
 	<ul style="color: black; font-size: 19px">
 		<li>Sell one ATM call option</li>
@@ -261,7 +252,7 @@ Benefits of the strategy:
 			<br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐺𝑎𝑖𝑛 = 𝑁𝑒𝑡 𝐶𝑟𝑒𝑑𝑖𝑡
 			<br> 𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐿𝑜𝑠𝑠 = 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑 
 			<br>𝐿𝑜𝑤𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 – 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚
-			<br> 𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 + 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚
+			<br> 𝑈𝑝𝑝𝑒𝑟 𝐵𝑟𝑒𝑎𝑘𝑒𝑣𝑒𝑛 = 𝑆𝑡𝑟𝑖𝑘𝑒 𝑃𝑟𝑖𝑐𝑒 + 𝑁𝑒𝑡 𝑃𝑟𝑒𝑚𝑖𝑢𝑚<br><br>
 			<img src="res/img/ss39.png" alt="Nature" class="responsive"><br><br>
             <img src="res/img/new5.jpeg" alt="Nature" class="responsive"><br><br>
             A short straddle is established for a net credit (or net receipt) and profits if the underlying stock trades in a narrow range between the break-even points. Profit potential is limited to the total premiums received. Potential loss is unlimited if the stock price rises and substantial if the stock price falls.
