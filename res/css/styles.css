@@ -741,7 +741,7 @@ td {
   transition: all 0.3s ease;
 }
 .button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+   background-color: rgba(11, 173, 230, 0.6);
 }
 .button-dark:hover {
   color: #ffffff;
