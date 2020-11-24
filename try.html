@@ -46,13 +46,13 @@
 			</button>
 			<br><br>
 			
-			<h2 align="center" class="ourproject_title title_padding" style="color:#FF1700"> Black Scholes </h2>
-			<p style="color: rgb(39, 33, 33)" align="center">A Detailed Analysis and Derivation of the 
-Black-Scholes Pricing Formula</p><br> <br>
-			<h4 class="ourproject_title title_padding" style="color:#FDD060">
+			<h2 class="ourproject_title title_padding" style="color:black"> Black Scholes </h2>
+			<p style="color: rgb(39, 33, 33)">A Detailed Analysis and Derivation of the 
+Black-Scholes Pricing Formula</p><br> 
+			<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>The Markov Property</b>
 			</h4>
-			<br> <p style="color: black; font-size: 19px"> A sensible way to introduce the Markov property is through a sequence of random variables Z<sub>i</sub>, which can take one of two values from the set {1,-1}. This is known as a coin toss. We can calculate the expectations of Z<sub>i</sub>:
+			 <p style="color: black; font-size: 19px"> A sensible way to introduce the Markov property is through a sequence of random variables <i>Z<sub>i</sub></i>, which can take one of two values from the set {1,-1}. This is known as a coin toss. We can calculate the expectations of <i>Z<sub>i</sub></i>:
 				<img  src="res/img/img1.png" alt="ok" height="200px" width="500px" >
 
 			</p>
@@ -61,7 +61,7 @@ Black-Scholes Pricing Formula</p><br> <br>
 		<!-- <div id="home" class="section main container-fluid"> -->
 			<!-- <div class="snap-pad"></div> -->
 <p style="color: black; font-size: 19px">
-<br> <br> The key point is that the expectation of Z<sub>i</sub> has no dependence on any previous values within the sequence. Let us take the partial sums of our random variables within our coin toss, which we will denote by Si:
+<br> <br> The key point is that the expectation of <i>Z<sub>i</sub></i> has no dependence on any previous values within the sequence. Let us take the partial sums of our random variables within our coin toss, which we will denote by <i>S<sub>i</sub></i>:
 <!--<br><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp S<sub>i</sub>=&Sigma;<sub>{k=1}</sub><sup>i</sup>Z<sub>i</sub>-->
 <br><br><img  src="res/img/img2.png" alt="ok" height="100px" width="500px">
 <br> <br> We can now calculate the expectations of our partial sums, using the
@@ -71,16 +71,16 @@ Black-Scholes Pricing Formula</p><br> <br>
 <!-- </div>-->
 		<!-- <div id="home" class="section main container-fluid"> -->
 			<!-- <div class="snap-pad"></div> -->
-<br><br> We see that, again there is no dependence on the expectation of Si of any previous value within the sequence of partials sums. We can extend this to discuss conditional expectation. Conditional expectation is the expectation of a random variable with respect to some conditional probability distribution. Hence, we can ask that if i=4 (i.e. we carry out four coin tosses),what does this mean for the expectation of S5?
+<br><br> We see that, again there is no dependence on the expectation of <i>S<sub>i</sub></i> of any previous value within the sequence of partials sums. We can extend this to discuss conditional expectation. Conditional expectation is the expectation of a random variable with respect to some conditional probability distribution. Hence, we can ask that if <i>i=4</i> (i.e. we carry out four coin tosses),what does this mean for the expectation of <i>S<sub>5</sub></i>?
 <br> <br><img  src="res/img/img5.png" alt="ok"height="100px" width="500px" >
-<br><br>That is, the expected value of Si is only dependent upon the previousvalues Si-1, not on any values prior to that. This is known as the Markov Property. Essentially, there is no memory of past events beyond the point our variable is currently at within the sequence. Nearly all financial models discussed in these articles will possess the Markov property.</p>
-<br><br></p>			
+<br><br>That is, the expected value of <i>S<sub>i</sub></i> is only dependent upon the previousvalues <i>S<sub>i-1</sub></i>, not on any values prior to that. This is known as the Markov Property. Essentially, there is no memory of past events beyond the point our variable is currently at within the sequence. Nearly all financial models discussed in these articles will possess the Markov property.</p>
+<br></p>			
 
 	
-<h4 class="ourproject_title title_padding" style="color:#E0FD60">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>The Martingle Property</b>
 			</h4>
-			<p style="color: black; font-size: 19px"> <br> An additional property that holds for our sequence of partial sums is the Martingale property. It states that the conditional expectation of the sequence of partial sums, Si is simply the current value:
+			<p style="color: black; font-size: 19px"> <br> An additional property that holds for our sequence of partial sums is the Martingale property. It states that the conditional expectation of the sequence of partial sums, <i>S<sub>i</sub></i> is simply the current value:
 <br><br><img  src="res/img/img6.png" alt="ok" height="100px" width="500px">
 <br><br> Essentially, the martingale property ensures that in a "fair game", knowledge of the past will be of no use in predicting future winnings.
 <br><br> These properties will be of fundamental importance in regard to defining Brownian motion, which will later be used as a model for an asset price path.<br><br>
@@ -88,41 +88,44 @@ Black-Scholes Pricing Formula</p><br> <br>
 
 	
 
-<h4 class="ourproject_title title_padding" style="color:#60FD9E">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>The Brownian Motion and Weiner Process</b>
 			</h4>
 <p style="color: black; font-size: 19px">
 In the previous discussion on the Markov and Martingale properties, a discrete coin toss experiment was carried out, with an arbitrary number of time steps. The current goal is to work towards a continuous-time random walk, which will provide a more sophisticated model for the time-varying price of assets. In order to achieve this, the number of time steps will need to be increased. However, the manner in which they are increased must occur in a specific fashion, so as to avoid a nonsensical (infinite) result.
 
 <br><br> <img  src="res/img/img7.png" alt="ok" height="600px" width="300px">
-<br><br>Consider a continuous real-valued time interval [0,T], T>0. In this interval N coin tosses will be carried out, which each take a time T/N and hence are spaced equally. Concurrently, the payoff returned from each coin toss will be modified. The sequence of discrete random variables representing the coin toss is Zi∈{-1,1}.<br><br> A further sequence of discrete random variables, (Z<sub>i</sub> ) ̃∈T/N,-T/N, can be defined. The definition of such a sequence of DRVs is used to provide a very specific quadratic variation of the coin toss.
+<br><br>Consider a continuous real-valued time interval [0,T], <i>T>0.</i> In this interval N coin tosses will be carried out, which each take a time T/N and hence are spaced equally. Concurrently, the payoff returned from each coin toss will be modified. The sequence of discrete random variables representing the coin toss is <i>Zi∈{-1,1}.</i><br><br> A further sequence of discrete random variables, <i>(Z<sub>i</sub> ) ̃∈T/N,-T/N,</i> can be defined. The definition of such a sequence of DRVs is used to provide a very specific quadratic variation of the coin toss.
 <br><br> The quadratic variation of a sequence of DRVs is defined to be simply the sum of the squared differences of the current and previous terms:
 <br><br> <img  src="res/img/img8.png" alt="ok" height="100px" width="500px">
-<br><br>For Zi, the previous coin toss random variable sequence, the quadratic variation is given by:
+<br><br>For <i>Z<sub>i</sub></i>, the previous coin toss random variable sequence, the quadratic variation is given by:
 <br><br><img  src="res/img/img9.png" alt="ok" height="100px" width="500px">
 <br><br> <img  src="res/img/img10.png" alt="ok" height="100px" width="500px">
 <br><br>
 Thus, by construction, the quadratic variation of the amended coin toss (Z<sub>i</sub> ) ̃ is simply the total duration of all tosses, T.
-<br><br>Importantly, note that both the Markov and Martingale properties are retained by (Z<sub>i</sub> ) ̃ . As N→∞ the random walk coin toss does not diverge. If the value of the asset at time t, with t∈[0,T], is given by S(t), then its conditional expectation at the end of the interval, given that S(0)=0, is E(S(T))=0 with a variance of E(〖S(T)〗<sup>2</sup>)=T.
+<br><br>Importantly, note that both the Markov and Martingale properties are retained by <i>(Z<sub>i</sub> ) ̃ .</i> As <i>N→∞</i> the random walk coin toss does not diverge. If the value of the asset at time t, with <i>t∈[0,T]</i>, is given by S(t), then its conditional expectation at the end of the interval, given that S(0)=0, is E(S(T))=0 with a variance of E(〖S(T)〗<sup>2</sup>)=T.
 <br><br>Although the technical details will not be discussed, as the number of steps N becomes infinite, the Wiener process is obtained, more commonly called a standard Brownian motion, which will be denoted by B(t). Formally, the definition is given by:<br>
 
 </p>
 			
-<h5 class="ourproject_title title_padding" style="color:#60FBFD">
+<h5 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Definition (Wiener Process/Standard Brownian Motion)</b>
 			</h5>
 <p style="color: black; font-size: 19px">A sequence of random variables B(t) is a Brownian motion if B(0)=0, and for all t,s such that s,t, B(t)-B(s) is normally distributed with variance t−s and the distribution of B(t)-B(s) is independent of B(r) for r≤s.<br>
 </p>
-<h4 class="ourproject_title title_padding" style="color:#60B6FD">
+<h4 class="ourproject_title title_padding" style="color:#A569BD">
 				<b>Properties of Brownian Motion</b>
 			</h4>
-<p style="color: black; font-size: 19px">Standard Brownian motion has some interesting properties. In particular:<br>
-   <br> • Brownian motions are finite. The construction of Z~i was chosen carefully in order that in the limit of large N,B  was both finite and non-zero.
-    <br>• Brownian motions have unbound variation. This means that if the sign of all negative gradients were switched to positive, then B would hit infinity in an arbitrarily short time period.
-    <br>• Brownian motions are continuous. Although Brownian motions are continuous everywhere, they are differentiable nowhere. Essentially this means that a Brownian motion has fractal geometry. This has important implications regarding the choice of calculus methods when Brownian motions are to be manipulated.
-    <br>• Brownian motions satisfy both the Markov and Martingale properties. The conditional distribution of B(t) given information until s < t is dependent only on B(s) and, given information until s < t, the conditional expectation of B(t) is B(s) .
-    <br>• Brownian motions are strongly normally distributed. This means that, for s< t,s,t&#8712;[0,T] , that B(t)-B(s)  is normally distributed with mean zero and variance t-s.<br><br>
-Brownian motions are a fundamental component in the construction of stochastic differential equations, which will eventually allow derivation of the famous Black-Scholes equation for contingent claims pricing.<br><br>
+<p style="color: black; font-size: 19px"><b>Standard Brownian motion has some interesting properties. In particular:</b><br>
+	<ul style="color: black; font-size: 19px">
+   <li>  Brownian motions are finite. The construction of Z~i was chosen carefully in order that in the limit of large N,B  was both finite and non-zero.</li>
+    <li>Brownian motions have unbound variation. This means that if the sign of all negative gradients were switched to positive, then B would hit infinity in an arbitrarily short time period.</li>
+    <li> Brownian motions are continuous. Although Brownian motions are continuous everywhere, they are differentiable nowhere. Essentially this means that a Brownian motion has fractal geometry. This has important implications regarding the choice of calculus methods when Brownian motions are to be manipulated.</li>
+    <li> Brownian motions satisfy both the Markov and Martingale properties. The conditional distribution of B(t) given information until s < t is dependent only on B(s) and, given information until s < t, the conditional expectation of B(t) is B(s) .</li>
+    <li> Brownian motions are strongly normally distributed. This means that, for s< t,s,t&#8712;[0,T] , that B(t)-B(s)  is normally distributed with mean zero and variance t-s.</li><br><br>
+</ul>
+<a style="color: black; font-size: 19px">
+Brownian motions are a fundamental component in the construction of stochastic differential equations, which will eventually allow derivation of the famous Black-Scholes equation for contingent claims pricing.<br><br></a>
 </p>
 <h4 class="ourproject_title title_padding" style="color:#AA60FD">
 				<b>The Stochastic Differential Equations</b>
@@ -136,25 +139,6 @@ Brownian motions are a fundamental component in the construction of stochastic 
 	<a class="button" href="try2.html"> Next >> </a>
 	 <!-- <a class="button" href="tsys2.html">Next</a> -->
 </p>
-
-<script src="res/js/prism.js"></script>
-	<script type="text/javascript">
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
-
-	for (i = 0; i < coll.length; i++) 
-	{
-  		coll[i].addEventListener("click", function() {
-    	this.classList.toggle("active");
-    	var content = this.nextElementSibling;
-    	if (content.style.display === "block") {
-      	content.style.display = "none";
-    	} else {
-      	content.style.display = "block";
-    }
-  });
-}
-</script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
